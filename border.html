@@ -4,6 +4,11 @@
 	<title>border related test</title>
 	<meta charset="utf-8"/>
 	<style type="text/css">
+		aside p{
+			font-size:14px;
+			font-weight:bold;
+			opacity:0.5;
+		}
 		.border-radius{
 			width:350px;
 			border:#a1a1a1 2px solid;
@@ -11,6 +16,33 @@
 			background:#dddddd;
 			border-radius:25px;
 			-moz-border-radius:25px;
+			text-align:center;
+		}
+		.border-topleft-radius{
+			width:350px;
+			border:#a1a1a1 2px solid;
+			padding:10px 40px;
+			background:#dddddd;
+			border-top-left-radius:25px;
+			-moz-border-top-left--radius:25px;
+			text-align:center;
+		}
+		.box-shadow{
+			width:300px;
+			height:100px;
+			background-color:#ff9900;
+			-moz-box-shadow:10px 10px 5px #888888;
+			box-shadow:10px 10px 5px #888888;
+			text-align:center;
+		}
+		.box-allparam-shadow{
+			width:300px;
+			height:100px;
+			background-color:#ff9900;
+			-moz-box-shadow:50px 20px 5px 5px #ff0;
+			box-shadow:50px 20px 5px 5px #ff0;
+			text-align:center;
+			opacity:1;
 		}
 	</style>
 </head>
@@ -22,5 +54,27 @@
 	
 	<h1>css3 圆角边框</h1>
 	<div class="border-radius">border radius</div>
+	<aside>
+		<p>可自定义四个边角</p>
+		<p>border-[top|bottom]-[left|right]-radius</p>
+		<p>Example:border-top-left-radius:25px;</p>
+		<div class="border-topleft-radius">border-topleft-radius</div>
+	</aside>
+	
+	<h1>css3 边框阴影</h1>
+	<div class="box-shadow">box shadow</div>
+	<aside>
+		<p>各个参数</p>
+		<p>
+			h-shadow<br/>
+			v-shadow<br/>
+			blur<br/>
+			spread<br/>
+			color<br/>
+			inset/outset<br/>
+		</p>
+		<p>Example:50px 20px 5px 5px #ff0 outset(default)</p>
+		<div class="box-allparam-shadow">box-allparam-shadow</div>
+	</aside>
 </body>
 </html>
