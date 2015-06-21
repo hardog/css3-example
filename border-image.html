@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>css3:border-image</title>
+	<style type="text/css">
+		aside{
+			font-size:14px;
+			font-weight:bold;
+			opacity:0.5;
+		}
+		.border-image-9-cell{
+			width:400px;
+			height:100px;
+			-moz-border-image:url(img/border-image-9-cell.jpg) 27 13 27 27 round stretch;
+			-webkit-border-image:url(img/border-image-9-cell.jpg) 27 13 27 27 round stretch;
+			border-width:27px;
+			border-style:double;
+		}
+		.border-image-button{
+			border:10px solid transparent;
+			width:40px;
+			padding:5px 10px;
+			-moz-border-image:url(img/border_image_button.png) 0 14 0 14 round stretch;
+			-webkit-border-image:url(img/border_image_button.png) 0 14 0 14 round stretch;
+			-o-border-image:url(img/border_image_button.png) 0 14 0 14 round stretch;
+			border-image:url(img/border_image_button.png) 0 14 0 14 round stretch;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Browser Supported</h1>
+	<p>
+		Supported by Internet Explorer 11 & Firefox & Opera 15 & Safari 6
+	</p>
+	<p>
+		有5个属性，如下所示：<br/>
+		border-image-source<br/>
+		border-image-slice<br/>
+		border-image-width<br/>
+		border-image-outset<br/>
+		border-image-repeat
+	</p>
+	<hr/>
+	
+	<h1>9 cell</h1>
+	<aside>
+		top-right-bottom-left:27 13 27 27<br/>
+		水平方向：round，垂直方向：stretch
+	</aside>
+	<div class="border-image-9-cell">border-image-9-cell</div>
+	
+	<h1>border image button</h1>
+	<div class="border-image-button">button</div>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.wufangbo.com/css3-border-image/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" charset="utf-8" async="" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/pa.app.js"></script><script type="text/javascript" charset="utf-8" async="" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/pa_links_new2_colorshake.app.js"></script>
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<title>CSS3 border-image的使用方法 | 前端开发-武方博</title>
+<meta name="keywords" content="border-image,ccs3,html5,jquery css3,webkit-border-image">
+<meta name="description" content="  一、border-image的兼容性 	 	border-image可以说是CSS3中的一员大将，将来一定会大放光彩，其应用潜力真的是非常的惊人。可惜目前支持的浏览器有限，仅 Firefox3.5，chrome浏览器，Safari3+支持border-image。所以，就本文而言，IE浏览器可以回家休息 了，Firefox3及其以下以及Opera浏览器也可以休息去看《阿凡达》了。所以">
+
+<link href="http://www.wufangbo.com/wp-content/themes/wufangbo/style.css?=11" rel="stylesheet">
+<script type="text/javascript" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/jquery.js"></script>
+<link rel="prev" title="前端开发工具集合（2011最新）" href="http://www.wufangbo.com/web-development-tools/">
+<link rel="next" title="CSS reset怎么写" href="http://www.wufangbo.com/css-reset-write/">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="canonical" href="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/CSS3 border-image的使用方法 _ 前端开发-武方博.html">
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/common.js"></script>
+<script type="text/javascript" async="" charset="UTF-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/embed.js"></script><link type="text/css" rel="stylesheet" href="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/embed.default.css"><script type="BAIDU_HH" runed="true">{"type":"flowbar","di":"u2103842","rsi0":"auto","rsi1":"50"}</script><script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/ls.js"></script></head>
+<body><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+<div class="topBar"><div class="box clearfix">
+<div class="biaoyu">【前端开发-武方博】css+xhtml+javascript=前端开发</div>
+</div></div>
+<div class="headerWrap">
+<div class="header clearfix">
+<div class="logo"><a href="http://www.wufangbo.com/" target="_blank"><img alt="前端开发-武方博" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/logo2.png"></a></div>
+<div class="logoSide clearfix">
+<div class="searchWrap clearfix">
+<div class="search">
+      <form id="searchform" method="get" action="http://www.wufangbo.com/">
+        <input type="text" value="" name="s" id="s" size="30">
+        <button type="submit">
+        搜索        </button>
+      </form>
+</div>
+</div>
+<ul class="tpShili clearfix">
+      <li><a href="http://www.wufangbo.com/css-examples-list/">css实例</a></li>
+      <li><a href="http://www.wufangbo.com/javascript-examples-list/">javaScript实例</a></li>
+      <li><a href="http://www.wufangbo.com/jquery-examples-list/">jQuery实例</a></li>
+      <li><a href="http://www.wufangbo.com/web-development-tools-list/">前端开发工具</a></li>
+      <li><a href="http://www.wufangbo.com/about-me/">关于我</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div class="navWrap navWrapFix">
+<ul class="nav clearfix">
+<li><a href="http://www.wufangbo.com/">&nbsp;首页&nbsp;</a></li>
+<li><a href="http://www.wufangbo.com/category/css/">css</a> </li>
+<li><a href="http://www.wufangbo.com/category/css3-html5/">css3</a> </li>
+<li><a href="http://www.wufangbo.com/category/javascript/">javascript</a> </li>
+<li><a href="http://www.wufangbo.com/category/jquery/">jquery</a> </li>
+<li><a href="http://www.wufangbo.com/category/yhty/">ued</a> </li>
+<li><a href="http://www.wufangbo.com/category/linux/">linux</a> </li>
+<li><a href="http://www.wufangbo.com/category/wordpress/">wordpress</a> </li>
+<li><a href="http://www.wufangbo.com/category/qdkf/">前端开发</a> </li>
+<li><a href="http://www.wufangbo.com/category/qdzy/">资源</a> </li>
+<li><a href="http://www.wufangbo.com/category/qdzx/">资讯</a> </li>
+<li><a href="http://www.wufangbo.com/category/ydkf/">移动开发</a> </li>
+<li><a href="http://www.wufangbo.com/category/wysj/">设计</a> </li>
+<li><a href="http://www.wufangbo.com/category/gfjy/">规范</a> </li>
+<li><a href="http://www.wufangbo.com/category/yunying/">运营</a> </li>
+<li><a href="http://www.wufangbo.com/category/other/">谈天说地</a> </li>
+</ul>
+</div>
+
+<div style="width:960px; margin:15px auto 5px;"><script type="text/javascript">/*前端开发-导航下*/ var cpro_id = 'u773089';</script><script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/c.js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u773089_0"><iframe id="cproIframe_u773089_1" width="960" height="90" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(11).html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom"></script></div>
+
+<div class="weizhi">您的位置：<a href="http://www.wufangbo.com/">前端开发-武方博</a><span>&gt;</span><a href="http://www.wufangbo.com/category/css3-html5/">css3 html5</a><span>&gt;</span><a>CSS3 border-image的使用方法</a></div>
+
+<div class="box">
+<div class="main clearfix">
+<div class="mainL">
+
+<div class="Lbox mb10">
+<div class="article">
+<h1 class="articleH1">
+CSS3 border-image的使用方法</h1>
+<div class="articleH2">作者：<span>前端开发-武方博</span> 发布：<span>2011-03-09</span>  分类：<a href="http://www.wufangbo.com/category/css3-html5/" rel="category tag">css3 html5</a> 阅读：<span>6,451次</span></div>
+<div style="width:618px; height:22px; margin:5px auto;">
+<script type="text/javascript">/*618*22，创建于2012-12-9*/var cpro_id = "u1155124";</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/c(1).js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1155124_0"><iframe id="cproIframe_u1155124_2" width="618" height="22" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(7).html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(1)"></script>
+</div>
+<div style="overflow:hidden;zoom:1; width:360px; height:300px;margin:0 auto;">
+<script type="text/javascript">
+    /*前端开发360*300*/
+    var cpro_id = "u2037822";
+</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/c(1).js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u2037822_0"><iframe id="cproIframe_u2037822_3" width="360" height="300" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(9).html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(2)"></script>
+</div>
+<div class="articleInfo">
+<p>&nbsp;</p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><strong style="line-height: normal; ">一、<span class="wp_keywordlink_affiliate"><a href="http://www.wufangbo.com/tag/border-image/" title="View all posts in border-image" target="_blank">border-image</a></span>的兼容性</strong><br style="line-height: normal; "><br>
+	<br>
+	<span class="wp_keywordlink_affiliate"><a href="http://www.wufangbo.com/tag/border-image/" title="View all posts in border-image" target="_blank">border-image</a></span>可以说是CSS3中的一员大将，将来一定会大放光彩，其应用潜力真的是非常的惊人。可惜目前支持的浏览器有限，仅 Firefox3.5，chrome浏览器，Safari3+支持<span class="wp_keywordlink_affiliate"><a href="http://www.wufangbo.com/tag/border-image/" title="View all posts in border-image" target="_blank">border-image</a></span>。所以，就本文而言，IE浏览器可以回家休息 了，Firefox3及其以下以及Opera浏览器也可以休息去看《阿凡达》了。所以，本文提供的一些demo页面，要在 Firefox3.5+，chrome或Safari3+浏览器下才可以看到效果。<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" class="alignnone" height="157" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc1976f0a61211d803c32254bb0f8ac4b9737279b15aaa3e519fc94fab93387727601cd3d960cba7150d860b22ecb1b45876f50e3f821c0f9cbb73d7fa34ce8892bdc7b32975&amp;a=27&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004454SlU.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="538"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><strong style="line-height: normal; ">二、熟悉border-image的一些特性</strong><br style="line-height: normal; "><br>
+	<br>
+	我们可能对于CSS2中的background属性比较熟悉，例如：<code style="line-height: normal; ">background:url(xx.jpg) 27px no-repeat;</code><br style="line-height: normal; "><br>
+	<br>
+	指代的是图片(url(xx.jpg))，位置(27px)，重复性(no-repeat)。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">border-image于此类似，border-image包括图片，剪裁位置（与background位置一样，也是数值，也支持百分值），重复性。例如：<code style="line-height: normal; ">border-image:url(border.png) 27 repeat;</code>，指的就是图片(url(border.png))，剪裁位置(27)，重复方式(repeat)。试着对比background，这有助于border-image属性的记忆。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">具体描述border-image的参数</strong></em><br style="line-height: normal; "><br>
+	<br>
+	border-image的参数就是上面提到的三个：图片，剪裁位置，重复性。<br style="line-height: normal; "><br>
+	<br>
+	1、图片(border-image-source)<br style="line-height: normal; "><br>
+	<br>
+	与CSS2中background-image属性一样，border-image的背景图使用url()调用，图片可以是相对路径或是绝对路径，也可以不使用图片，即<code style="line-height: normal; ">border-image:none;</code></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">2、图片剪裁位置(border-image-slice)<br style="line-height: normal; "><br>
+	<br>
+	此参数特点比较鲜明：<br style="line-height: normal; "><br>
+	<br>
+	1、没有单位，专指像素。这类似于flash的as脚本，舞台高宽，影片剪辑大小，位移直接就是一个数值，没有单位，因为默认单位就是像素(px)了。例如：<code style="line-height: normal; ">border-image:url(border.png) 27 repeat;</code>这里的27专指27像素。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">2、支持百分比值，百分比值大小事相对于边框图片而言，假设边框图片大小为400px*300px，则20%的实际效果就是剪裁了图片的60px 80px 60px 80px的四边大小。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">3、剪裁特性。如果您对CSS中clip属性(clip:rect(auto, auto, auto, auto))比较了解，则这里理解就会轻松些。clip可以说是CSS中一个明目张胆的剪裁属性，而此处的属性虽然表意上不是剪裁，但是在border- image效果的实现上来说，就好像是个剪裁工具，把边框图片四分五裂，再重新安置，变形。其有1~4个参数，其方位规则符合CSS普遍的方位规则（与 margin，padding等或border-width一致），上右下左顺时针，再赋予剪裁的含义，举个简单的例子，前面提到，支持百分比宽度，所以 这里“30% 35% 40% 30%的”示意可以用下图表示：</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><img alt="CSS3 border image的使用方法" class="alignleft" height="191" orgsrc="http://b27.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc194fc3f5d451d4c726bef0a883f283a20b41d88ab20419338051f9835e4a8db664a83ad1acbcfbbd605d9fce442f15a8b9918976d8a97442319a76ad21fc8ff1f1151374e1&amp;a=33&amp;b=27" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004454nn7.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="180"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">看图说话就是，离图片上部30%的地方剪裁一下，在右边35%的地方剪裁一下，在离底部40%的地方裁剪一下，在距左边30%的地方也剪裁一下。于是总共对图片进行了“四刀切”，形成了九个分离的区域，这就是九宫格，这是下面深入讲解border-image的基础。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">3、重复性(border-image-repeat)<br style="line-height: normal; "><br>
+	<br>
+	这里的重复性有别于background的背景重复，差别较大。background图片就是重复，不重复，水平重复，垂直重复，总之就是围绕 repeat（重复）这个词打转，一家独大。而对于border-image，可谓是三足鼎立，repeat（重复）只是其中之一，其余两个是 round（平铺）和stretch（拉伸）。其中，stretch是默认值。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">参数0~2个，0则使用默认值 – stretch，例如：<code style="line-height: normal; ">border-image:url(border.png) 30% 40%;</code>就等同于<code style="line-height: normal; ">border-image:url(border.png) 30% 40% stretch stretch;</code>；1则表示水平方向及垂直方向均使用此参数；2个参数的话则第一个参数表水平方向，第二个参数表示垂直方向。例如：<code style="line-height: normal; ">border-image:url(border.png) 30% 40%;</code>就等同于<code style="line-height: normal; ">border-image:url(border.png) 30% 40% round repeat;</code>表示水平方向round（平铺），垂直方向repeat（重复），至于何为平铺何为重复下面会深入讲解。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><strong style="line-height: normal; ">三、深入理解border-image的宽度和展示方式</strong><br style="line-height: normal; "><br>
+	<br>
+	分开理解border-image的宽度或是展示方式其实不太难的，关键是这两者结合使用时候的含义，需要花一定的功夫的理解。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">帮助理解的九宫格模型</strong></em><br style="line-height: normal; "><br>
+	<br>
+	何为九宫格？为什么我们需要九宫格帮助理解？<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" class="alignleft mt10 mr20" height="93" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc1945454828d6506db6930342540960e8eab84c65a1fd0c3f7ab7ee32b506062a5b22a0be7f92dbf8df7392ae818e25163626731bff340ca188ef7c8a7201658d85692ee217&amp;a=33&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004454g68.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="100"><br style="line-height: normal; "><br>
+	<br>
+	“九宫格”是我国书法史上临帖写仿的一种界格，又叫“九方格”，即在纸上画出若干大方框，再于每个方框内分出九个小方格，以便对照法帖范字的笔画部位进行练字。在本文，“九宫格”就专指由九个方格形成的矩形布局，例如左图就是一个很简单的数字九宫格。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">border-image的数值参数其实是用来剪裁边框图片的，正好“哗哗四刀”切出了个九宫格的模型，所以，有意或无意，巧合还是必然，我们需要 用到九宫格模型帮助我们理解border-image的绘制原理。下面这张图是本文非常重要的基本的示意图，因为这是张具有代表性的九宫格图案 (27*3)*(27*3)。<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" class="mr10 mt10" height="81" orgsrc="http://b27.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19a50931a634caf8371698249a19c0c16b80a05009fbbc8234705ba96ab9beda0a302639c7d9231c073febe2d8aa93607d7e1aa153d9e52b71bdd55784e41b59219381d06a&amp;a=33&amp;b=27" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004454Pfe.jpg" style="line-height: normal; vertical-align: middle; " title="CSS3 border image的使用方法" width="81"><span style="line-height: normal; display: inline-block; vertical-align: middle; color: rgb(153, 153, 153); ">&lt;————————&gt;</span><img alt="CSS3 border image的使用方法" class="mt10 ml10" height="81" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19637d4a450068f2c63948070775b0aec64105a8088888649d4e14945be15f3d5ef0eab3517786132912b037e1e1b3de5588cc933c03c5d29d6ac590ea3be17f449231e3f7&amp;a=30&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/00445482n.jpg" style="line-height: normal; vertical-align: middle; " title="CSS3 border image的使用方法" width="81"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">这张图能够帮助我们更好的理解border-image的剪裁及绘制的原理。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">边框将border-image分成了九部分：border-top-image , border-right-image , border-bottom-image , border-left-image, border-top-left-image , border-top-right-image , border-bottom-left-image , border-bottom-right-image以及中间的内容区域。假设现在边框的宽度是27像素，则上面所说的九部分正如下图所表示的（放大 400%）：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignleft mt10 mr20" height="338" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc193e1dea72fec2eb88cc2f540c5918b83520fa01aa504e0a65c2cd92f743e45f9226e5c02857e5985bf57523091e57134fdabb4aa8d3155f5ba52b525b9a54b973049fed02&amp;a=33&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/0044557dP.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="337"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">左图中，橙红色的四个边角的菱形区域称为“角边框图片”，在border-image中，角边框图片是<span style="line-height: normal; border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(204, 204, 204); ">没有任何展示效果</span>的，不会平铺，不会重复，也不会拉伸，有点类似于视觉中盲点的意思。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">而对边的四个橙黄色区域属于展示效果的作用区（也是边框宽度计算剩余区），上下区域即border-top-image和border- bottom-image区域受到展示效果属性的第一个参数——水平方向效果影响：如果为repeat，则此区域图片会水平重复，如果是round，则此 框框内的图片会水平平铺，如果是stretch，则此矩形域中的图片就会被水平拉伸。（下部分的实例会做具体演示）左右区域只有垂直方向上的效果，与上下 区域效果对应，不多说。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">中间的区域（左图的空白格）受到全部参数的作用，在水平和垂直两个维度上都有展示效果（平铺、拉伸等）。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">这里，插一点内容，讲一下round（平铺），repeat（重复），stretch（拉伸）所具体指代的效果。这三个特性其实大家应该都比较熟悉。看下图：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignright imgpad" height="201" orgsrc="http://b30.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19850206e9757a7d72429fc4ba4c947e9ab9f0e9710b714bac6266e85b1c0a0defac2fa71779478d1573d0679f0e8c34a06378eb254885c01b9415feab743b3b26b556522d&amp;a=33&amp;b=30" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004455O0L.jpg" style="line-height: normal; margin-top: 20px; " title="CSS3 border image的使用方法" width="288"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">在windows系统桌面壁纸显示方式选项中就有“拉伸”和“平铺”，这两个效果与border中“拉伸”和“平铺”效果一致。只是可能在理解“平 铺”和“重复”的区别上有点丈二的和尚——摸不着头脑。记住这么一点：平铺可能会改变了原图片显示的大小，重复不改变图片显示的大小。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">这么比方吧，您从万科地产买了个99.5m*99.5m的毛坯房，地面要贴瓷砖，都是1m*1m的正方形瓷砖。如果是“平铺”，对不起，这1m边长 的瓷砖不行，要处理！怎么处理法？很简单，每个瓷砖压成0.995m*0.995m的，这样就可以了，所以，平铺就是以完整的单元铺满整个区域。如果是重 复，就直接把这1m*1m的瓷砖从一个角落一个一个的放置，放到头放不下了怎么办？直接把瓷砖从中间“咔”掉，于是最后会在房子的边角看到很多半截的瓷 砖。下面就是一个个的实例演示了，您可以通过下面的实例效果中加深理解。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">帮助理解的一些实例</strong></em><br style="line-height: normal; "><br>
+	<br>
+	下面的实例代码对应的demo页面要在Firefox3.5、chrome或Safari3+浏览器下才可以看到效果。所使用的背景图片就是前面提到的九宫格代表图（8菱形 – 81px*81px），名称为border.png。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">1、27像素剪裁宽高(1/3边框图片宽高)在1em边框宽度下的默认显示<br style="line-height: normal; "><br>
+	<br>
+	CSS代码：</span></p>
+<div class="zxx_code" style="font-family: Arial; word-wrap: break-word; word-break: break-all; visibility: visible !important; zoom: 1 !important; filter: none; font-size: 14px; line-height: normal; ">
+<pre style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">.border_image{
+&nbsp;&nbsp;&nbsp;&nbsp;width:400px;
+&nbsp;&nbsp;&nbsp;&nbsp;height:100px;
+&nbsp;&nbsp;&nbsp;&nbsp;-moz-border-image:url(../image/border.png) 27;
+&nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-image:url(../image/border.png) 27;
+&nbsp;&nbsp;&nbsp;&nbsp;border:double orange 1em;
+}</span></pre>
+</div>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">结果：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="imgpad" height="142" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc195be8784e3ca624ace41cf636153d4451b280a06e476af28977902989dde6a95c737c95bff1bc9f2e1aeef38b5dc63e873439b611a94f0402584d6d32b09ae3995a4ee53d&amp;a=30&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/0044559nU.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="449"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">效果分析：<br style="line-height: normal; "><br>
+	<br>
+	这里没有显示方式的参数，正如上面所说的，0参数即使用默认的stretch拉伸，所以从图上可以看到四个对边的拉伸效果。上面还提到，四个对角是不受重复方式影响，该什么样子还是什么样子，无拉伸平铺，本面目示人。见下图的标注（放大200%）。<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignleft mt10" height="175" orgsrc="http://b30.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19da351d80ddb8dcf04dd8354fa5eaf164be8ead4809fada35508bd37fd48989c89118b3cb640204eb23292932a8a7e6f14c3be6f3e91b46a99888a454bf49e2f0e6fc440e&amp;a=33&amp;b=30" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004455bME.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="174"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">这个九宫格各区域展示方式的标注图在border-image中是通用的，无论border-image的代码如何改变，其显示效果的原理核心就是 左边这张九宫标注图，亘古不变的是四个边角，这四个边角就是四条边框的重叠区域，不会有拉伸或是重复的展现效果。有变化的就是四边区域和中心区域，这几个 区域中的水平和垂直属性也是稳如泰山，屹立不变的，改变的就只是“拉伸”而已，变成重复啦或是平铺。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">由于其通用性，所以此显示原理标注图在下面就不一一展示了，您找到对应的位置，修改“拉伸”为“平铺”或“重复”即可，其他都不用改变。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">2、27像素剪裁在1em边框宽度下round（平铺）显示效果<br style="line-height: normal; "><br>
+	<br>
+	CSS代码：</span></p>
+<div class="zxx_code" style="font-family: Arial; word-wrap: break-word; word-break: break-all; visibility: visible !important; zoom: 1 !important; filter: none; font-size: 14px; line-height: normal; ">
+<pre style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">.border_image{
+&nbsp;&nbsp;&nbsp;&nbsp;width:400px;
+&nbsp;&nbsp;&nbsp;&nbsp;height:100px;
+&nbsp;&nbsp;&nbsp;&nbsp;-moz-border-image:url(../image/border.png) 27 round;
+&nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-image:url(../image/border.png) 27 round;
+&nbsp;&nbsp;&nbsp;&nbsp;border:double orange 1em;
+}</span></pre>
+</div>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">结果：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="mt10 imgpad" height="142" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc192596656d9b0d6a3c5dbf444d6a5c549be51825066c7c280fca4c19309dec164ae8ae34065c3ee9ce9547929e97285b0b5c8c190f98af2e90ac658cf5ab694b38cd68d5eb&amp;a=30&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004455jce.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="443"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">3、27像素剪裁在1em边框宽度下repeat（重复）效果<br style="line-height: normal; "><br>
+	<br>
+	CSS代码：</span></p>
+<div class="zxx_code" style="font-family: Arial; word-wrap: break-word; word-break: break-all; visibility: visible !important; zoom: 1 !important; filter: none; font-size: 14px; line-height: normal; ">
+<pre style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">.border_image{
+&nbsp;&nbsp;&nbsp;&nbsp;width:400px;
+&nbsp;&nbsp;&nbsp;&nbsp;height:100px;
+&nbsp;&nbsp;&nbsp;&nbsp;-moz-border-image:url(../image/border.png) 27 repeat;
+&nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-image:url(../image/border.png) 27 repeat;
+&nbsp;&nbsp;&nbsp;&nbsp;border:double orange 1em;
+}</span></pre>
+</div>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">结果：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="mt10 imgpad" height="147" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19f20ce94fab73f0b21358528aee5de11eb5de7a0e11ccbd1f5e2ef14ce34ad965d112843d556587cfa9c2895a47b402cf547749da957663eaa4b9b343b530e3ae160c4014&amp;a=33&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004455ANi.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="447"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">上图我圈了四个边角，不难发现，这一个边角处的菱形都是被截掉的。这就是repeat的效果，还记得上面的毛坯房的例子吗？round会压缩（或伸 展）图片大小使其正好在区域内显示，而repeat是不管三七二十一直接重复的，而且是居中重复，repeat从中间开始（这是我的观察，可能不准确）。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">这里还有一点需要注意：在webkit核心的浏览器下这个round属性和repeat属性似乎没有没有区分，显示的效果是一样的，所以您在 chrome浏览器或是Safari浏览器下看demo2和demo3的效果可能是一样的。Firefox3.5下可以准确区分这两个参数。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">4、上实例样式缩写<br style="line-height: normal; "><br>
+	<br>
+	上面的实例还可以进一步缩写。CSS如下：</span></p>
+<div class="zxx_code" style="font-family: Arial; word-wrap: break-word; word-break: break-all; visibility: visible !important; zoom: 1 !important; filter: none; font-size: 14px; line-height: normal; ">
+<pre style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">.border_image{
+&nbsp;&nbsp;&nbsp;&nbsp;width:400px;
+&nbsp;&nbsp;&nbsp;&nbsp;height:100px;
+&nbsp;&nbsp;&nbsp;&nbsp;-moz-border-image:url(../image/border.png) 27/1em repeat;
+&nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-image:url(../image/border.png) 27/1em repeat;
+&nbsp;&nbsp;&nbsp;&nbsp;border:double orange 1em;
+}</span></pre>
+</div>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">border-image绘制原理简述</strong></em><br style="line-height: normal; "><br>
+	<br>
+	我是这样理解的：共存在两个九宫格，一个是边框图片，还有一个就是边框本身，九个方位关系一一对应。边框本身的特性让其变成了一个九宫格，四条边框交错，加上其围住的区域，正好形成一个九宫格。边框图片则是通过图片剪裁实现了九宫格。这是理解绘制原理的基础。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">1、调用边框图片<br style="line-height: normal; "><br>
+	<br>
+	border-image的url属性，通过相对或绝对路径链接图片。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">2、边框图片的剪裁<br style="line-height: normal; "><br>
+	<br>
+	border-image的数值参数剪裁边框图片，形成九宫格。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">3、剪裁图片填充边框<br style="line-height: normal; "><br>
+	<br>
+	边框图片被切割成9部分，以一一对应的关系放到div边框的九宫格中，然后再压缩（或拉伸）至边框（border-width或border-image-width）的宽度大小。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">4、执行重复属性<br style="line-height: normal; "><br>
+	<br>
+	被填充至边框九宫格四个角落的的边框图片是不执行重复属性的。上下的九宫格执行水平方向的重复属性（拉伸或平铺），左右的格子执行垂直方向的重复属性，而中间的那个格子则水平重复和垂直方向的重复都要执行。</span></p>
+<p style="line-height: normal; "><font class="Apple-style-span" color="#333333" face="Arial" size="3"><span class="Apple-style-span" style="-webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px;"><br>
+	</span></font></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><strong style="line-height: normal; ">四、border-image的一些应用</strong></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">自适应的圆角效果</strong></em><br style="line-height: normal; "><br>
+	<br>
+	使用图片如下：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignleft" height="42" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19c9bc5213273942a80b6ce5fae0b5db85477cde1447e5a58f65e700f729afaf7844d019ddd528f92473e8c552532430aa355020a90b87fb954cbd185a53cf179f97514672&amp;a=30&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/0044556oj.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="42"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">此图片的剪裁宽度为20像素，基本上就是此图的圆角大小。div的边框宽度为10像素，其CSS核心样式如下：</span></p>
+<div class="zxx_code" style="font-family: Arial; word-wrap: break-word; word-break: break-all; visibility: visible !important; zoom: 1 !important; filter: none; font-size: 14px; line-height: normal; ">
+<pre style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">.border_image{
+&nbsp;&nbsp;&nbsp;&nbsp;-moz-border-image:url(../image/rounded_corner.png) 20/10px;
+&nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-image:url(../image/border.png) 20/10px;
+}</span></pre>
+</div>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">结果如下：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignnone" height="62" orgsrc="http://b30.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19c42ab71bbd7b00dd1fffed3a1bae27a98bc4f0f201996c7595d73622b93afea6dd88fce693848979f369daed19cc2a6d0242d5d5e950c6b56c6b0fb98b3b36e8e2b05da8&amp;a=30&amp;b=30" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004455JXU.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="141"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">多边框效果</strong></em><br style="line-height: normal; "><br>
+	<br>
+	使用图片如下：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignnone" height="42" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc1905a4f1723bdd69e09fc88b67d96ad62a6ade7b20e54352b5f83316a8f001605e0c9d7020a6fd0407fccd3183f9909f57d5ff49c985b74f5aa68cbc41bc87949779804ebd&amp;a=30&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004455mv8.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="42"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">圆角和边框大小都是20，就不上CSS代码了，大同小异。终效果如下图：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignnone" height="78" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc198270fbafdbd3bb2b81d7c38594543e048809e553f2c579aeae9d76becd0e382f0a9bb534de6e4d5e049b83b8dd2e94d798ffce5508e63c9d18151f795b2a17aba52c269b&amp;a=33&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004455eKi.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="156"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">投影效果</strong></em><br style="line-height: normal; "><br>
+	<br>
+	使用素材图片如下：<img alt="CSS3 border image的使用方法" bloaded="true" class="alignnone" height="21" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19710425f4135c89e1eff06e3f36d9574e8850974d6222a411aaa4bdf9a138ce6484e56bd88b44f70a0195bb2f4df9042fc230e2066fc4b37dd3969a7f9e396cbde5c1582e&amp;a=33&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/0044551ui.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="20"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">剪裁宽度和边框宽度都是2 5 6 2，这里的投影我直接使用photoshop的投影样式生成的，发现用在边框投影上有一点点不足，需要手动调整，截取投影的四边，以及重复区域再拼合一下，您可以自己试试如果实现最佳的投影效果。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">效果如下图：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignnone" height="119" orgsrc="http://b30.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc1982fb48ecaf7a74e5b9b2ca2b8c198482fc565c10c4ec04247e1e307095cf598ea9149ca1bc95d0246104fb9d3cadff01248410d158f6a2302578399d599940c393d7d363&amp;a=33&amp;b=30" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004456RNd.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="152"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><br>
+	</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">选项卡</strong></em><br style="line-height: normal; "><br>
+	<br>
+	自适应选项卡，CSS2中实现自适应选项卡需要将背景图片制作的较长，而且需要两层标签，但是在CSS3中，图片要短，且一个标签就可以搞定。例如，这是淘宝新首页搜索选项卡的背景图片（已剪裁），<img bloaded="true" class="alignnone" height="27" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc191c9058ea228743ce61da5b4bfdee5e4f154e55a88010bcda6c90f9a38c660b082d7d40e327a0a6c2df8aefb8bee55d2d24f6a7663e932074ee6f86b3aa970aa09ddfbc3f&amp;a=27&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004456CZP.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="167" alt="CSS3 border image的使用方法">，要是使用border-image，只要值么点图就可以了，<img alt="CSS3 border image的使用方法" bloaded="true" class="alignnone" height="27" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc199fcc06601724d5e0928f07349c4e276690129eb68323703e7209e5e9b614718587d497d91575ec73b9b99ca5fb4dfb099b76cdc95d7289b7f2d454a9c05ed4be54d2672a&amp;a=33&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004456uvn.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="12"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">边框图片剪裁大小和边框宽度都是5 5 0；底边为0，其余都是5像素，结果效果为：<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignnone" height="53" orgsrc="http://b30.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc19d00eb3db83d1d00077e9600c3e5ae06defae9588b9d3d320d0c02526b455ff2bc1f422b1096c6bd75264a5796b073f00647315565fc92c8d16159d1371163450294f4ef6&amp;a=33&amp;b=30" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004456loX.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="105"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">其他</strong></em><br style="line-height: normal; "><br>
+	<br>
+	还有很多其他的应用，以前我们制作渐变背景，一张背景图很少可以重复使用，而有了border-image后就不会有这样的问题了，因为其可以拉伸。我们还可以利用border-image做高光按钮，做自适应的popup对话框，等等，太多了，就不一一举例了。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><strong style="line-height: normal; ">五、border-image效果的jQuery插件</strong><br style="line-height: normal; "><br>
+	<br>
+	正如开始所讲的，border-image仅Firefox3.5，chrome，Safari支持，IE这类浏览器不支持，但是并不代表他们无法实现类似的效果。例如利用<a href="http://www.whatwg.org/specs/web-apps/current-work/#canvas" style="line-height: normal; " target="_blank">canvas绘图</a>，可以让Firefox2实现类似效果，IE下的<a href="http://msdn.microsoft.com/en-us/library/bb263898%28VS.85%29.aspx" style="line-height: normal; " target="_blank">VML语言</a>也是支持矢量绘图，而这些就是此jQuery插件实现类似border-image效果的原理或称之为核心。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">您可以狠狠地点击这里：<a class="a_link" href="http://www.zhangxinxu.com/study/js/jquery.borderImage.js" style="line-height: normal; " target="_blank">jquery.borderImage.js</a>（插件js）</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><em style="line-height: normal; "><strong style="line-height: normal; ">使用方法</strong></em><br style="line-height: normal; "><br>
+	<br>
+	首先需要调用jQuery库，然后就是上面提供的js文件了。方法为borderImage，如下面的示例代码：</span></p>
+<div class="zxx_code" style="font-family: Arial; word-wrap: break-word; word-break: break-all; visibility: visible !important; zoom: 1 !important; filter: none; font-size: 14px; line-height: normal; ">
+<pre style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">$('#element').borderImage('url("border.png") 30% 35% 40% 30%');</span></pre>
+</div>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">对此插件我个人评价不高，原因如下：<br style="line-height: normal; "><br>
+	<br>
+	一是IE6及以上也可以实现类似canvas效果（需js插件支持），没有必要修改头部什么再使用VML绘图；<br style="line-height: normal; "><br>
+	<br>
+	二是兼容性欠佳，IE6下无法实现高宽大于100像素的边框的拉伸；IE8下貌似也有点问题。<br style="line-height: normal; "><br>
+	<br>
+	<img alt="CSS3 border image的使用方法" bloaded="true" class="alignnone" height="151" orgsrc="http://b33.photo.store.qq.com/http_imgload.cgi?/rurl4_b=b8f7e954be8b19ee7a1f02be9498cc192f15edf5fbb305f5cfe214e21a957804a828bb9dbaa824c92cb0d94615d90f5068e416a8fbb29e181331233cc8165c4c25fc7f74818d0b3c6f5774e556af1f20f9ed6e10&amp;a=33&amp;b=33" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/004456CI0.jpg" style="line-height: normal; " title="CSS3 border image的使用方法" width="453"></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">因而，我不具体说，一带而过。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><br>
+	</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><strong style="line-height: normal; ">六、总结</strong><br style="line-height: normal; "><br>
+	<br>
+	从本文的篇幅可以看到border-image的潜力真是很惊人，我可以感觉到这将会是CSS3中的重磅武器之一。本文大部分的精力是在讲解 border-image的原理，因为我非常看好border-image的应用前景，所以尽可能细致的讲清楚border-image各个属性的含义， 让即使初学者也能较好的理解border-image的含义，本文列举的几个应用可以说只是border-image最基本的些应用。如果加上些创意的思 考和天马行空的想象，真不知border-image可以创造出什么奇妙的事情来。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; ">我开始深入学习CSS3方面的东西也只是最近开始，这东西，非要投入进入，你才会感受到这玩意真是酷，太不可思议了。我现在可以想象如果CSS3的世界到来，那时候，网页将会是多么精彩的一个世界。好了，就说这些，共同进步吧。</span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><strong style="line-height: normal; ">七、参考内容</strong><br style="line-height: normal; "><br>
+	<br>
+	1、百度百科，九宫格：<a href="http://baike.baidu.com/view/230179.htm?fr=ala0_1_1" style="line-height: normal; " target="_blank">http://baike.baidu.com/view/230179.htm?fr=ala0_1_1</a><br style="line-height: normal; "><br>
+	<br>
+	2、W3C官方文档：&nbsp;<a href="http://www.w3.org/TR/css3-background/#borders" style="line-height: normal; " target="_blank">CSS Backgrounds and Borders Module Level 3</a><br style="line-height: normal; "><br>
+	<br>
+	3、CSS3中文手册<br style="line-height: normal; "><br>
+	<br>
+	4、<a href="http://www.lrbabe.com/sdoms/borderImage/index.html" style="line-height: normal; " target="_blank">Meet a ninja living in browsers</a></span></p>
+<p style="line-height: normal; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Arial; font-size: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; "><strong style="line-height: normal; "><a href="http://www.wufangbo.com/" style="line-height: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; " target="_blank">郑州前端开发-武方博</a></strong></span></p>
+<p class="postCopy"><span>转载请注明：</span><a href="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/CSS3 border-image的使用方法 _ 前端开发-武方博.html" rel="external nofollow" target="_blank">CSS3 border-image的使用方法</a> - <a href="http://www.wufangbo.com/" rel="external nofollow" target="_blank">前端开发-武方博</a></p></div>
+
+<div style="overflow:hidden;zoom:1; width:360px; height:300px;margin:0 auto 12px;">
+<script type="text/javascript">
+    /*前端开发360*300*/
+    var cpro_id = "u2037822";
+</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/c(1).js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u2037822_1"><iframe id="cproIframe_u2037822_4" width="360" height="300" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(10).html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(3)"></script>
+</div>
+
+<div style="width:618px; height:22px; margin:0 auto;">
+<script type="text/javascript">/*618*22，创建于2012-12-9*/var cpro_id = "u1155124";</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/c(1).js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1155124_1"><iframe id="cproIframe_u1155124_5" width="618" height="22" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(8).html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(4)"></script>
+</div>
+
+<div class="author clearfix">
+<div class="author_pic">
+					<a href="http://www.wufangbo.com/" title="前端开发-武方博"><img src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/tou.png"></a>
+				</div>
+<div class="author_text">
+			<div class="spostinfo">
+				<p>该文章由武方博于2011年03月09日发表在<a href="http://www.wufangbo.com/category/css3-html5/" rel="category tag">css3 html5</a>分类下，你可以至底部留下评论。</p>
+				
+				<p>原创文章转载请注明: <a href="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/CSS3 border-image的使用方法 _ 前端开发-武方博.html" rel="bookmark" title="本文固定链接 http://www.wufangbo.com/css3-border-image/">CSS3 border-image的使用方法 | 前端开发-武方博</a></p>
+				<p>关键字: <a href="http://www.wufangbo.com/tag/border-image/" rel="tag">border-image</a>, <a href="http://www.wufangbo.com/tag/ccs3/" rel="tag">ccs3</a>, <a href="http://www.wufangbo.com/tag/html5/" rel="tag">html5</a>, <a href="http://www.wufangbo.com/tag/jquery-css3/" rel="tag">jquery css3</a>, <a href="http://www.wufangbo.com/tag/webkit-border-image/" rel="tag">webkit-border-image</a></p>
+			</div>
+				</div>
+</div>
+
+<div class="prevnext">
+<p class="fl">上一篇：<a href="http://www.wufangbo.com/web-development-tools/" rel="prev">前端开发工具集合（2011最新）</a></p>
+<p class="fr">下一篇：<a href="http://www.wufangbo.com/css-reset-write/" rel="next">CSS reset怎么写</a></p>
+</div>
+</div>
+</div>
+
+<div class="Lbox mb10" style="border:0 none;">
+<script type="text/javascript">
+var cpro_id="u1444097";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"650",rsi1:"250",pat:"6",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"1",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",ptbg:"90",piw:"0",pih:"0",ptp:"0"}
+</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/c(1).js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1444097_0"><iframe id="cproIframe_u1444097_6" width="650" height="250" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom.html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(5)"></script>
+</div>
+
+<div class="Lbox mb10">
+<div class="LboxHd"><h2>您可能还会对这些文章感兴趣</h2></div>
+<div class="LboxBd">
+<ul class="Nlist1">
+<li><a href="http://www.wufangbo.com/ie9-html5-css3-test/" target="_blank" title="IE9关于HTML5和CSS3的测试">IE9关于HTML5和CSS3的测试</a></li>
+<li><a href="http://www.wufangbo.com/css3-box-shadow-2/" target="_blank" title="css3 box-shadow发光效果">css3 box-shadow发光效果</a></li>
+<li><a href="http://www.wufangbo.com/css3-box-shadow/" target="_blank" title="css3 box-shadow投影发光效果">css3 box-shadow投影发光效果</a></li>
+<li><a href="http://www.wufangbo.com/html5-canvas-draw/" target="_blank" title="HTML5 Canvas 绘制股市走势图">HTML5 Canvas 绘制股市走势图</a></li>
+<li><a href="http://www.wufangbo.com/canvas-xue-xi/" target="_blank" title="【Canvas学习教程】Canvas介绍">【Canvas学习教程】Canvas介绍</a></li>
+<li><a href="http://www.wufangbo.com/html5-quanping/" target="_blank" title="html5实现全屏的api方法">html5实现全屏的api方法</a></li>
+<li><a href="http://www.wufangbo.com/mobile-3g-mobile-development/" target="_blank" title="移动平台3G手机网站前端开发布局技巧汇总">移动平台3G手机网站前端开发布局技巧汇总</a></li>
+<li><a href="http://www.wufangbo.com/htmlt-new-tag-use/" target="_blank" title="HTML5标签用法及描述">HTML5标签用法及描述</a></li>
+<li><a href="http://www.wufangbo.com/html5-qian-jing/" target="_blank" title="HTML5 不可限量的发展前景">HTML5 不可限量的发展前景</a></li>
+<li><a href="http://www.wufangbo.com/html-quan-ping/" target="_blank" title="手机浏览器全屏代码,css3+html5+js控制手机浏览器全屏">手机浏览器全屏代码,css3+html5+js控制手机浏览器全屏</a></li>
+<li><a href="http://www.wufangbo.com/css-html-xiangying-pic/" target="_blank" title="CSS与HTML5响应式图片">CSS与HTML5响应式图片</a></li>
+<li><a href="http://www.wufangbo.com/wang-ye-yu-yin/" target="_blank" title="网页input智能语音识别输入功能">网页input智能语音识别输入功能</a></li>
+<li><a href="http://www.wufangbo.com/css3-kai-fa/" target="_blank" title="12款有助于简化CSS3开发的生成工具">12款有助于简化CSS3开发的生成工具</a></li>
+<li><a href="http://www.wufangbo.com/ie9-html5-css3-test/" target="_blank" title="IE9关于HTML5和CSS3的测试">IE9关于HTML5和CSS3的测试</a></li>
+<li><a href="http://www.wufangbo.com/css3-kai-yan/" target="_blank" title="css3制作火影忍着写轮眼开眼及进化过程">css3制作火影忍着写轮眼开眼及进化过程</a></li>
+<li><a href="http://www.wufangbo.com/css-jie-shuo-hua-dong/" target="_blank" title="css3实现渐变的iPhone滑动解锁效果">css3实现渐变的iPhone滑动解锁效果</a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="Lbox mb10">
+<div class="LboxHd"><h2>最新文章</h2></div>
+<div class="LboxBd">
+<ul class="Plist1">
+<li><div class="picBox"><a href="http://www.wufangbo.com/sm-shi-yong-hu/" target="_blank" class="pic"><img src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/454-240x180.jpg" alt="什么是真正的用户，估计90%人不知道！"></a></div><div class="textBox"><a href="http://www.wufangbo.com/sm-shi-yong-hu/" target="_blank" title="什么是真正的用户，估计90%人不知道！">什么是真正的用户，估计90%人不知道！</a></div></li>
+<li><div class="picBox"><a href="http://www.wufangbo.com/wp-emoji-release/" target="_blank" class="pic"><img src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/thumbnail.jpg"></a></div><div class="textBox"><a href="http://www.wufangbo.com/wp-emoji-release/" target="_blank" title="wordpress升级4.2.2出现wp-emoji-release.min.js的解决方法">wordpress升级4.2.2出现wp-emoji-release.min.js的解决方法</a></div></li>
+<li><div class="picBox"><a href="http://www.wufangbo.com/nginx-php-fpm-502/" target="_blank" class="pic"><img src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/thumbnail.jpg"></a></div><div class="textBox"><a href="http://www.wufangbo.com/nginx-php-fpm-502/" target="_blank" title="nginx502错误,调整php-fpm.conf避免502频繁错误">nginx502错误,调整php-fpm.conf避免502频繁错误</a></div></li>
+<li><div class="picBox"><a href="http://www.wufangbo.com/linode-ssh-port/" target="_blank" class="pic"><img src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/thumbnail.jpg"></a></div><div class="textBox"><a href="http://www.wufangbo.com/linode-ssh-port/" target="_blank" title="linode通过Lish修改ssh端口">linode通过Lish修改ssh端口</a></div></li>
+<li><div class="picBox"><a href="http://www.wufangbo.com/css3-deng-bi-suo-fang/" target="_blank" class="pic"><img src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/24651792111a3852e9599f6c9c180ce7-240x180.gif" alt="css3实现图片比例缩放，左右垂直居中显示"></a></div><div class="textBox"><a href="http://www.wufangbo.com/css3-deng-bi-suo-fang/" target="_blank" title="css3实现图片比例缩放，左右垂直居中显示">css3实现图片比例缩放，左右垂直居中显示</a></div></li>
+<li><div class="picBox"><a href="http://www.wufangbo.com/jing-tai-wei-jingtai/" target="_blank" class="pic"><img src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/thumbnail.jpg"></a></div><div class="textBox"><a href="http://www.wufangbo.com/jing-tai-wei-jingtai/" target="_blank" title="网站静态、伪静态、缓存的区别">网站静态、伪静态、缓存的区别</a></div></li>
+</ul>
+</div>
+</div>
+
+<div class="Lbox mb10">
+<div class="LboxHd"><h2>发表评论</h2></div>
+<div class="LboxBd">
+<div id="duoshuo">
+<script type="text/javascript">
+var duoshuoQuery = {"short_name":"wufangbo","sso":{"login":"http:\/\/www.wufangbo.com\/wp-login.php?action=duoshuo_login","logout":"http:\/\/www.wufangbo.com\/wp-login.php?action=logout&_wpnonce=60c96d55bc"},"theme":"default","stylePatch":"wordpress\/wufangbo"};
+duoshuoQuery.sso.login += '&redirect_to=' + encodeURIComponent(window.location.href);
+duoshuoQuery.sso.logout += '&redirect_to=' + encodeURIComponent(window.location.href);
+(function() {
+    var ds = document.createElement('script'); ds.type = 'text/javascript'; ds.async = true;
+    ds.charset = 'UTF-8';
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script><a name="comments"></a>
+
+<div class="ds-thread" data-thread-key="6293" data-author-key="1" data-title="网站静态、伪静态、缓存的区别" data-url="http://www.wufangbo.com/jing-tai-wei-jingtai/" id="ds-thread"><div id="ds-reset"><div class="ds-meta" style="display: none;"><a href="javascript:void(0)" class="ds-like-thread-button ds-rounded"><span class="ds-icon ds-icon-heart"></span> <span class="ds-thread-like-text">喜欢</span><span class="ds-thread-cancel-like">取消喜欢</span></a><span class="ds-like-panel"></span></div><div class="ds-comments-info"><div class="ds-sort"><a class="ds-order-desc ds-current">最新</a><a class="ds-order-asc">最早</a><a class="ds-order-hot">最热</a></div><ul class="ds-comments-tabs"><li class="ds-tab"><a class="ds-comments-tab-duoshuo ds-current" href="javascript:void(0);">0条评论</a></li>  </ul></div><ul class="ds-comments"><li class="ds-post ds-post-placeholder">还没有评论，沙发等你来抢</li></ul><div class="ds-paginator" style="display: none;"><div class="ds-border"></div><a data-page="1" href="javascript:void(0);" class="ds-current">1</a></div><a name="respond"></a><div class="ds-login-buttons"><p>社交帐号登录:</p><div class="ds-social-links"><ul class="ds-service-list"><li><a href="http://wufangbo.duoshuo.com/login/weibo/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-weibo">微博</a></li><li><a href="http://wufangbo.duoshuo.com/login/qq/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-qq">QQ</a></li><li><a href="http://wufangbo.duoshuo.com/login/renren/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-renren">人人</a></li><li><a href="http://wufangbo.duoshuo.com/login/douban/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-douban">豆瓣</a></li><li><a class="ds-more-services" href="javascript:void(0)">更多»</a></li></ul><ul class="ds-service-list ds-additional-services"><li><a href="http://wufangbo.duoshuo.com/login/kaixin/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-kaixin">开心</a></li><li><a href="http://wufangbo.duoshuo.com/login/netease/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-netease">网易</a></li><li><a href="http://wufangbo.duoshuo.com/login/sohu/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-sohu">搜狐</a></li><li><a href="http://wufangbo.duoshuo.com/login/baidu/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-baidu">百度</a></li><li><a href="http://wufangbo.duoshuo.com/login/google/?sso=1&redirect_uri=http%3A%2F%2Fwww.wufangbo.com%2Fwp-login.php%3Faction%3Dduoshuo_login%26redirect_to%3Dhttp%253A%252F%252Fwww.wufangbo.com%252Fcss3-border-image%252F" rel="nofollow" class="ds-service-link ds-google">谷歌</a></li></ul></div></div><div class="ds-replybox"><a class="ds-avatar" href="javascript:void(0);" onclick="return false"><img src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/noavatar_default.png" alt=""></a><form method="post"><input type="hidden" name="thread_id" value="1155770339234415265">
+<input type="hidden" name="parent_id" value="">
+<input type="hidden" name="nonce" value="550c43c912637"><div class="ds-textarea-wrapper ds-rounded-top"><textarea name="message" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea><pre class="ds-hidden-text"></pre></div><div class="ds-post-toolbar"><div class="ds-post-options ds-gradient-bg"><span class="ds-sync"></span></div><button class="ds-post-button" type="submit">发布</button><div class="ds-toolbar-buttons"></div></div></form></div><p class="ds-powered-by"><a href="http://duoshuo.com/" target="_blank" rel="nofollow">前端开发-武方博正在使用多说</a></p></div></div>
+
+<script type="text/javascript">
+	if (typeof DUOSHUO !== 'undefined')
+		DUOSHUO.EmbedThread('.ds-thread');
+</script>
+	<div id="ds-ssr">
+
+		
+            <ol id="commentlist">
+                            </ol>
+
+		            
+    </div></div>
+</div>
+</div>
+
+</div>
+
+<div class="mainR">
+
+<div class="Rbox mb10">
+<div class="RboxHd"><a class="more" href="http://www.wufangbo.com/category/qdzx/" target="_blank">更多</a><h2>前端资讯</h2></div>
+<div class="RboxBd">
+<ul class="Rhot">
+          <li><a href="http://www.wufangbo.com/mozilla-fx10/" target="_blank" title="Mozilla发布开发者专用浏览器Fx10">Mozilla发布开发者专用浏览器Fx10</a></li>
+       <li><a href="http://www.wufangbo.com/baidu-jquery/" target="_blank" title="百度jquery地址公共库,百度jquery cdn引用地址">百度jquery地址公共库,百度jquery cdn引用地址</a></li>
+       <li><a href="http://www.wufangbo.com/360-cdn-ku/" target="_blank" title="谷歌公共库访问不了 360推前端公共库CDN服务">谷歌公共库访问不了 360推前端公共库CDN服务</a></li>
+       <li><a href="http://www.wufangbo.com/10-gai-bian-shi-jie/" target="_blank" title="10项即将到来并可能改变世界的技术">10项即将到来并可能改变世界的技术</a></li>
+       <li><a href="http://www.wufangbo.com/10-da-sjs/" target="_blank" title="问题：你仍想成为一个自由网页设计师吗？">问题：你仍想成为一个自由网页设计师吗？</a></li>
+       <li><a href="http://www.wufangbo.com/jquery-1-9-api/" target="_blank" title="jQuery 1.9 beta1 发布，删除被废弃的 API">jQuery 1.9 beta1 发布，删除被废弃的 API</a></li>
+       <li><a href="http://www.wufangbo.com/2012-sheji-qu-shi/" target="_blank" title="2012年Web设计和开发的15个趋势">2012年Web设计和开发的15个趋势</a></li>
+       <li><a href="http://www.wufangbo.com/jquery-ji-jin-hui/" target="_blank" title="jQuery基金会成立了 促进jQuery发展">jQuery基金会成立了 促进jQuery发展</a></li>
+       <li><a href="http://www.wufangbo.com/ya-hu-mian-shi-ti/" target="_blank" title="雅虎面试题-你真的了解HTML吗?">雅虎面试题-你真的了解HTML吗?</a></li>
+       <li><a href="http://www.wufangbo.com/google-1-host/" target="_blank" title="谷歌加(google+)打不开可修改Host文件">谷歌加(google+)打不开可修改Host文件</a></li>
+      
+   </ul>
+</div>
+</div>
+
+<div class="Rbox mb10">
+<div class="RboxHd"><h2>前端开发工具</h2></div>
+<div class="RboxBd">
+<ul class="rTool">
+<li><span><a target="_blank" href="http://www.wufangbo.com/demo/tool/01/index.html">css压缩与格式化(去空格)工具</a></span></li>
+<li><span><a target="_blank" href="http://www.wufangbo.com/demo/tool/02/index.html">css横排竖排转换工具</a></span></li>
+<li><span><a target="_blank" href="http://www.wufangbo.com/demo/tool/03/index.html">JavaScript加密,压缩,格式化工具</a></span></li>
+<li><span><a target="_blank" href="http://www.wufangbo.com/demo/tool/05/index.html">json数据格式化解析工具</a></span></li>
+<li><span><a target="_blank" href="http://www.wufangbo.com/demo/tool/06/index.html">css3圆角Border Radius在线生成工具</a></span></li>
+<li><span><a target="_blank" href="http://www.wufangbo.com/demo/tool/12/index.html">css3在线生成器中文版</a></span></li>
+<li><span><a style="background:#53b4c6;" target="_blank" href="http://www.wufangbo.com/web-development-tools-list/">-----查看全部20个工具-----</a></span></li>
+</ul>
+</div>
+</div>
+
+<div class="Rbox mb10">
+<div class="RboxHd"><h2>阅读排行榜</h2></div>
+<div class="RboxBd">
+<ul class="Rhot">
+<li><a href="http://www.wufangbo.com/ie6-ie7-z-index-bug/" title="ie6和ie7下z-index bug的解决办法">ie6和ie7下z-index bug的解决办法</a></li><li><a href="http://www.wufangbo.com/mobile-3g-mobile-development/" title="移动平台3G手机网站前端开发布局技巧汇总">移动平台3G手机网站前端开发布局技巧汇总</a></li><li><a href="http://www.wufangbo.com/ie6-ie7-ie8-css-bug-2/" title="ie6,ie7,ie8 css bug兼容解决记录">ie6,ie7,ie8 css bug兼容解决记录</a></li><li><a href="http://www.wufangbo.com/jquery-shuo-fang-tu-pian/" title="jQuery自动根据图片高度宽度缩放">jQuery自动根据图片高度宽度缩放</a></li><li><a href="http://www.wufangbo.com/jquery-image-scrolling-around-lateral-effect-btn/" title="jquery图片横向左右滚动效果（带按钮控制）">jquery图片横向左右滚动效果（带按钮控制）</a></li><li><a href="http://www.wufangbo.com/css3-box-shadow/" title="css3 box-shadow投影发光效果">css3 box-shadow投影发光效果</a></li><li><a href="http://www.wufangbo.com/jquery-screen-slide-mobile-phone-lyhuctouchslider/" title="Jquery 仿手机左右拖动滑屏效果">Jquery 仿手机左右拖动滑屏效果</a></li><li><a href="http://www.wufangbo.com/jquery-picture-scroll/" title="jQuery图片左右滚动和jquery图片左右连续滚动">jQuery图片左右滚动和jquery图片左右连续滚动</a></li><li><a href="http://www.wufangbo.com/css-hack/" title="各种浏览器的Hack写法(chrome firefox ie等)">各种浏览器的Hack写法(chrome firefox ie等)</a></li><li><a href="http://www.wufangbo.com/jquery-pan-duan-checked/" title="jquery判断checkbox是否选中及改变checkbox状态">jquery判断checkbox是否选中及改变checkbox状态</a></li><li><a href="http://www.wufangbo.com/jquery-scroll-position-fixed/" title="jQuery实现页面滚动时层智能浮动定位">jQuery实现页面滚动时层智能浮动定位</a></li><li><a href="http://www.wufangbo.com/jquery-left-right-scroll-plugins/" title="Jquery图片无缝左右滚动插件">Jquery图片无缝左右滚动插件</a></li><li><a href="http://www.wufangbo.com/jquery-scroll-upward-cycle/" title="jQuery向上循环滚动（仿新浪微博未登录首页滚动微博显示）">jQuery向上循环滚动（仿新浪微博未登录首页滚动微博显示）</a></li><li><a href="http://www.wufangbo.com/tianya-mima-you-xiang/" title="天涯数据下载 天涯数据库密码下载 天涯数据.kz下载">天涯数据下载 天涯数据库密码下载 天涯数据.kz下载</a></li><li><a href="http://www.wufangbo.com/jquery-tab/" title="jQuery tab选项卡插件(可多次使用)">jQuery tab选项卡插件(可多次使用)</a></li></ul>
+</div>
+</div>
+
+<div class="Rbox mb10">
+<div class="RboxHd"><h2>随机文章</h2></div>
+<div class="RboxBd">
+<ul class="Rhot">
+<li><a href="http://www.wufangbo.com/jquery-thumbnail-rolling-around-effect/" target="_blank" title="jQuery带缩略图左右滚动效果">jQuery带缩略图左右滚动效果</a></li>
+<li><a href="http://www.wufangbo.com/vps-xing-neng/" target="_blank" title="Linux VPS各项性能指标测试方法汇总">Linux VPS各项性能指标测试方法汇总</a></li>
+<li><a href="http://www.wufangbo.com/qian-duan-na-xie-shi/" target="_blank" title="前端开发的那些事儿">前端开发的那些事儿</a></li>
+<li><a href="http://www.wufangbo.com/jquery-10-peys/" target="_blank" title="10款web前端超实用jQuery插件大合集">10款web前端超实用jQuery插件大合集</a></li>
+<li><a href="http://www.wufangbo.com/huang-zuan-deng-ji-yin-fa-de-si-kao/" target="_blank" title="由黄钻等级图标处理引发的思考">由黄钻等级图标处理引发的思考</a></li>
+<li><a href="http://www.wufangbo.com/jquery-cha-jian-feng-zhuang/" target="_blank" title="jQuery插件的机制及实战">jQuery插件的机制及实战</a></li>
+<li><a href="http://www.wufangbo.com/wordpress-repair/" target="_blank" title="wordpress数据库修复和优化">wordpress数据库修复和优化</a></li>
+<li><a href="http://www.wufangbo.com/css-selection-change-background-color/" target="_blank" title="css selection改变文字反选的背景颜色">css selection改变文字反选的背景颜色</a></li>
+<li><a href="http://www.wufangbo.com/liu-xing-se/" target="_blank" title="2015年春夏web设计流行色">2015年春夏web设计流行色</a></li>
+<li><a href="http://www.wufangbo.com/js-package-tab/" target="_blank" title="js封装一个tab效果">js封装一个tab效果</a></li>
+</ul>
+</div>
+</div>
+
+<div class="Rbox mb10">
+<div class="RboxHd"><h2>热门标签</h2></div>
+<div class="RboxBd">
+<div class="Rtag">
+<a href="http://www.wufangbo.com/tag/jquery%e5%ae%9e%e4%be%8b/" class="tag-link-8" title="26个话题" style="font-size: 12px;">jquery实例</a>
+<a href="http://www.wufangbo.com/tag/css%e7%bb%8f%e9%aa%8c/" class="tag-link-40" title="14个话题" style="font-size: 12px;">css经验</a>
+<a href="http://www.wufangbo.com/tag/jquery/" class="tag-link-7" title="44个话题" style="font-size: 12px;">jquery</a>
+<a href="http://www.wufangbo.com/tag/%e5%89%8d%e7%ab%af%e5%bc%80%e5%8f%91%e8%a7%84%e8%8c%83/" class="tag-link-575" title="8个话题" style="font-size: 12px;">前端开发规范</a>
+<a href="http://www.wufangbo.com/tag/%e9%83%91%e5%b7%9e%e7%bd%91%e9%a1%b5%e8%ae%be%e8%ae%a1/" class="tag-link-133" title="14个话题" style="font-size: 12px;">郑州网页设计</a>
+<a href="http://www.wufangbo.com/tag/%e6%89%8b%e6%9c%ba%e7%bd%91%e7%ab%99%e5%bc%80%e5%8f%91%e5%88%b6%e4%bd%9c/" class="tag-link-79" title="12个话题" style="font-size: 12px;">手机网站开发制作</a>
+<a href="http://www.wufangbo.com/tag/%e5%89%8d%e7%ab%af%e5%bc%80%e5%8f%91%e5%b7%a5%e7%a8%8b%e5%b8%88/" class="tag-link-84" title="10个话题" style="font-size: 12px;">前端开发工程师</a>
+<a href="http://www.wufangbo.com/tag/jquery%e6%8f%92%e4%bb%b6/" class="tag-link-25" title="33个话题" style="font-size: 12px;">jquery插件</a>
+<a href="http://www.wufangbo.com/tag/%e6%89%8b%e6%9c%ba%e7%bd%91%e7%ab%99%e5%88%b6%e4%bd%9c/" class="tag-link-112" title="14个话题" style="font-size: 12px;">手机网站制作</a>
+<a href="http://www.wufangbo.com/tag/css3/" class="tag-link-382" title="12个话题" style="font-size: 12px;">css3</a>
+<a href="http://www.wufangbo.com/tag/web%e5%89%8d%e7%ab%af%e5%bc%80%e5%8f%91/" class="tag-link-540" title="20个话题" style="font-size: 12px;">web前端开发</a>
+<a href="http://www.wufangbo.com/tag/wap%e7%bd%91%e7%ab%99%e5%bc%80%e5%8f%91/" class="tag-link-114" title="14个话题" style="font-size: 12px;">wap网站开发</a>
+<a href="http://www.wufangbo.com/tag/%e6%89%8b%e6%9c%ba%e6%b5%8f%e8%a7%88%e5%99%a8/" class="tag-link-115" title="8个话题" style="font-size: 12px;">手机浏览器</a>
+<a href="http://www.wufangbo.com/tag/html5/" class="tag-link-104" title="10个话题" style="font-size: 12px;">html5</a>
+<a href="http://www.wufangbo.com/tag/3g%e7%bd%91/" class="tag-link-76" title="14个话题" style="font-size: 12px;">3g网</a>
+<a href="http://www.wufangbo.com/tag/%e6%89%8b%e6%9c%ba%e6%b5%8f%e8%a7%88%e5%99%a8%e5%85%bc%e5%ae%b9/" class="tag-link-178" title="14个话题" style="font-size: 12px;">手机浏览器兼容</a>
+<a href="http://www.wufangbo.com/tag/%e7%bd%91%e9%a1%b5%e8%ae%be%e8%ae%a1%e5%b8%88/" class="tag-link-85" title="12个话题" style="font-size: 12px;">网页设计师</a>
+<a href="http://www.wufangbo.com/tag/css-bug/" class="tag-link-44" title="18个话题" style="font-size: 12px;">css bug</a>
+<a href="http://www.wufangbo.com/tag/jquery%e7%89%b9%e6%95%88/" class="tag-link-30" title="13个话题" style="font-size: 12px;">jquery特效</a>
+<a href="http://www.wufangbo.com/tag/%e7%bd%91%e9%a1%b5%e8%ae%be%e8%ae%a1/" class="tag-link-38" title="20个话题" style="font-size: 12px;">网页设计</a>
+<a href="http://www.wufangbo.com/tag/javascript/" class="tag-link-12" title="13个话题" style="font-size: 12px;">javascript</a>
+<a href="http://www.wufangbo.com/tag/wap%e7%bd%91%e7%ab%99%e5%88%b6%e4%bd%9c/" class="tag-link-113" title="8个话题" style="font-size: 12px;">wap网站制作</a>
+<a href="http://www.wufangbo.com/tag/jquery%e6%bb%91%e5%8a%a8/" class="tag-link-64" title="12个话题" style="font-size: 12px;">jquery滑动</a>
+<a href="http://www.wufangbo.com/tag/%e6%89%8b%e6%9c%ba%e7%bd%91%e7%ab%99%e5%bc%80%e5%8f%91/" class="tag-link-78" title="13个话题" style="font-size: 12px;">手机网站开发</a>
+<a href="http://www.wufangbo.com/tag/bug%e8%a7%a3%e5%86%b3/" class="tag-link-43" title="9个话题" style="font-size: 12px;">bug解决</a>
+<a href="http://www.wufangbo.com/tag/qdkf/" class="tag-link-392" title="38个话题" style="font-size: 12px;">前端开发</a>
+<a href="http://www.wufangbo.com/tag/%e9%83%91%e5%b7%9e%e5%89%8d%e7%ab%af%e5%bc%80%e5%8f%91/" class="tag-link-132" title="24个话题" style="font-size: 12px;">郑州前端开发</a>
+<a href="http://www.wufangbo.com/tag/%e7%94%a8%e6%88%b7%e4%bd%93%e9%aa%8c/" class="tag-link-90" title="8个话题" style="font-size: 12px;">用户体验</a>
+<a href="http://www.wufangbo.com/tag/web%e8%a7%84%e8%8c%83/" class="tag-link-80" title="17个话题" style="font-size: 12px;">web规范</a>
+<a href="http://www.wufangbo.com/tag/css/" class="tag-link-5" title="21个话题" style="font-size: 12px;">css div</a></div>
+</div>
+</div>
+
+<div id="weixin" style="width:300px; overflow:hidden;" class="weixinFix">
+<div class="Rbox">
+<div class="RboxHd"><h2>本月热门</h2></div>
+<div class="RboxBd">
+<ul class="Rhot">
+        <li><a href="http://www.wufangbo.com/pian-ping-hua-she-ji/" title="迷失在扁平化里的视觉设计，还能主宰多长时间呢？">迷失在扁平化里的视觉设计，还能主宰多长时间呢？</a></li>
+        <li><a href="http://www.wufangbo.com/sha-si-seo-5/" title="杀死你网站SEO的5个技术">杀死你网站SEO的5个技术</a></li>
+        <li><a href="http://www.wufangbo.com/css3-deng-bi-suo-fang/" title="css3实现图片比例缩放，左右垂直居中显示">css3实现图片比例缩放，左右垂直居中显示</a></li>
+        <li><a href="http://www.wufangbo.com/zu-ji-pyq/" title="足记如何刷爆朋友圈的">足记如何刷爆朋友圈的</a></li>
+        <li><a href="http://www.wufangbo.com/jing-tai-wei-jingtai/" title="网站静态、伪静态、缓存的区别">网站静态、伪静态、缓存的区别</a></li>
+        <li><a href="http://www.wufangbo.com/guan-jian-zi-cpianzi/" title="搜索引擎里关键词成了骗子的敛财工具">搜索引擎里关键词成了骗子的敛财工具</a></li>
+        <li><a href="http://www.wufangbo.com/wp-emoji-release/" title="wordpress升级4.2.2出现wp-emoji-release.min.js的解决方法">wordpress升级4.2.2出现wp-emoji-release.min.js的解决方法</a></li>
+        <li><a href="http://www.wufangbo.com/linode-ssh-port/" title="linode通过Lish修改ssh端口">linode通过Lish修改ssh端口</a></li>
+        <li><a href="http://www.wufangbo.com/sm-shi-yong-hu/" title="什么是真正的用户，估计90%人不知道！">什么是真正的用户，估计90%人不知道！</a></li>
+        <li><a href="http://www.wufangbo.com/nginx-php-fpm-502/" title="nginx502错误,调整php-fpm.conf避免502频繁错误">nginx502错误,调整php-fpm.conf避免502频繁错误</a></li>
+  </ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	if($("#weixin").length>0){
+		var weiTop=$("#weixin").offset().top
+       $(window).scroll(function(){
+			if($(window).scrollTop()>=weiTop){
+				$("#weixin").addClass("weixinFix");
+			}else{
+				$("#weixin").removeClass("weixinFix");
+			} 
+       });
+  } 
+})
+</script>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">/*前端图+*/var cpro_id = "u1815534";</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/i.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var viewsCacheL10n = {"admin_ajax_url":"http:\/\/www.wufangbo.com\/wp-admin\/admin-ajax.php","post_id":"789"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/postviews-cache.js"></script>
+
+<div class="fLink">
+<ul class="clearfix"><li><strong>友情链接：</strong></li><li><a href="http://www.wufangbo.com/">郑州前端开发</a></li>
+<li><a href="http://www.wufangbo.com/">前端开发</a></li>
+<li><a href="http://www.xiejiancong.com/" target="_blank">我的那些事</a></li>
+<li><a href="http://blog.dmtuan.com/" target="_blank">啄米鸟</a></li>
+<li><a href="http://www.iamivan.net/" target="_blank">Web前端开发-IVAN</a></li>
+<li><a href="http://mscss.cn/" target="_blank">莽石的博客</a></li>
+<li><a href="http://www.huceo.com/" target="_blank">小宇博客</a></li>
+<li><a href="http://qitiancom.com/" target="_blank">Web前端</a></li>
+<li><a href="http://www.css119.com/" target="_blank">web前端开发</a></li>
+<li><a href="http://sentsin.com/" target="_blank">贤心</a></li>
+<li><a href="http://www.csswang.com/" target="_blank">css网站</a></li>
+<li><a href="http://www.cftea.com/" target="_blank">前端开发</a></li>
+<li><a href="http://www.onlycj.com/" target="_blank">IT商学院</a></li>
+<li><a href="http://puxiao.com/" target="_blank">普晓设计</a></li>
+<li><a href="http://www.xuexb.com/" target="_blank">谢亮</a></li>
+<li><a href="http://bbs.ibeifeng.com/" target="_blank">java学习论坛</a></li>
+<li><a href="http://www.hdhacker.com/" target="_blank">黑盾科技论坛</a></li>
+<li><a href="http://www.198zone.com/" target="_blank">网页特效代码</a></li>
+<li><a href="http://www.zesmob.com/" target="_blank">APP营销</a></li>
+<li><a href="http://www.junmidao.com/" target="_blank">军迷岛</a></li>
+<li><strong><a style="color:#EF4B4B;" target="_blank" href="http://www.wufangbo.com/about-me/">友情链接请点击</a></strong></li></ul>
+</div>
+
+
+<div class="footer">
+<p><a style="font-size:14px; background:none;" href="http://www.wufangbo.com/" title="前端开发-武方博">www.wufangbo.com</a> <a href="http://www.wufangbo.com/" title="前端开发-武方博" rel="home">前端开发-武方博</a><br></p><p><a href="http://www.wufangbo.com/">郑州前端开发</a> | <a href="http://www.wufangbo.com/">web前端开发</a> | <a href="http://www.wufangbo.com/">郑州页面重构</a> | <a href="http://www.wufangbo.com/">前端开发-武方博</a> <a href="http://www.wufangbo.com/sitemap.xml">站点地图</a> <a href="http://www.wufangbo.com/about-me/">关于我</a></p>
+</div>
+
+<script type="text/javascript">/*前端悬浮视窗300*250*/var cpro_id = "u1807895";</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/f.js" type="text/javascript"></script><div style="position: absolute; border: 0px; margin: 0px; padding: 0px; height: 0px; overflow: visible; text-align: left; top: 3572px; left: 156px; width: 337px; display: block;"></div><div style="position: absolute; border: 0px; margin: 0px; padding: 0px; height: 0px; overflow: visible; text-align: left; top: 4255px; left: 181px; width: 288px; display: block;"></div>
+
+ <script type="text/javascript">
+    /*前端开发 折叠 300*250*/
+    var cpro_id = "u2037814";
+</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/s.js" type="text/javascript"></script><script charset="utf-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/acom(6)"></script><script charset="utf-8" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/slide.js"></script><div id="slideoutu2037814_0" style="position: fixed; bottom: 60px; left: -302px; width: 332px; height: 252px; overflow: hidden; z-index: 2147483649;"><div style="left: 0px; top: 0px; position: absolute; width: 300px; height: 250px; border: 1px solid rgb(81, 140, 255); background-color: rgb(255, 255, 255);"><iframe scrolling="no" frameborder="0" allowtransparency="true" align="center,center" style="width: 300px; height: 250px;" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/ecom.html"></iframe></div><a href="javascript:void(0);" style="cursor: pointer; text-decoration: none;"><div style="position: absolute; height: 102px; width: 30px; left: 302px; top: 0px; border-radius: 0px 5px 5px 0px; background-color: rgb(81, 140, 255);"><div style="position: absolute; left: 7px; top: 7px; height: 16px; width: 16px; background: url(http://cpro.baidustatic.com/cpro/ui/noexpire/img/slide/right.png) 50% 50% no-repeat;"></div><div style="position: absolute; height: 72px; width: 30px; left: 0px; top: 28px; text-align: center; color: rgb(255, 255, 255); font-size: 15px; font-family: &#39;microsoft yahei&#39;; font-weight: bold; line-height: 16px;">为<br>您<br>推<br>荐</div></div></a></div>
+
+<script type="text/javascript">
+    /* 搜索推荐*/
+    var cpro_id = "u2103842";
+</script>
+<script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/uf.js" type="text/javascript"></script>
+
+
+<div style="display:none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9e39cba98375c61eaf783e7994bd039f' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/h.js" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=9e39cba98375c61eaf783e7994bd039f" target="_blank"><img border="0" src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/21.gif" width="20" height="20"></a>
+</div>
+
+
+<!-- Dynamic page generated in 0.350 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-06-07 02:18:03 -->
+
+<!-- super cache --><div id="backTop" style="display: block;"></div><div id="BAIDU_DSPUI_FLOWBAR" fixed="true" style="height: 70px; position: fixed; width: 100%; z-index: 2147483647; overflow: hidden; top: 0px; margin-top: 0px; left: 0px; right: auto;"><iframe src="./CSS3 border-image的使用方法 _ 前端开发-武方博_files/home.html" style="height: 70px; background-color: transparent;" width="100%" height="100%" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><div id="window-resizer-tooltip" style="display: none;"><a href="http://www.wufangbo.com/css3-border-image/#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">704</span> x <span class="tooltipHeight" id="winHeight">720</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">688</span> x <span class="tooltipHeight" id="vpHeight">587</span></div></body></html>
