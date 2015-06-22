@@ -5,21 +5,182 @@
 	<title>css3 : 2D rotate</title>
 	<link href="css/common.css" rel="stylesheet"/>
 	<style type="text/css">
-	
+		.translate-src{
+			width:100px;
+			height:100px;
+			background-color:#ff0;
+		}
+		.translate-des{
+			width:100px;
+			height:100px;
+			background-color:#ff0;
+			transform:translate(20px, 10px);
+			-ms-transform:translate(20px, 10px);
+			-o-transform:translate(20px, 10px);
+			-webkit-transform:translate(20px, 10px);
+			-moz-transform:translate(20px, 10px);
+		}
+		.eg-smile{
+			width:128px;
+			height:128px;
+			background-image:url(img/eg_smile.gif);
+			background-size:100% 100%;
+			font-weight:bold;
+			margin:50px;
+			border:#00f dotted 1px;
+		}
+		.rotate-des-positive{
+			transform:rotate(30deg);
+			-ms-transform:rotate(30deg);
+			-o-transform:rotate(30deg);
+			-webkit-transform:rotate(30deg);
+			-moz-transform:rotate(30deg);
+		}
+		.rotate-des-negative{
+			transform:rotate(-30deg);
+			-ms-transform:rotate(-30deg);
+			-o-transform:rotate(-30deg);
+			-webkit-transform:rotate(-30deg);
+			-moz-transform:rotate(-30deg);
+		}
+		.scale-des-largethan1{
+			transform:scale(2,1.5);
+			-ms-transform:scale(2,1.5);
+			-o-transform:scale(2,1.5);
+			-webkit-transform:scale(2,1.5);
+			-moz-transform:scale(2,1.5);
+		}
+		.scale-des-lessthan1{
+			transform:scale(0.5,0.8);
+			-ms-transform:scale(0.5,0.8);
+			-o-transform:scale(0.5,0.8);
+			-webkit-transform:scale(0.5,0.8);
+			-moz-transform:scale(0.5,0.8);
+		}
+		.skew-positive-x-30{
+			transform:skew(30deg, 0deg);
+			-ms-transform:skew(30deg, 0deg);
+			-o-transform:skew(30deg, 0deg);
+			-webkit-transform:skew(30deg, 0deg);
+			-moz-transform:skew(30deg, 0deg);
+		}
+		.skew-positive-y-20{
+			transform:skew(30deg, 20deg);
+			-ms-transform:skew(30deg, 20deg);
+			-o-transform:skew(30deg, 20deg);
+			-webkit-transform:skew(30deg, 20deg);
+			-moz-transform:skew(30deg, 20deg);
+		}
+		.skew-negative{
+			transform:skew(-30deg, 0deg);
+			-ms-transform:skew(-30deg, 0deg);
+			-o-transform:skew(-30deg, 0deg);
+			-webkit-transform:skew(-30deg, 0deg);
+			-moz-transform:skew(-30deg, 0deg);
+		}
 	</style>
 </head>
 
 <body>
+	<header>
+		<aside>
+			Supported By IE 10+ & Firefox<br/>
+			Chrome & Safari needs '-webkit-' prefix<br/>
+			IE 9+ needs '-ms-' prefix<br/>
+		</aside>
+	</header>
 	<section>
 		<header>
-			<h1></h1>
+			<h1>transform:translate</h1>
 			<aside>
-			
+				transform:translate(left, top)
 			</aside>
 		</header>
 		<article>
-		
+			<div class="translate-src">translate-src</div>
+			<div class="translate-des">translate-des</div>
 		</article>
 	</section>
+	<section>
+		<header>
+			<h1>transform:rotate</h1>
+			<aside>
+				transform:rotate(deg)
+			</aside>
+		</header>
+		<article>
+			<h3>rotate src</h3>
+			<div class="eg-smile">rotate-src</div>
+			<h3>rotate +30deg 顺时针</h3>
+			<div class="eg-smile rotate-des-positive">rotate-des-positive</div>
+			<h3>rotate -30deg 逆时针</h3>
+			<div class="eg-smile rotate-des-negative">rotate-des-negative</div>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>transform:scale</h1>
+			<aside>
+				transform:scale(x(倍数), y(倍数))
+			</aside>
+		</header>
+		<article>
+			<h3>scale src</h3>
+			<div class="eg-smile">scale-src</div>
+			<h3>scale x=2, y=1.5</h3>
+			<div class="eg-smile scale-des-largethan1">scale-des-largethan1</div>
+			<h3>scale x=0.5, y=0.8</h3>
+			<div class="eg-smile scale-des-lessthan1">scale-des-lessthan1</div>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>transform:skew</h1>
+			<aside>
+				transform:skew(x(deg翻转角度), y(deg翻转角度))
+			</aside>
+		</header>
+		<article>
+			<h3>skew src</h3>
+			<div class="eg-smile">skew-src</div>
+			<h3>skew x=30deg, y=0deg</h3>
+			<div class="eg-smile skew-positive-x-30" id="skew-positive-x-30">skew-positive-x-30</div>
+			<h3>skew x=30deg, y=20deg</h3>
+			<div class="eg-smile skew-positive-y-20" id="skew-positive-y-20">skew-positive-y-20</div>
+			<h3>scale x=-30deg, y=0deg</h3>
+			<div class="eg-smile skew-negative" id="skew-negative">skew-negative</div>
+			<input type="button" value="开始旋转" id="skew-turn" onclick="skewTurn();"/>
+			<script type="text/javascript">
+				function skewTurn(){
+					var stx30 = document.getElementById("skew-positive-x-30"),
+						sty20 = document.getElementById("skew-positive-y-20"),
+						stNegative = document.getElementById("skew-negative"),
+						degX = 0,
+						degY = 0;
+					
+					var timeInterval = setInterval(function(){
+						stx30.style.transform = "skew(" + degX + "deg, 0deg)";
+						sty20.style.transform = "skew(30deg, "+ degY +"deg)";
+						stNegative.style.transform = "skew(-" + degX + "deg, 0deg)";
+						
+						if(degX != 60){
+							degX += 2;
+						}
+						
+						if(degY != 40){
+							degY += 2;
+						}
+						
+						if(degX == 60 && degY == 40){
+							clearInterval(timeInterval);
+							degX = 0;
+							degY = 0;
+						}
+					}, 1000);
+				}
+			</script>
+		</article>
+	</section>
+	<footer>more complex about martix , you can view current folder directory 'matrix'</footer>
 </body>
 </html>

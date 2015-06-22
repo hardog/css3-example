@@ -1,0 +1,837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0085)http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="张鑫旭的个人博客_web前端技术文章_理解CSS3 transform中的Matrix(矩阵)">
+<meta name="keywords" content="web前端,HTML5,CSS3,jQuery,SVG,canvas">
+<meta name="author" content="张鑫旭,zhangxinxu">
+<title>理解CSS3 transform中的Matrix(矩阵) «  张鑫旭-鑫空间-鑫生活</title>
+<link rel="stylesheet" href="http://www.zhangxinxu.com/wordpress/wp-content/themes/default/style.css?v20150604">
+<link rel="pingback" href="http://www.zhangxinxu.com/wordpress/xmlrpc.php">
+ 
+<link rel="alternate" type="application/rss+xml" title="张鑫旭-鑫空间-鑫生活 » Feed" href="http://www.zhangxinxu.com/wordpress/feed/">
+<link rel="alternate" type="application/rss+xml" title="张鑫旭-鑫空间-鑫生活 » 评论Feed" href="http://www.zhangxinxu.com/wordpress/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="张鑫旭-鑫空间-鑫生活 » 理解CSS3 transform中的Matrix(矩阵)评论Feed" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/feed/">
+<link rel="stylesheet" id="wp-pagenavi-css" href="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/pagenavi-css.css" type="text/css" media="all">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.zhangxinxu.com/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.zhangxinxu.com/wordpress/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="如何灵活利用免费开源图标字体-IcoMoon篇" href="http://www.zhangxinxu.com/wordpress/2012/06/free-icon-font-usage-icomoon/">
+<link rel="next" title="小tip: 外链地址网站标志图标API应用" href="http://www.zhangxinxu.com/wordpress/2012/06/external-links-favicons/">
+<meta name="generator" content="WordPress 4.1.5">
+<link rel="canonical" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/">
+<link rel="shortlink" href="http://www.zhangxinxu.com/wordpress/?p=2427">
+<link href="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/bdsstyle.css" rel="stylesheet" type="text/css"></head>
+<body class="single single-post postid-2427 single-format-standard" style=""><iframe frameborder="0" style="display: none;"></iframe><div id="bdshare_s" style="display: block;"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0"></iframe><div id="bdshare_l" style="display: none;"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_mshare mshare">一键分享</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_renren rrw">人人网</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_douban db">豆瓣网</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_sqq sqq">QQ好友</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_thx thx">和讯微博</a></li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="bds_more">更多...</a></li></ul><p><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" class="goWebsite">百度分享</a></p></div></div></div>
+<div id="page">
+<div id="header" role="banner">
+	<div id="headerimg">
+		<a href="http://www.zhangxinxu.com/" class="page_logo">张鑫旭-鑫空间-鑫生活</a>
+		<div class="description">it's my whole life!</div>
+	</div>
+    <div id="menubar">
+    	<ul class="menu_tab">
+        	<li>
+            	<a class="boss" href="http://www.zhangxinxu.com/">网站首页</a>
+                <a class="disabled" title="频道已关闭">提问交流</a>
+                <a class="disabled" title="频道已关闭">前端调查</a>
+            </li>
+        	<li class="on">
+            	<a class="boss" href="http://www.zhangxinxu.com/wordpress/">前端技术</a>
+                <a href="http://www.zhangxinxu.com/wordpress/?cat=3">css</a>
+                <a href="http://www.zhangxinxu.com/wordpress/?cat=5">js/jQuery</a>
+                <a href="http://www.zhangxinxu.com/wordpress/?cat=198">翻译</a>
+            </li>
+            <li>
+            	<a class="boss" href="http://www.zhangxinxu.com/life/">生活与创作</a>
+                <a href="http://www.zhangxinxu.com/life/?cat=3">生活</a>
+                <a href="http://www.zhangxinxu.com/life/?cat=5">散文</a>
+                <a href="http://www.zhangxinxu.com/life/?cat=4">小说</a>
+            </li>
+            <li>
+            	<span class="boss">前端在线资源</span>
+                <a href="http://www.zhangxinxu.com/css3/">CSS3参考</a>
+                <a href="http://www.zhangxinxu.com/jq/api14/">jQuery1.4参考</a>
+            </li>         
+        </ul>
+    	<form method="get" id="searchform" action="http://www.zhangxinxu.com/wordpress/">
+<label class="hidden" for="s">Search for:</label>
+<div><input type="search" value="" name="s" id="s">
+<input type="submit" id="searchsubmit" value="Search">
+</div>
+</form>
+    </div>
+</div>
+<script async="" type="text/javascript" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/ca-pub-0090627341039040.js"></script><script type="text/javascript" async="" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/ga.js"></script><script>
+var isSlideHide = false;
+if (window.localStorage) {
+	isSlideHide = localStorage.getItem("isSlideHide");
+	if (!isSlideHide && document.body.clientWidth <= 1024) {
+		isSlideHide = "true";
+	}
+	if (isSlideHide == "true") {
+		document.getElementById("page").className = "slide_hide";
+	}
+}
+if (window.location != window.parent.location) window.parent.location = window.location;
+</script>
+<div class="the_main">
+	<div id="content" class="widecolumn" role="main">
+    <div class="shink_rel"><a href="javascript:" id="shinkSlide" class="shink_a" title="收起右边栏" style="display: inline;">►</a></div>
+<script>if (window.localStorage && window.isSlideHide) {
+	(function() {
+		var eleShink = document.getElementById("shinkSlide");	
+		eleShink.title = "展开右边栏";
+		eleShink.innerHTML = "◄";
+	})();
+}</script>
+	
+		<div class="navigation">
+			<div class="alignleft">« <a href="http://www.zhangxinxu.com/wordpress/2012/06/free-icon-font-usage-icomoon/" rel="prev">如何灵活利用免费开源图标字体-IcoMoon篇</a></div>
+			<div class="alignright"><a href="http://www.zhangxinxu.com/wordpress/2012/06/external-links-favicons/" rel="next">小tip: 外链地址网站标志图标API应用</a> »</div>
+		</div>
+
+		<div class="post-2427 post type-post status-publish format-standard hentry category-css tag-3d tag-css3 tag-matrix tag-transform tag-725 tag-472 tag-724 tag-577" id="post-2427">
+			<h2>理解CSS3 transform中的Matrix(矩阵)</h2>
+			<div class="entry">
+				<p>by <a href="http://www.zhangxinxu.com/">zhangxinxu</a> from <a href="http://www.zhangxinxu.com/">http://www.zhangxinxu.com</a><br>
+本文地址：<a href="http://www.zhangxinxu.com/wordpress/?p=2427">http://www.zhangxinxu.com/wordpress/?p=2427</a></p>
+<h3>一、哥，我被你吓住了</h3>
+<p>打架的时候会被块头大的吓住，学习的时候会被奇怪名字吓住（如“拉普拉斯不等式”）。这与情感化设计本质一致：界面设计好会让人觉得这个软件好用！</p>
+<p>所以，当看到上面“Matrix(矩阵)”的时候，难免会心生畏惧（即使你已经学过），正常心理。实际上，这玩意确实有点复杂。</p>
+<p>然而，这却是屌丝逆袭的一个好机会。</p>
+<p><strong>CSS同行间：</strong><br>
+你是不是有这样的感觉：哎呀呀，每天就是对着设计图切页面，貌似技术没有得到实质性地提升啊，或者觉得日后高度有限！</p>
+<p>我们应该都知道<a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/baike.baidu.com/view/119451.htm">二八法则(巴莱多定律)</a>，即任何一组东西中，最重要的只占其中一小部分，约20%，其余80%的尽管是多数，却是次要的。如果你有上述的感觉，那你就属于那80%, 一抓一大把，没有特色的页面仔。</p>
+<p>CSS门槛低，无需程序基础或数学逻辑能力，也能做出点自我感觉不错的东西。然而，你自己也应该清楚的，一般你能轻松学到的东西，别人也可以。因此，如果你想挤进那20%的行列，就要学到一般人学不到的深度，学到一般人学不了的东西。自然，是需要更多额外的努力的。如果每次你都比别人努力一点点，何愁不比他人高出几等。人年轻的时候，贵在坚持！</p>
+<p>而这里的CSS矩阵就是展现你与其他芸芸同行差异的好契机。很多人看到名字就畏惧了，看到奇怪的数学书写就吓退了；而你没有，迎难而上，把摇手机的时间用在理解矩阵上。自然，你就冒尖了一点。类似的，很多其他CSS方面的东西，你也比别人多深入学习一点，怎么可能就是个普通的页面仔呢？</p>
+<p>因此，从这里开始，摆脱那80%的行列吧！</p>
+<p><strong>伪同行间：</strong><br>
+虽然都是从事计算机，虽然都是从事互联网，虽然都是写代码的，(据说)写JAVA的瞧不起写JavaScript的，写JavaScript的瞧不起写CSS的。这可以理解，虽然养鸡养鸭成为富翁的不在少数，但是，一说你是农村养鸡的，怎么样？上海专业的丈母娘们的视线立马下降60°——被BS了。倒不是因为你是干农业的，而是“鸡”的问题；如果说你是饲养斯里兰卡蓝孔雀的，得，挑剔的丈母娘们说不定就会正脸看看（唷，斯里兰卡，国外货；唷，孔雀，高档货）。</p>
+<p>同样的，如果你掌握的CSS都是些“砌砖头”的活（虽然砌砖头也是大学问），被无视也情理之中。但是，矩阵这个东西，就是扭转乾坤（网称“逆袭”）的好东西：CSS中也是有复杂的高档货的。再忽悠些“图形算法、位置计算”之类的词句，嘿嘿，立马看法从<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/kbsa_thumb.gif" class="vimg">变成<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/qq_thumb.gif" class="vimg">。</p>
+<h3>二、何为矩阵？</h3>
+<p>矩阵可以理解为方阵，只不过，平时方阵里面站的是人，矩阵中是数值：<br>
+<img alt="方阵" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/fangzhen.jpg" title="方阵" class="alignnone" width="500" height="120" align="absmiddle"> <strong style="font-size:40px; vertical-align:middle;">→</strong><img alt="矩阵示意 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/css-transforms-matrix1.gif" title="矩阵示意" class="alignnone" width="159" height="99" align="absmiddle"></p>
+<p>而所谓矩阵的计算，就是两个方阵的人（可以想象成古代的方阵士兵）相互冲杀。</p>
+<p><strong>CSS3中的矩阵</strong><br>
+CSS3中的矩阵指的是一个方法，书写为<code>matrix()</code>和<code>matrix3d()</code>，前者是元素2D平面的移动变换(transform)，后者则是3D变换。2D变换矩阵为3*3, 如上面矩阵示意图；3D变换则是4*4的矩阵。</p>
+<p>有些迷糊？恩，我也觉得上面讲述有些不合时宜。那好，我们先看看其他东西，层层渐进——<code>transform</code>属性。</p>
+<p>具体关于<code>transform</code>属性具体内容可以<a href="http://www.zhangxinxu.com/wordpress/?p=1268">点击这里</a>补个课。稍微熟悉的人都知道，<strong>transform</strong>中有这么几个属性方法：</p>
+<div class="zxx_code">
+<pre>.trans_skew { transform: skew(35deg); }
+.trans_scale { transform:scale(1, 0.5); }
+.trans_rotate { transform:rotate(45deg); }
+.trans_translate { transform:translate(10px, 20px); }
+</pre>
+</div>
+<p>斜拉(skew)，缩放(scale)，旋转(rotate)以及位移(translate)。</p>
+<p>那你有没有想过，为什么<code>transform:rotate(45deg);</code>会让元素旋转45°, 其后面运作的机理是什么呢？</p>
+<p>下面这张图可以解释上面的疑问：<br>
+<img alt="transform属性方法本质实现 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/matrix-skew-scale-rotate-translate.gif" title="transform属性方法本质实现" class="alignnone" width="375" height="161"></p>
+<p>无论是旋转还是拉伸什么的，本质上都是应用的<code>matrix()</code>方法实现的（修改<code>matrix()</code>方法固定几个值），只是类似于<code>transform:rotate</code>这种表现形式，我们更容易理解，记忆与上手。</p>
+<p>换句话说，理解<code>transform</code>中<code>matrix()</code>矩阵方法有利于透彻理解CSS3的<code>transform</code>属性，这就与那80%的也会应用但只知表象的人拉开了差距！</p>
+<p>OK，现在上面提到的CSS3矩阵解释应该说得通了。</p>
+<h3>三、矩阵应用场景</h3>
+<p>虽然题目写的是“<code>transform</code>中的<code>Matrix</code>”，实际上，在CSS3以及HTML5的世界里，这玩意还是涉猎蛮广的，如<code>SVG</code>以及<code>canvas</code>.<br>
+事实上，关于矩阵，我之前曾经介绍过，是在介绍IE浏览器下的<a href="http://www.zhangxinxu.com/wordpress/?p=1505">Matrix矩阵滤镜</a>的时候说过，IE的滤镜矩阵与CSS中的矩阵虽然写法上差异较大，但是，矩阵计算的原来是一致的。只是之前的介绍主要是IE下的旋转与缩放，同时也不是很深入，因此还有有些局限的。</p>
+<h3>四、<code>transform</code>与坐标系统</h3>
+<p>用过<code>transform</code>旋转的人可以发现了，其默认是绕着中心点旋转的，而这个中心点就是<code>transform-origin</code>属性对应的点，也是所有矩阵计算的一个重要依据点（下图参考自<a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/dev.opera.com">dev.opera.com</a>）。<br>
+<img alt="transform坐标系统" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/css-transforms-matrix2.png" title="transform坐标系统" class="alignnone" width="411" height="386"></p>
+<p>当我们通过<code>transform-origin</code>属性进行设置的时候，矩阵相关计算也随之发生改变。反应到实际图形效果上就是，旋转拉伸的中心点变了！</p>
+<p>举例来说，如果偶们设置：</p>
+<div class="zxx_code">
+<pre>-webkit-transform-origin: bottom left;</pre>
+</div>
+<p>则，坐标中心点就是左下角位置。于是动画（例如图片收缩）就是基于图片的左下角这一点了：<br>
+<img alt="动画的起始点 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2012-06-07_151408.png" title="动画的起始点 " class="alignnone" width="420" height="260"></p>
+<p>上图效果可以<a class="a_link" target="_blank" href="http://www.zhangxinxu.com/study/201011/css3-transition-animate-demo-11.html">点击这里</a>查看（Chrome浏览器）。</p>
+<p>再举个稍微难理解的例子，我们如果这样设置：</p>
+<div class="zxx_code">
+<pre>transform-origin: 50px 70px;</pre>
+</div>
+<p>则，中心点位置有中间移到了距离左侧50像素，顶部70像素的地方（参见下图），而此时的<code>(30, 30)</code>的坐标为白点所示的位置（这个位置后面会用到）。<br>
+<img alt="中心坐标数值偏移的理解 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/css-transforms-matrix4.png" title="中心坐标数值偏移的理解" class="alignnone" width="411" height="386"></p>
+<p>仔细看看，是不是很快就理解了哈~~</p>
+<h3>五、准备好了没？重头戏来了</h3>
+<p>CSS3 <code>transform</code>的<code>matrix()</code>方法写法如下：</p>
+<div class="zxx_code">
+<pre>transform: matrix(a,b,c,d,e,f);</pre>
+</div>
+<p>吓住了吧，这多参数，一个巴掌都数不过来。好吧，如果你把<code>a~f</code>这6个参数想象成女神的名词，你会觉得，世界不过如此嘛~~</p>
+<p>实际上，这6参数，对应的矩阵就是：<br>
+<img alt="矩阵参数与矩阵对应关系 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/css-transforms-matrix3.gif" title="矩阵参数与矩阵对应关系" class="alignnone" width="147" height="92"></p>
+<p>注意书写方向是<strong>竖着的</strong>。</p>
+<p>上面提过，矩阵可以想象成古代的士兵方阵，要让其发生变化，只有与另外一个士兵阵火拼就可以了，即使这是个小阵。</p>
+<p>反应在这里就是如下转换公式：<br>
+<img alt="CSS3中矩阵位置计算公式 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/css-transforms-matrix5.gif" title="CSS3中矩阵位置计算公式" class="alignnone" width="454" height="105"></p>
+<p>其中，<code>x</code>, <code>y</code>表示转换元素的所有坐标（变量）了。那后面的<code>ax+cy+e</code>怎么来的呢？<br>
+<span class="s" style="color:#999;">//zxx:大学时候线性代数知识，懂的人这里可以直接跳过</span></p>
+<p>很简单，3*3矩阵每一行的第1个值与后面1*3的第1个值相乘，第2个值与第2个相乘，第3个与第3个，然后相加，如下图同色标注：<br>
+<img alt="矩阵计算的同色标注" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2012-06-07_160412.png" title="矩阵计算的同色标注" class="alignnone" width="533" height="170"></p>
+<p>那<code>ax+cy+e</code>的意义是什么？<br>
+记住了，<code>ax+cy+e</code>为变换后的水平坐标，<code>bx+dy+f</code>表示变换后的垂直位置。</p>
+<p>又迷糊了？不急，一个简单例子就明白了。</p>
+<p>假设矩阵参数如下：</p>
+<div class="zxx_code">
+<pre>transform: matrix(1, 0, 0, 1, 30, 30); <span style="color:green;">/* a=1, b=0, c=0, d=1, e=30, f=30 */</span></pre>
+</div>
+<p>现在，我们根据这个矩阵偏移元素的中心点，假设是<code>(0, 0)</code>，即<code>x=0</code>, <code>y=0</code>。</p>
+<p>于是，变换后的<code>x</code>坐标就是<code>ax+cy+e = 1*0+0*0+30 =30</code>, <code>y</code>坐标就是<code>bx+dy+f = 0*0+1*0+30 =30</code>.</p>
+<p>于是，中心点坐标从<code>(0, 0)</code>变成了→<code>(30, 30)</code>。对照上面有个<code>(30, 30)</code>的白点图，好好想象下，原来<code>(0,0)</code>的位置，移到了白点的<code>(30, 30)</code>处，怎么样，是不是往右下方同时偏移了30像素哈！！</p>
+<p>实际上<code>transform: matrix(1, 0, 0, 1, 30, 30);</code>就等同于<code>transform: translate(30px, 30px);</code>. 注意：<code>translate</code>, <code>rotate</code>等方法都是需要单位的，而<code>matrix</code>方法<code>e, f</code>参数的单位可以省略。</p>
+<p>一例胜万语，您可以狠狠地点击这里：<a class="a_link" target="_blank" href="http://www.zhangxinxu.com/study/201206/css3-transform-matrix-translate-30-30.html">matrix(1,0,0,1,30,30)实例demo</a></p>
+<p>在现代浏览器下，会有类似下面动图的效果：<br>
+<img alt="30*30像素偏移示意" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/translate-30-30.gif" title="30*30像素偏移示意" class="alignnone" width="250" height="270"></p>
+<p>效果只是表象的，我想到了一个更好的idea去表现矩阵到底是如何变换的，您可以狠狠地点击这里：<a class="a_link" target="_blank" href="http://www.zhangxinxu.com/study/201206/css3-transform-matrix-30-30-step.html">matrix分解变换演示</a></p>
+<p>为了提高性能，demo中每个单元分解成了<code style="color:gray;">5px * 5px</code>的区域。演示分两步，先是演示每个单元的位置是如何计算的，接着动画表现其位置的偏移。</p>
+<p>这个demo所做的工作就是把浏览器瞬间完成的计算和渲染变成了可控的分步显示，这样，大家就可以很直观地看出，这个矩阵计算到底是如何起作用的。下图为正在演示过程中的截图：<br>
+<img alt="矩阵计算分解演示demo截图 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2012-06-07_193735.png" title="矩阵计算分解演示demo截图" class="alignnone" width="435" height="396"></p>
+<p><span class="s">//zxx:由于默认100毫秒间隔不断渲染，因此如果你电脑CPU或是浏览器hold不住，可以取消“自动演示”的勾选，然后，点击左边的按钮手动分步查看。</span></p>
+<p><strong>总结</strong><br>
+聪明的你可能以及意识到了，尼玛matrix表现偏移就是：</p>
+<div class="zxx_code">
+<pre>transform: matrix(<del datetime="2012-06-07T01:20:26+00:00" style="color:#666;">与我无关, 哪位, 怎么不去高考, 打麻将去吧,</del> 水平偏移距离, 垂直偏移距离);</pre>
+</div>
+<p>你只要关心后面两个参数就可以了，至于前面4个参数，是牛是马，是男是女都没有关系的。</p>
+<div class="hidden"><em>如果您看到下面的文字，可能是由于在其他网站或是RSS中阅读本文，本文原地址：<a href="http://www.zhangxinxu.com/wordpress/?p=2427">http://www.zhangxinxu.com/wordpress/?p=2427</a>，本文作者：<a href="http://www.zhangxinxu.com/">张鑫旭</a>，来自张鑫旭-鑫空间-鑫生活，访问原出处阅读体验更佳。</em></div>
+<h3>六、transform matrix矩阵与缩放，旋转以及拉伸</h3>
+<p>偏移是matrix效果中最简单，最容易理解的，因此，上面很详尽地对此进行展开说明。下面，为了进一步加深对matrix的理解，会简单讲下matrix矩阵与缩放，旋转以及拉伸效果。</p>
+<p><strong>缩放(scale)</strong><br>
+上面的偏移只要关心最后两个参数，这个缩放也是只要关心两个参数。哪两个呢？</p>
+<p>如果你足够明察秋毫，应该已经知道了，因为上面多次出现的：</p>
+<div class="zxx_code">
+<pre>transform: matrix(1, 0, 0, 1, 30, 30);</pre>
+</div>
+<p>已经出卖了。</p>
+<p>发现没，<code>matrix(1, 0, 0, 1, <del datetime="2012-06-07T01:20:26+00:00">30, 30</del>);</code>的元素比例与原来一样，1:1, 而这几个参数中，有两个<code>1</code>, 啊哈哈！没错，这两个<code>1</code>就是缩放相关的参数。</p>
+<p>其中，第一个缩放<code>x</code>轴，第二个缩放<code>y</code>轴。</p>
+<p>用公式就很明白了，假设比例是<code>s</code>，则有<code>matrix(s, 0, 0, s, 0, 0);</code>，于是，套用公式，就有：<br>
+<code>x' = ax+cy+e = s*x+0*y+0 = s*x;</code><br>
+<code>y' = bx+dy+f = 0*x+s*y+0 = s*y;</code></p>
+<p>也就是<code>matrix(sx, 0, 0, sy, 0, 0);</code>，等同于<code>scale(sx, sy)</code>;</p>
+<p>好了，至此，无需多说了……</p>
+<p>眼见为实，因此demo还是要滴，您可以狠狠地点击这里：<a class="a_link" target="_blank" href="http://www.zhangxinxu.com/study/201206/css3-transform-matrix-scale.html">matrix矩阵与缩放demo</a></p>
+<p>为了避免元素比例放大时候遮盖上面的文本框以及描述位子，因此，将元素的坐标原点迁至了左上角。</p>
+<p><img alt="matrix矩阵缩放demo效果截图" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2012-06-07_215813.png" title="matrix矩阵缩放demo效果截图" class="alignnone" width="513" height="317"></p>
+<p><strong>旋转(rotate)</strong><br>
+旋转相比前面两个要更高级些，要用到（可能勾起学生时代阴影的）三角函数。</p>
+<p>方法以及参数使用如下（假设角度为<code>θ</code>）：</p>
+<div class="zxx_code">
+<pre>matrix(cosθ,sinθ,-sinθ,cosθ,0,0)</pre>
+</div>
+<p>结合矩阵公式，就有：</p>
+<div class="zxx_code">
+<pre>x' = x*cosθ-y*sinθ+0 = x*cosθ-y*sinθ
+y' = x*sinθ+y*cosθ+0 = x*sinθ+y*cosθ</pre>
+</div>
+<p>这个与<a href="http://www.zhangxinxu.com/wordpress/?p=1505">IEMatrix滤镜中的旋转</a>是有些类似的(M11表示矩阵第1行第1个（参数a），M21表示矩阵第2行第一个（参数b）……)：</p>
+<div class="zxx_code">
+<pre>filter:progid:DXImageTransform.Microsoft.Matrix(M11=cosθ,M21=sinθ,M12=-sinθ,M22=cosθ');</pre>
+</div>
+<p>哎呀呀，四个参数，我记不住啊！莫慌，我们可以这样子记忆：<br>
+CS-SC：初三-上床，对称结构，这下忘不了了吧~~</p>
+<p>您可以狠狠地点击这里：<a class="a_link" target="_blank" href="http://www.zhangxinxu.com/study/201206/css3-transform-matrix-rotate.html">transform matrix矩阵与旋转demo</a></p>
+<p><img alt="matrix矩阵旋转效果demo页面截图 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2012-06-07_220737.png" title="matrix矩阵旋转效果demo页面截图" class="alignnone" width="514" height="291"></p>
+<p>不过，说句老实话，就旋转而言，<code>rotate(θdeg)</code>这种书写形式要比<code>matrix</code>简单多了，首先记忆简单，其次，无需计算。例如，旋转30°，前者直接：</p>
+<div class="zxx_code">
+<pre>transform:rotate(30deg);</pre>
+</div>
+<p>而使用<code>matrix</code>表示则还要计算<code>cos</code>, <code>sin</code>值：</p>
+<div class="zxx_code">
+<pre>transform: matrix(0.866025,0.500000,-0.500000,0.866025,0,0);</pre>
+</div>
+<p><strong>拉伸(skew)</strong><br>
+拉伸也用到了三角函数，不过是<code>tanθ</code>，而且，其至于<code>b, c</code>两个参数相关，书写如下（注意<code>y</code>轴倾斜角度在前）：</p>
+<div class="zxx_code">
+<pre>matrix(1,tan(θy),tan(θx),1,0,0)</pre>
+</div>
+<p>套用矩阵公式计算结果为：</p>
+<div class="zxx_code">
+<pre>x' = x+y*tan(θx)+0 = x+y*tan(θx) 
+y' = x*tan(θy)+y+0 = x*tan(θy)+y</pre>
+</div>
+<p>对应于<code>skew(θx + "deg"，θy+ "deg")</code>这种写法。</p>
+<p>其中，<code>θx</code>表示<code>x</code>轴倾斜的角度，<code>θy</code>表示<code>y</code>轴，两者并无关联。</p>
+<p>还是靠实例说话吧，您可以狠狠地点击这里：<a class="a_link" target="_blank" href="http://www.zhangxinxu.com/study/201206/css3-transform-matrix-skew.html">matrix矩阵与拉伸demo</a></p>
+<p>在Chrome下可以很动态地查看不同倾斜角度对应的拉伸的效果：<br>
+<img alt="拉伸效果demo页面截图" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2012-06-07_221013.png" title="拉伸效果demo页面截图" class="alignnone" width="432" height="372"></p>
+<h3>七、既然有简单的skew, rotate..，那matrix有何用？</h3>
+<p>我想有人会奇怪，既然CSS3 transform中提供了像<code>skew</code>, <code>rotate</code>, <code>…</code>效果，那还需要掌握和熟悉让人头大的矩阵方法干嘛呢？</p>
+<p>好问题，确实，对于一般地交互应用，<code>transform</code>属性默认提供的些方法是足够了，但是，一些其他的效果，如果<code>transform</code>属性没有提供接口方法，那你又该怎么办呢？比方说，“<strong>镜像对称效果</strong>”！</p>
+<p>没辙了吧，这是，就只能靠<code>matrix</code>矩阵了。要知道，matrix矩阵是<code>transform</code>变换的基础，可以应付很多高端的效果，算是一种高级应用技巧吧。掌握了基础，才能兵来将挡水来土掩啊。</p>
+<p>OK，这里就演示下，如何使用CSS3 <code>transform</code> <code>matrix</code>矩阵实现镜像效果。</p>
+<p>这个有点难度，因此，我们先看demo，您可以狠狠地点击这里：<a class="a_link" target="_blank" href="http://www.zhangxinxu.com/study/201206/css3-transform-matrix-mirror.html">matrix与镜像对称效果demo</a></p>
+<p>框框中输入旋转的角度值（用来确定镜像的对称轴），然后失去焦点，就会呈现出对应的镜像对称效果了：<br>
+<img alt="镜像对称效果操作示意 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2012-06-07_233041.png" title="镜像对称效果操作示意" class="alignnone" width="489" height="283"><br>
+<img alt="镜像对称效果截图" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2012-06-07_233356.png" title="镜像对称效果截图" class="alignnone" width="468" height="321"></p>
+<p>您可以在FireFox或是Chrome等浏览器上体验下<code>matrix</code>实现的镜像渐变效果。</p>
+<p>demo页面中的一个轴是为了便于理解我加上的效果，实际上，在镜像对称的时候轴是看不见的。</p>
+<p>轴围绕的那个点就是CSS3中<code>transform</code>变换的中心点，自然，镜像对称也不例外。因为该轴永远经过原点，因此，任意对称轴都可以用<code>y = k * x</code>表示。则<code>matrix</code>表示就是：</p>
+<div class="zxx_code">
+<pre>matrix((1-k*k) / (1+k*k), 2k / (1 + k*k), 2k / (1 + k*k), (k*k - 1) / (1+k*k), 0, 0)</pre>
+</div>
+<p>这个如何得到的呢？<br>
+啊，高中数学来了，就当再高考一次吧，如下图，已经<code>y=kx</code>，并且知道点(x, y)坐标，求其对称点(x’, y’)的坐标？<br>
+<img alt="镜像渐变题目 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/css-transforms-matrix-mirror.png" title="镜像渐变题目" class="alignnone" width="411" height="386"></p>
+<p>很简单，一是垂直，二是中心点在轴线上，因此有：</p>
+<p><code>(y-y') / (x - x') = -1/ k      →       ky-ky' = -x+x'</code><br>
+<code>(x + x') / 2 * k = (y + y')/2     →       kx+kx' = y+y'</code></p>
+<p>很简单的，把<code>x'</code>和<code>y'</code>提出来，就有：</p>
+<p><code>x' = (1-k*k)/(k*k+1) *x + 2k/(k*k+1) *y;</code><br>
+<code>y' = 2k/(k*k+1) *x + (k*k-1)/(k*k+1) *y;</code></p>
+<p>再结合矩阵公式：<br>
+<code>x' = ax+cy+e;</code><br>
+<code>y' = bx+dy+f;</code></p>
+<p>我们就可以得到：<br>
+<code>a = (1-k*k)/(k*k+1);</code><br>
+<code>b = 2k/(k*k+1);</code><br>
+<code>c = 2k/(k*k+1);</code><br>
+<code>d = (k*k-1)/(k*k+1);</code></p>
+<p>也就是上面matrix方法中的参数值啦！</p>
+<p>下图为自己计算的草稿：<br>
+<img alt="镜像矩阵参数计算草稿" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/4b4d632fjw1dtq2jrsr1jj.jpg" title="镜像矩阵参数计算草稿" class="alignnone" width="440" height="330"></p>
+<h3>八、3D变换中的矩阵</h3>
+<p>3D变换虽然只比2D多了一个D，但是复杂程度不只多了一个。从二维到三维，是从4到9；而在矩阵里头是从3*3变成4*4, 9到16了。</p>
+<p>其实，本质上很多东西都与2D一致的，只是复杂度不一样而已。这里就举一个简单的3D缩放变换的例子。</p>
+<p>对于3D缩放效果，其矩阵如下：<br>
+<img alt="3D比例变换矩阵图 张鑫旭-鑫空间-鑫生活" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/css-transforms-matrix8.gif" title="3D比例变换矩阵图" class="alignnone" width="209" height="123"></p>
+<p>代码表示就是：</p>
+<div class="zxx_code">
+<pre>transform: matrix3d(sx, 0, 0, 0, 0, sy, 0, 0, 0, 0, sz, 0, 0, 0, 0, 1)</pre>
+</div>
+<p>您可以狠狠地点击这里：<a class="a_link" target="_blank" href="http://www.zhangxinxu.com/study/201206/css3-transform-matrix-3d-scale.html">matrix3d下的3D比例变换demo</a></p>
+<p><strong>补充于2013-04-24</strong><br>
+关于3D变换，可以参见邪恶的这篇文章：“<a href="http://www.zhangxinxu.com/wordpress/2012/09/css3-3d-transform-perspective-animate-transition/">CSS3 3D transform变换，不过如此！</a>”</p>
+<h3>九、结束语</h3>
+<p>想了想，没什么要唠叨的。文中观点若是存在疑问或不准确的，欢迎指正。感谢阅读！</p>
+<p><strong>参考文章：</strong><br>
+<a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms Matrix</a><br>
+<a href="http://www.phphubei.com/article-2645-1.html">CSS3前端开发中需要用到的变换矩阵 </a></p>
+<div class="hidden">
+<p>觉得这里的文章不错，希望他一直走下去？您可以：<a target="_blank" href="https://me.alipay.com/zhangxinxu" title="小小赞助大大帮助"><img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/pay_encourage.png" width="159" height="37" alt="支付鼓励" align="absmiddle"></a></p>
+</div>
+<p>原创文章，转载请注明来自<a href="http://www.zhangxinxu.com/">张鑫旭-鑫空间-鑫生活</a>[<a href="http://www.zhangxinxu.com/">http://www.zhangxinxu.com</a>]<br>
+本文地址：<a href="http://www.zhangxinxu.com/wordpress/?p=2427">http://www.zhangxinxu.com/wordpress/?p=2427</a></p>
+<p>（本篇完）</p>
+<div class="alipay_support"><strong>如果您觉得本文的内容对您的学习有所帮助，您可以支付宝(左)或微信(右)：</strong><div class="alipay_img"><img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/alipay.png"> <img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/wxpay.png"></div></div><div class="similarity"><div class="similar_title">相关文章</div><ul><li><a href="http://www.zhangxinxu.com/wordpress/2015/02/ie-zoom-transform-filter/">小tip: IE下zoom或Matrix矩阵滤镜中心点变换实现</a> (0.831)</li><li><a href="http://www.zhangxinxu.com/wordpress/2011/03/ie%e7%9f%a9%e9%98%b5%e6%bb%a4%e9%95%9cmatrix%e4%b8%8b%e6%97%8b%e8%bd%ac%e4%b8%8e%e7%bc%a9%e6%94%be%e5%8f%8a%e7%bb%93%e5%90%88transform%e7%9a%84%e6%8b%93%e5%b1%95/">IE矩阵滤镜Matrix旋转与缩放及结合transform的拓展</a> (0.572)</li><li><a href="http://www.zhangxinxu.com/wordpress/2012/06/photon-3d-css3-animate-light/">photon-3D光线引擎项目展示与介绍</a> (0.126)</li><li><a href="http://www.zhangxinxu.com/wordpress/2012/08/svg-feature-support-bugs/">SVG特征、支持以及一些实际使用问题</a> (0.126)</li><li><a href="http://www.zhangxinxu.com/wordpress/2012/09/css3-3d-transform-perspective-animate-transition/">好吧，CSS3 3D transform变换，不过如此！</a> (0.126)</li><li><a href="http://www.zhangxinxu.com/wordpress/2015/03/css-only-parallax-effect/">小tip: 纯CSS实现视差滚动效果</a> (0.126)</li><li><a href="http://www.zhangxinxu.com/wordpress/2010/08/css3js%e5%ae%9e%e7%8e%b0%e5%a4%9a%e5%bd%a9%e7%82%ab%e9%85%b7%e6%97%8b%e8%bd%ac%e5%9c%86%e7%8e%af%e6%97%b6%e9%92%9f%e6%95%88%e6%9e%9c/">CSS3+js实现多彩炫酷旋转圆环时钟效果</a> (0.116)</li><li><a href="http://www.zhangxinxu.com/wordpress/2011/01/%e4%bd%bf%e7%94%a8css%e5%ae%9e%e7%8e%b0html5%e7%9a%84%e6%96%b0logo/">使用纯洁的CSS实现HTML5的新logo</a> (0.116)</li><li><a href="http://www.zhangxinxu.com/wordpress/2011/05/css%e5%ae%9e%e7%8e%b0%e5%90%84%e4%b8%aa%e6%b5%8f%e8%a7%88%e5%99%a8%e5%85%bc%e5%ae%b9%e7%9a%84%e5%9e%82%e7%9b%b4%e7%bf%bb%e8%bd%ac%e6%b0%b4%e5%b9%b3%e7%bf%bb%e8%bd%ac%e6%95%88%e6%9e%9c/">CSS垂直翻转/水平翻转提高web页面资源重用性</a> (0.116)</li><li><a href="http://www.zhangxinxu.com/wordpress/2010/01/css3-animate%e5%ae%9e%e7%8e%b0%e5%9b%be%e7%89%87%e5%a2%993d%e7%bf%bb%e8%bd%ac%e6%95%88%e6%9e%9c/">CSS3 animate实现图片墙3D翻转效果</a> (0.093)</li><li><a href="http://www.zhangxinxu.com/wordpress/2012/09/css3-background-image-cross-fade/">CSS3背景图片透明叠加属性cross-fade简介</a> (RANDOM - 0.007)</li></ul></div><!-- Tag -->				<div class="wp_share_box">
+                	<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<span class="bds_more">分享到：</span>
+<a class="bds_tsina" title="分享到新浪微博" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#"></a>
+<a class="bds_qzone" title="分享到QQ空间" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#"></a>
+<a class="bds_tqq" title="分享到腾讯微博" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#"></a>
+<a class="bds_renren" title="分享到人人网" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#"></a>
+<a class="bds_t163" title="分享到网易微博" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#"></a>
+<a class="bds_douban" title="分享到豆瓣网" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#"></a>
+<a class="bds_tsohu" title="分享到搜狐微博" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#"></a>
+<a class="shareCount" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" title="累计分享14次">14</a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1954626" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/bds_s_v2.js"></script>
+
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END --> 
+                </div>
+								<p>标签： <a href="http://www.zhangxinxu.com/wordpress/tag/3d/" rel="tag">3d</a>, <a href="http://www.zhangxinxu.com/wordpress/tag/css3/" rel="tag">css3</a>, <a href="http://www.zhangxinxu.com/wordpress/tag/matrix/" rel="tag">Matrix</a>, <a href="http://www.zhangxinxu.com/wordpress/tag/transform/" rel="tag">transform</a>, <a href="http://www.zhangxinxu.com/wordpress/tag/%e6%8b%89%e4%bc%b8/" rel="tag">拉伸</a>, <a href="http://www.zhangxinxu.com/wordpress/tag/%e6%97%8b%e8%bd%ac/" rel="tag">旋转</a>, <a href="http://www.zhangxinxu.com/wordpress/tag/%e7%9f%a9%e9%98%b5/" rel="tag">矩阵</a>, <a href="http://www.zhangxinxu.com/wordpress/tag/%e7%bc%a9%e6%94%be/" rel="tag">缩放</a></p>
+				<p class="postmetadata alt">
+					<small>
+												这篇文章发布于 2012年06月8日，星期五，01:16，归类于 <a href="http://www.zhangxinxu.com/wordpress/category/css/" rel="category tag">css相关</a>。                        阅读 90744 次, 今日 78 次					</small>
+				</p>
+
+			</div>
+		</div>
+		
+        <div><script async="" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/adsbygoogle.js"></script>
+<!-- 728x90, 大型横幅广告 -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-0090627341039040" data-ad-slot="4686885989" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+        
+	﻿
+<div id="respond">
+<h3 class="respond_title">发表评论（目前69 条评论）</h3>
+<div id="cancel-comment-reply"> 
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#respond" style="display:none;">点击这里取消回复。</a></small>
+</div> 
+
+
+<form action="http://www.zhangxinxu.com/wordpress/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true" required="">
+<label for="author"><small>名称 (必须)</small></label></p>
+
+<p><input type="email" name="email" id="email" value="" size="22" tabindex="2" aria-required="true" required="">
+<label for="email"><small>邮件地址(不会被公开) (必须)</small></label></p>
+
+<p><input type="url" name="url" id="url" value="" size="22" tabindex="3">
+<label for="url"><small>网站</small></label></p>
+
+
+<!--<p><small><strong>XHTML：</strong>您可以使用这些标签：<code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="提交评论">
+<input type="hidden" name="comment_post_ID" value="2427" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+ 
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="6fe8a6c8c3"></p><p style="display: none;"></p>
+<input type="hidden" id="ak_js" name="ak_js" value="1434970542905"></form>
+
+</div>
+
+
+<!-- You can start editing here. -->
+
+	<div class="navigation">
+		<div class="alignleft"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-1/#comments">« 先前评论</a></div>
+		<div class="alignright"></div>
+	</div>
+
+	<ol class="commentlist">
+			<li class="comment even thread-even depth-1" id="comment-275860">
+				<div id="div-comment-275860" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/b602ee7c3bb331e8901d781a851735bd" class="avatar avatar-32" height="32" width="32">			<cite class="fn">spellsnow</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-275860">
+			2015年06月19日 20:53</a>		</div>
+
+		<p>领教了</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=275860#respond" onclick="return addComment.moveForm( &quot;div-comment-275860&quot;, &quot;275860&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给spellsnow">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-269429">
+				<div id="div-comment-269429" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/bf1a31e3b4c3ca7bb6bf36441d701e98" class="avatar avatar-32" height="32" width="32">			<cite class="fn">菜鸟</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-269429">
+			2015年05月17日 18:32</a>		</div>
+
+		<p>使用Matrix设置旋转360，直接回到了原点。不会有旋转的效果。</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=269429#respond" onclick="return addComment.moveForm( &quot;div-comment-269429&quot;, &quot;269429&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给菜鸟">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-2" id="comment-269431">
+				<div id="div-comment-269431" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/bf1a31e3b4c3ca7bb6bf36441d701e98" class="avatar avatar-32" height="32" width="32">			<cite class="fn">菜鸟</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-269431">
+			2015年05月17日 18:40</a>		</div>
+
+		<p>还有就是，使用旋转需要前面四个参数，这意思就是说不能同时设置旋转和缩放？</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=269431#respond" onclick="return addComment.moveForm( &quot;div-comment-269431&quot;, &quot;269431&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给菜鸟">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-265868">
+				<div id="div-comment-265868" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/3c8681d572b5c084212be06090f63a6a" class="avatar avatar-32" height="32" width="32">			<cite class="fn">暴力美学</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-265868">
+			2015年04月29日 16:36</a>		</div>
+
+		<p>CS-SC：初三-上床<br>
+狠！！！</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=265868#respond" onclick="return addComment.moveForm( &quot;div-comment-265868&quot;, &quot;265868&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给暴力美学">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-265518">
+				<div id="div-comment-265518" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/26823fdb16b7fe77f72ce8d4d5693103" class="avatar avatar-32" height="32" width="32">			<cite class="fn"><a href="http://www.leiquan.me/" rel="external nofollow" class="url">leiquan</a></cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-265518">
+			2015年04月27日 18:34</a>		</div>
+
+		<p>谢谢，终于恍然大悟了，虽然还是很复杂的，很好奇一件事，大侠的好多demo的图像都是这个姑娘啊。。。。。哈哈</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=265518#respond" onclick="return addComment.moveForm( &quot;div-comment-265518&quot;, &quot;265518&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给leiquan">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-264822">
+				<div id="div-comment-264822" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/b9e0eeaa29290264cf0b3b2930e37b18" class="avatar avatar-32" height="32" width="32">			<cite class="fn">june</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-264822">
+			2015年04月23日 09:54</a>		</div>
+
+		<p>博主，，<br>
+1、有没有什么方法用js直接获取到角度数啊？我用的是var m_rotate = $(“.baby_m”).css(“-moz-transform”);直接获取到的是矩阵。？<br>
+2、如果没有，那有什么方法是把矩阵转换成角度的？<br>
+3、canvas可以直接使用矩阵么？</p>
+<p>我这个问题比较急，希望博主尽快回复啊！在此谢谢博主了。</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=264822#respond" onclick="return addComment.moveForm( &quot;div-comment-264822&quot;, &quot;264822&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给june">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment even depth-2" id="comment-266632">
+				<div id="div-comment-266632" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/daf06d994a6705c1e07ddd04c5d1e9d8" class="avatar avatar-32" height="32" width="32">			<cite class="fn">奔波儿灞</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-266632">
+			2015年05月4日 11:23</a>		</div>
+
+		<p>1、没有<br>
+2、可以通过矩阵，用反正切函数换算出来弧度，然后再转换成角度即可<br>
+3、可以<br>
+不是博主，只是路过^^</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=266632#respond" onclick="return addComment.moveForm( &quot;div-comment-266632&quot;, &quot;266632&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给奔波儿灞">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-255507">
+				<div id="div-comment-255507" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/0cd12bd7cf7e076a862f2bfd3c8523e8" class="avatar avatar-32" height="32" width="32">			<cite class="fn"><a href="http://user.qzone.qq.com/497005903/infocenter?ptsig=C32UBKCHh4cxIpB21o1uxBdVXFVF7eTa9TPabdGVJrA_" rel="external nofollow" class="url">专为感谢楼主而写</a></cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-255507">
+			2015年03月28日 16:53</a>		</div>
+
+		<p>LZ，我真的被你的文章感动得无言以对了，首先，在前面那么激励我们。要摆脱那80%的人，后面，文章细致琳琳，真心无法用语言说啥啊~</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=255507#respond" onclick="return addComment.moveForm( &quot;div-comment-255507&quot;, &quot;255507&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给专为感谢楼主而写">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-200310">
+				<div id="div-comment-200310" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/88c93264600b3fc868c3918151c01d40" class="avatar avatar-32" height="32" width="32">			<cite class="fn">andyron</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-200310">
+			2014年12月26日 15:10</a>		</div>
+
+		<p>很详细的，点赞。<br>
+不过skew 翻译为拉伸貌似有点不妥。</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=200310#respond" onclick="return addComment.moveForm( &quot;div-comment-200310&quot;, &quot;200310&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给andyron">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-2" id="comment-258788">
+				<div id="div-comment-258788" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/1dda58d61467df756d32ad59cf08b65d" class="avatar avatar-32" height="32" width="32">			<cite class="fn"><a href="http://yanhaijing.com/" rel="external nofollow" class="url">yanhaijing</a></cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-258788">
+			2015年04月2日 15:06</a>		</div>
+
+		<p>变形吗</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=258788#respond" onclick="return addComment.moveForm( &quot;div-comment-258788&quot;, &quot;258788&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给yanhaijing">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even depth-2 parent" id="comment-263151">
+				<div id="div-comment-263151" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/323b87639958facf0c3bbe69ecfcc920" class="avatar avatar-32" height="32" width="32">			<cite class="fn">老徐不二</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-263151">
+			2015年04月13日 18:51</a>		</div>
+
+		<p>应该是斜切</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=263151#respond" onclick="return addComment.moveForm( &quot;div-comment-263151&quot;, &quot;263151&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给老徐不二">回复</a></div>
+				</div>
+		<ul class="children">
+		<li class="comment odd alt depth-3" id="comment-272358">
+				<div id="div-comment-272358" class="comment-body">
+				<div class="comment-author vcard">
+			<img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/2e1397fd38ee5c759c8bfdf8d6f09abb" class="avatar avatar-32" height="32" width="32">			<cite class="fn">lonphy</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-2/#comment-272358">
+			2015年06月3日 13:44</a>		</div>
+
+		<p>叫切变更合适吧，</p>
+
+		<div class="reply"><a class="comment-reply-link" href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/?replytocom=272358#respond" onclick="return addComment.moveForm( &quot;div-comment-272358&quot;, &quot;272358&quot;, &quot;respond&quot;, &quot;2427&quot; )" aria-label="回复给lonphy">回复</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	</ol>
+
+	<div class="navigation">
+		<div class="alignleft"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%e7%9f%a9%e9%98%b5/comment-page-1/#comments">« 先前评论</a></div>
+		<div class="alignright"></div>
+	</div>
+ 
+
+
+
+	
+	</div>
+</div>
+	<div id="sidebar" role="complementary">
+         <div id="zxx_intro" class="sldebar_out">
+            <div class="silebar_inner" itemscope="" itemtype="http://data-vocabulary.org/Person">
+                <img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/zxx_90_0824.jpg" itemprop="photo" class="zxx_head_image">
+                <div class="zxx_some_info">
+                    <p class="mb10"><span itemprop="name" class="fn">张鑫旭</span><sup><a itemprop="url" href="http://www.zhangxinxu.com/life/about/">more</a></sup>，09年<a href="http://www.hust.edu.cn/">华中科技大学</a>毕业，目前<span itemprop="location">上海</span>，现就职<a href="http://isux.tencent.com/" itemprop="organization">ISUX</a><a href="http://www.zhangxinxu.com/wordpress/?page_id=3720">上海设计中心</a>，热爱<span itemprop="role">web前端</span>，喜爱钓鱼。</p>
+
+                    <p>邮箱：<span style="font-family:arial;">zhangxinxu@zhangxinxu.com</span></p>
+                    <p>微博：<a href="http://weibo.com/zhangxinxu">新浪</a> <a href="http://t.qq.com/iamzhangxinxu">腾讯</a>(<a href="http://www.zhangxinxu.com/wordpress/?page_id=3720" style="color:#cd0000;">工作机会</a>)</p>
+                </div>
+                <div class="clear"></div>                
+            </div>
+        </div>
+        
+        <div class="sldebar_out top_ad_out">
+            <div class="silebar_inner top_ad">
+            	<div class="ad_inner">
+    				<script async="" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/adsbygoogle.js"></script>
+<!-- 300x250, 纯图片广告 -->
+<ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-0090627341039040" data-ad-slot="2939854193" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                </div>
+            </div>
+        </div>
+    	<div class="sldebar_out">
+            <div class="silebar_inner slide_list">
+                <ul>
+                    <li id="categories-4" class="widget widget_categories"><h2 class="widgettitle">文章分类</h2>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://www.zhangxinxu.com/wordpress/category/css/">css相关</a> (210)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.zhangxinxu.com/wordpress/category/graphic/">graphic相关</a> (61)
+<ul class="children">
+	<li class="cat-item cat-item-81"><a href="http://www.zhangxinxu.com/wordpress/category/graphic/as3%e8%8f%9c%e5%8d%95/">as3菜单</a> (32)
+</li>
+	<li class="cat-item cat-item-896"><a href="http://www.zhangxinxu.com/wordpress/category/graphic/canvas-graphic/">canvas相关</a> (7)
+</li>
+	<li class="cat-item cat-item-895"><a href="http://www.zhangxinxu.com/wordpress/category/graphic/svg-graphic/">SVG相关</a> (20)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.zhangxinxu.com/wordpress/category/js/">js相关</a> (107)
+<ul class="children">
+	<li class="cat-item cat-item-60"><a href="http://www.zhangxinxu.com/wordpress/category/js/jquery-about/">jquery相关</a> (43)
+</li>
+	<li class="cat-item cat-item-180"><a href="http://www.zhangxinxu.com/wordpress/category/js/js%e5%ae%9e%e4%be%8b/">js实例</a> (49)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-648"><a href="http://www.zhangxinxu.com/wordpress/category/mobile%e7%9b%b8%e5%85%b3/">mobile相关</a> (11)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.zhangxinxu.com/wordpress/category/ps/">ps相关</a> (13)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.zhangxinxu.com/wordpress/category/web/">web综合</a> (32)
+</li>
+	<li class="cat-item cat-item-198"><a href="http://www.zhangxinxu.com/wordpress/category/%e5%a4%96%e6%96%87%e7%bf%bb%e8%af%91/">外文翻译</a> (36)
+</li>
+		</ul>
+</li><li id="archives-3" class="widget widget_archive"><h2 class="widgettitle">文章存档</h2>		<ul>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2015/06/">2015年六月</a>&nbsp;(2)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2015/05/">2015年五月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2015/04/">2015年四月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2015/03/">2015年三月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2015/02/">2015年二月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2015/01/">2015年一月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/12/">2014年十二月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/11/">2014年十一月</a>&nbsp;(1)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/10/">2014年十月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/09/">2014年九月</a>&nbsp;(1)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/08/">2014年八月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/07/">2014年七月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/06/">2014年六月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/05/">2014年五月</a>&nbsp;(1)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/04/">2014年四月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/03/">2014年三月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/02/">2014年二月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2014/01/">2014年一月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/12/">2013年十二月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/11/">2013年十一月</a>&nbsp;(6)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/10/">2013年十月</a>&nbsp;(1)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/09/">2013年九月</a>&nbsp;(6)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/08/">2013年八月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/07/">2013年七月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/06/">2013年六月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/05/">2013年五月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/04/">2013年四月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/03/">2013年三月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/02/">2013年二月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2013/01/">2013年一月</a>&nbsp;(10)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/12/">2012年十二月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/11/">2012年十一月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/10/">2012年十月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/09/">2012年九月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/08/">2012年八月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/07/">2012年七月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/06/">2012年六月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/05/">2012年五月</a>&nbsp;(6)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/04/">2012年四月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/03/">2012年三月</a>&nbsp;(9)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/02/">2012年二月</a>&nbsp;(6)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2012/01/">2012年一月</a>&nbsp;(4)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/12/">2011年十二月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/11/">2011年十一月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/10/">2011年十月</a>&nbsp;(3)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/09/">2011年九月</a>&nbsp;(9)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/08/">2011年八月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/07/">2011年七月</a>&nbsp;(6)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/06/">2011年六月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/05/">2011年五月</a>&nbsp;(8)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/04/">2011年四月</a>&nbsp;(8)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/03/">2011年三月</a>&nbsp;(6)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/02/">2011年二月</a>&nbsp;(6)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2011/01/">2011年一月</a>&nbsp;(5)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/12/">2010年十二月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/11/">2010年十一月</a>&nbsp;(8)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/10/">2010年十月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/09/">2010年九月</a>&nbsp;(10)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/08/">2010年八月</a>&nbsp;(10)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/07/">2010年七月</a>&nbsp;(10)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/06/">2010年六月</a>&nbsp;(8)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/05/">2010年五月</a>&nbsp;(11)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/04/">2010年四月</a>&nbsp;(14)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/03/">2010年三月</a>&nbsp;(11)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/02/">2010年二月</a>&nbsp;(1)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2010/01/">2010年一月</a>&nbsp;(16)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2009/12/">2009年十二月</a>&nbsp;(14)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2009/11/">2009年十一月</a>&nbsp;(7)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2009/10/">2009年十月</a>&nbsp;(6)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2009/09/">2009年九月</a>&nbsp;(36)</li>
+	<li><a href="http://www.zhangxinxu.com/wordpress/2009/08/">2009年八月</a>&nbsp;(12)</li>
+		</ul>
+</li>		<li id="recent-posts-3" class="widget widget_recent_entries">		<h2 class="widgettitle">最新文章</h2>		<ul>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/06/ie7-attribute-css-selector/">IE7浏览器下CSS属性选择器二三事</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/06/know-css-text-decoration-style-color-ship/">小tip: 了解CSS text-decoration新特性新表现</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/05/css3-mix-blend-mode-background-blend-mode/">CSS3混合模式mix-blend-mode/background-blend-mode简介</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/05/css3-transform-affect/">CSS3 transform对普通元素的N多渲染影响</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/05/how-to-ask-web-front-question/">如何提问才能进阶成为前端大神？</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/04/css3-radius-outline/">小tip: CSS3如何实现圆角的outline效果？</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/04/before-after-pseudo-elements-special-features/">CSS之before, after伪元素特性表现两则</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/04/understand-web-front-undefined-behavior/">了解web前端领域的undefined behavior未定义行为</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/03/css3-clip-path-polygon-shape-transition-animation/">CSS3 clip-path polygon图形构建与动画变换二三事</a>
+						</li>
+					<li>
+				<a href="http://www.zhangxinxu.com/wordpress/2015/03/css-only-parallax-effect/">小tip: 纯CSS实现视差滚动效果</a>
+						</li>
+				</ul>
+		</li><li id="overall-top-10-posts" class="widget widget_dailytopten_overall"><h2 class="widgettitle">热门总排行</h2><ul>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/12/jquery-powerfloat%e4%b8%87%e8%83%bd%e6%b5%ae%e5%8a%a8%e5%b1%82%e4%b8%8b%e6%8b%89%e5%b1%82%e6%8f%92%e4%bb%b6/">jQuery powerFloat万能浮动层下拉层插件</a> (269405)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/01/jquery-pagination-ajax%e5%88%86%e9%a1%b5%e6%8f%92%e4%bb%b6%e4%b8%ad%e6%96%87%e8%af%a6%e8%a7%a3/">jQuery Pagination Ajax分页插件中文详解</a> (154243)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2011/09/%e5%9f%ba%e4%ba%8ehtml5%e7%9a%84%e5%8f%af%e9%a2%84%e8%a7%88%e5%a4%9a%e5%9b%be%e7%89%87ajax%e4%b8%8a%e4%bc%a0/">基于HTML5的可预览多图片Ajax上传</a> (138555)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2012/09/css3-3d-transform-perspective-animate-transition/">好吧，CSS3 3D transform变换，不过如此！</a> (135236)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/11/%e6%8b%9c%e6%8b%9c%e4%ba%86%e6%b5%ae%e5%8a%a8%e5%b8%83%e5%b1%80-%e5%9f%ba%e4%ba%8edisplayinline-block%e7%9a%84%e5%88%97%e8%a1%a8%e5%b8%83%e5%b1%80/">拜拜了,浮动布局-基于display:inline-block的列表布局</a> (127019)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2009/08/ie6%e4%b8%8bpng%e8%83%8c%e6%99%af%e4%b8%8d%e9%80%8f%e6%98%8e%e9%97%ae%e9%a2%98%e7%9a%84%e7%bb%bc%e5%90%88%e6%8b%93%e5%b1%95/">IE6下png背景不透明问题的综合拓展</a> (121561)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/04/%e8%ae%a9ie6ie7ie8%e6%b5%8f%e8%a7%88%e5%99%a8%e6%94%af%e6%8c%81css3%e5%b1%9e%e6%80%a7/">让IE6/IE7/IE8浏览器支持CSS3属性</a> (118032)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/11/jquery%e9%a1%b5%e9%9d%a2%e5%9b%be%e7%89%87%e7%ad%89%e5%85%83%e7%b4%a0%e6%bb%9a%e5%8a%a8%e5%8a%a8%e6%80%81%e5%8a%a0%e8%bd%bd%e5%ae%9e%e7%8e%b0/">jQuery页面滚动图片等元素动态加载实现</a> (115035)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2009/11/ajax-upload%e5%a4%9a%e6%96%87%e4%bb%b6%e4%b8%8a%e4%bc%a0%e6%8f%92%e4%bb%b6%e7%bf%bb%e8%af%91%e5%8f%8a%e4%b8%ad%e6%96%87%e6%bc%94%e7%a4%ba/">Ajax Upload多文件上传插件翻译及中文演示</a> (110729)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2009/08/jquery-%e5%be%88%e9%85%b7%e7%9a%84%e5%bc%b9%e5%87%ba%e5%b1%82%e6%95%88%e6%9e%9cjs%e6%8f%92%e4%bb%b6/">jQuery-很酷的弹出层效果js插件</a> (106914)</li>
+</ul>
+</li><li id="daily-top-10-posts" class="widget widget_dailytopten"><h2 class="widgettitle">今日热门</h2><ul>
+<li><a href="http://www.zhangxinxu.com/wordpress/2009/11/css%e8%a1%8c%e9%ab%98line-height%e7%9a%84%e4%b8%80%e4%ba%9b%e6%b7%b1%e5%85%a5%e7%90%86%e8%a7%a3%e5%8f%8a%e5%ba%94%e7%94%a8/">css行高line-height的一些深入理解及应用</a> (211)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/01/jquery-pagination-ajax%e5%88%86%e9%a1%b5%e6%8f%92%e4%bb%b6%e4%b8%ad%e6%96%87%e8%af%a6%e8%a7%a3/">jQuery Pagination Ajax分页插件中文详解</a> (184)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2009/09/%e5%85%b3%e4%ba%8e%e6%96%87%e5%ad%97%e5%86%85%e5%ae%b9%e6%ba%a2%e5%87%ba%e7%94%a8%e7%82%b9%e7%82%b9%e7%82%b9-%e7%9c%81%e7%95%a5%e5%8f%b7%e8%a1%a8%e7%a4%ba/">关于文字内容溢出用点点点(...)省略号表示</a> (168)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/04/%e8%ae%a9ie6ie7ie8%e6%b5%8f%e8%a7%88%e5%99%a8%e6%94%af%e6%8c%81css3%e5%b1%9e%e6%80%a7/">让IE6/IE7/IE8浏览器支持CSS3属性</a> (142)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2015/05/how-to-ask-web-front-question/">如何提问才能进阶成为前端大神？</a> (140)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2009/11/ajax-upload%e5%a4%9a%e6%96%87%e4%bb%b6%e4%b8%8a%e4%bc%a0%e6%8f%92%e4%bb%b6%e7%bf%bb%e8%af%91%e5%8f%8a%e4%b8%ad%e6%96%87%e6%bc%94%e7%a4%ba/">Ajax Upload多文件上传插件翻译及中文演示</a> (137)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/11/css3-transitions-transforms%e5%92%8canimation%e4%bd%bf%e7%94%a8%e7%ae%80%e4%bb%8b%e4%b8%8e%e5%ba%94%e7%94%a8%e5%b1%95%e7%a4%ba/">CSS3 Transitions, Transforms和Animation使用简介与应用展示</a> (127)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2013/01/why-use-href-javascript-void0/">疑问：为什么要使用href="javascript:void(0);"？</a> (125)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2009/08/ie6%e4%b8%8bpng%e8%83%8c%e6%99%af%e4%b8%8d%e9%80%8f%e6%98%8e%e9%97%ae%e9%a2%98%e7%9a%84%e7%bb%bc%e5%90%88%e6%8b%93%e5%b1%95/">IE6下png背景不透明问题的综合拓展</a> (124)</li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/12/css-box-flex%e5%b1%9e%e6%80%a7%ef%bc%8c%e7%84%b6%e5%90%8e%e5%bc%b9%e6%80%a7%e7%9b%92%e5%ad%90%e6%a8%a1%e5%9e%8b%e7%ae%80%e4%bb%8b/">CSS box-flex属性，然后弹性盒子模型简介</a> (120)</li>
+</ul>
+</li>                </ul>
+            </div>
+        </div>
+	</div>
+<div id="footer" role="contentinfo">
+	<p>
+    	Powerd by <a href="http://wordpress.org/">WordPress</a> | Designed by <a href="http://www.zhangxinxu.com/">zhangxinxu</a><br>
+		Copyright© 2009-2015 张鑫旭-鑫空间-鑫生活<br>
+        <a target="_blank" href="http://www.miibeian.gov.cn/">鄂ICP备09015569号</a>
+	</p>
+</div>
+<script src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/logger.js"></script></div>
+
+
+
+
+<script type="text/javascript" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/form.js"></script>
+<script type="text/javascript" src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/comment-reply.min.js"></script>
+
+<div id="footbar">
+	<div class="foot_yy_x hidden" id="footYyX">
+    	<div class="foot_yy_title">
+        	<span class="l">我的应用</span>
+            <a href="javascript:" class="r" id="footYYClose">-</a>
+        </div>
+        <div class="ml10 mr10 foot_yy_dv">工具与应用</div>
+        <div class="mt5">
+        	<a class="foot_yy_a" href="http://www.zhangxinxu.com/sp/base64.html">图片转base64(拖进来)</a>
+			<a class="foot_yy_a" href="http://browserhacks.com/">浏览器hack</a>
+            <a class="foot_yy_a" href="http://cubic-bezier.com/">CSS贝塞尔曲线可视化</a>
+            <a class="foot_yy_a" href="http://www.zhangxinxu.com/sp/css-compress-mini.html">CSS在线压缩工具</a>
+            <a class="foot_yy_a" href="http://www.zhangxinxu.com/sp/calculator.html">简易在线计算器</a>
+        </div>
+        <div class="ml10 mr10 foot_yy_dv">在线资源</div>
+        <div class="mt5">
+        	<a class="foot_yy_a" href="http://www.zhangxinxu.com/jq/api14/">jQuery 1.4 API中文版</a>
+            <a class="foot_yy_a" href="http://www.zhangxinxu.com/GitHub/demo-Snap.svg/demo/basic/">Snap.svg中文文档</a>
+            <a class="foot_yy_a" href="http://www.zhangxinxu.com/jq/stylus/">stylus中文版参考文档</a>
+            <a class="foot_yy_a" href="http://www.zhangxinxu.com/css3/">CSS3中文共享参考指南</a>
+            <a class="foot_yy_a" href="http://www.zhangxinxu.com/sp/character.html">非主流字符及字符图案</a>
+            <a class="foot_yy_a" href="http://www.zhangxinxu.com/jq/mt/">MooTools 1.2中文文档</a>
+        </div>
+        <div>&nbsp;</div>
+        <a href="javascript:" class="foot_yy foot_yy_on nowrap" id="footYYOff"><img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/zxx_ico.png" class="vimg"> 我的应用</a>
+    </div>
+    <a href="javascript:" class="foot_yy nowrap" id="footYYShow"><img src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/zxx_ico.png" class="vimg"> 我的应用</a>
+    <span class="foot_rss l">
+    	<a class="foot_rss_a" href="http://www.zhangxinxu.com/wordpress/?feed=rss2">文章(RSS)</a>
+         
+    </span>
+    <a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" id="backToTop" class="foot_top">返回顶部↑</a>
+	<a href="http://www.zhangxinxu.com/wordpress/wp-login.php" class="foot_login"><i class="icon-male"></i>登录</a>
+</div>
+
+<script src="./理解CSS3 transform中的Matrix(矩阵) « 张鑫旭-鑫空间-鑫生活_files/script-min.js"></script>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-11205167-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<div id="window-resizer-tooltip" style="display: none;"><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1366</span> x <span class="tooltipHeight" id="winHeight">728</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1366</span> x <span class="tooltipHeight" id="vpHeight">622</span></div></body></html>
