@@ -1,0 +1,8 @@
+.newsItem .catListTitle{display:none;}
+#profile_block{display:none;}
+.newsItem{ padding:22px 0 30px;}
+.newsItem p{
+margin:0 0 5px;
+}
+
+.newsItem a{border-bottom:1px #333 dotted;}

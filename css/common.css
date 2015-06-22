@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+section{
+	border:#888888 solid 2px;
+	margin:5px;
+}
+article{
+	margin:20px;
+}
+aside{
+	font-size:14px;
+	font-weight:bold;
+	opacity:0.5;
+	padding:10px;
+}

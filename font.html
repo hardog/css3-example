@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>css3 : @font-face</title>
+	<link href="css/common.css" rel="stylesheet"/>
+	<style type="text/css">
+		@font-face{
+			font-family:'smr';
+			src: url('fonts/singlemalta-webfont.eot');
+			src: url('fonts/singlemalta-webfont.eot?#iefix') format('embedded-opentype'),
+				 url('fonts/singlemalta-webfont.woff') format('woff'),
+				 url('fonts/singlemalta-webfont.ttf') format('truetype'),
+				 url('fonts/singlemalta-webfont.svg#SingleMaltaRegular') format('svg');
+			font-weight:normal;
+			font-style:normal;
+		}
+		.fonts-from-custom{
+			font-family:'smr';
+			font-size:20px;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<header>
+			<h1>@font-face</h1>
+			<aside>
+				@font-face:<br/>
+					font-family<br/>
+					src<br/>
+					font-weight<br/>
+					font-style<br/>
+					font-stretch<br/>
+					unicode-range<br/>
+			</aside>
+		</header>
+		<article>
+			<h1>test font</h1>
+			<div class="fonts-from-custom">startExample Question</div>
+		</article>
+		<footer>
+			其他说明详见当前目录‘fonts’文件夹
+		</footer>
+	</section>
+</body>
+</html>
