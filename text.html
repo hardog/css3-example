@@ -3,8 +3,155 @@
 <head>
 	<meta charset="UTF-8">
 	<title>css3:text</title>
+	<style type="text/css">
+		section{
+			border:#888888 solid 2px;
+			margin:5px;
+		}
+		article{
+			margin:20px;
+		}
+		aside{
+			font-size:14px;
+			font-weight:bold;
+			opacity:0.5;
+			padding:10px;
+		}
+		.test-border{
+			border:#000 dotted 1px;
+			white-space:nowrap;
+		}
+		.text-clip{
+			width:12em;
+			overflow:hidden;
+			text-overflow:clip;
+		}
+		.text-ellipsis-cn,
+		.text-ellipsis{
+			width:12em;
+			overflow:hidden;
+			text-overflow:ellipsis;
+		}
+		.test-border:hover{
+			text-overflow:inherit;
+			overflow:visible;
+		}
+		.hv-shadow{
+			text-shadow:3px 3px;
+		}
+		.hvb-shadow{
+			text-shadow:3px 3px 1px;
+		}
+		.hvbc-shadow{
+			text-shadow:3px 3px 1px #f00;
+		}
+		.rainbow-shadow{
+			text-shadow:0 0 3px #f00;
+		}
+		.word-wrap-test{
+			width:6em;
+			border:#000 solid 1px;
+		}
+		.word-wrap-normal{
+			word-wrap:normal;
+		}
+		.word-wrap-break-cn,
+		.word-wrap-break{
+			word-wrap:break-word;
+		}
+		.word-break-test{
+			width:10em;
+			border:#000 solid 1px;
+		}
+		.word-break-normal{
+			word-break:normal;
+		}
+		.word-break-all{
+			word-break:break-all;
+		}
+		.word-keep-all{
+			word-break:keep-all;
+		}
+	</style>
 </head>
 <body>
-
+	<section>
+		<header>
+			<h1>text-overflow</h1>
+			<aside>
+				Supported By IE & Firefox & Chrome & Safari & Opera
+			</aside>
+			<aside>
+				text-overflow:clip | ellipsis | string
+			</aside>
+		</header>
+		<article>
+			<h3>text-overflow:clip</h3>
+			<div class="test-border text-clip">text-clip : this is the test string!</div>
+			<h3>text-overflow:ellipsis</h3>
+			<div class="test-border text-ellipsis">text-ellipsis : this is the test string!</div>
+			<h3>text-overflow:中文测试</h3>
+			<div class="test-border text-ellipsis-cn">text-ellipsis : 这是一个文字换行中文测试!</div>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>text-shadow</h1>
+			<aside>
+				Supported By IE 10+ & Firefox & Chrome & Safari & Opera
+			</aside>
+			<aside>
+				text-shadow:h-shadow v-shadow blur(可选) color(可选)
+			</aside>
+		</header>
+		<article>
+			<h3>has: h-shadow v-shadow</h3>
+			<div class="hv-shadow">只有水平垂直方向阴影</div>
+			<h3>has: h-shadow v-shadow blur</h3>
+			<div class="hvb-shadow">水平垂直方向阴影以及模糊度</div>
+			<h3>has: h-shadow v-shadow blur color</h3>
+			<div class="hvbc-shadow">水平垂直方向阴影 模糊度 阴影颜色</div>
+			<h3>霓虹灯效果文字</h3>
+			<div class="rainbow-shadow">霓虹灯效果文字</div>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>word-wrap</h1>
+			<aside>
+				Supported By All popular browser
+			</aside>
+			<aside>
+				word-wrap:normal | break-word
+			</aside>
+		</header>
+		<article>
+			<h3>word-wrap:normal</h3>
+			<div class="word-wrap-test word-wrap-normal">word-wrap-normal text test thisisaverylongword!</div>
+			<h3>word-wrap:break-word</h3>
+			<div class="word-wrap-test word-wrap-break">word-wrap-normal text test thisisaverylongword!</div>
+			<h3>word-wrap:break-word 中文测试（测试结果:word-wrap只针对英文单词有效）</h3>
+			<div class="word-wrap-test word-wrap-break-cn">word-wrap-normal 这是一个非常非常非常长的中文字符串!</div>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>word-break</h1>
+			<aside>
+				Supported By All popular browser except Opera
+			</aside>
+			<aside>
+				word-break: normal | break-all | keep-all
+			</aside>
+		</header>
+		<article>
+			<h3>word-break:normal</h3>
+			<div class="word-break-test word-break-normal">word-break-normal this is a veryveryverylongtestfile!</div>
+			<h3>word-break:break-all</h3>
+			<div class="word-break-test word-break-all">word-break-all this is a veryveryverylongtestfile!</div>
+			<h3>word-break:keep-all</h3>
+			<div class="word-break-test word-keep-all">word-keep-all, this, is, a, veryveryverylongtestfile!</div>
+		</article>
+	</section>
 </body>
 </html>
