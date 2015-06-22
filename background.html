@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>css3:background</title>
+	<style type="text/css">
+		section{
+			border:#888888 solid 2px;
+			margin:5px;
+		}
+		article{
+			margin:20px;
+		}
+		aside{
+			font-size:14px;
+			font-weight:bold;
+			opacity:0.5;
+			padding:10px;
+		}
+		.bg-clip{
+			width:200px;
+			height:200px;
+			border:20px dotted #000;
+			background-color:#ff0;
+			padding:20px;
+		}
+		.bg-origin{
+			width:200px;
+			height:200px;
+			background-image:url(img/eg_smile.gif);
+			padding:20px;
+			border:#000 dotted 20px;
+			background-repeat:no-repeat;
+		}
+		.border-box-clip{
+			background-clip:border-box;
+		}
+		.padding-box-clip{
+			background-clip:padding-box;
+		}
+		.content-box-clip{
+			background-clip:content-box;
+		}
+		.border-box-origin{
+			background-origin:border-box;
+		}
+		.padding-box-origin{
+			background-origin:padding-box;
+		}
+		.content-box-origin{
+			background-origin:content-box;
+		}
+		.bg-size{
+			width:400px;
+			height:300px;
+			background-image:url(img/eg_smile.gif);
+			background-repeat:no-repeat;
+			border:#000 dotted 10px;
+			padding:10px;
+			background-color:#ff0;
+		}
+		.bg-size-repeat{
+			width:400px;
+			height:300px;
+			background-image:url(img/eg_smile.gif);
+			border:#000 dotted 10px;
+			padding:10px;
+			background-color:#ff0;
+			background-size:25%;
+			background-repeat:repeat-x;
+		}
+		.length-size{
+			background-size:100px 100px;
+		}
+		.percentage-size{
+			background-size:50% 50%;
+		}
+		.cover-size{
+			background-size:cover;
+		}
+		.contain-size{
+			background-size:contain;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<header>
+			<h1>background-clip</h1>	
+			<aside>Supported By IE9+ & Firefox & Opera & Chrome & Safari</aside>
+			<aside>
+				background-clip:border-box | padding-box | content-box
+			</aside>
+		</header>
+		<article>
+			<h1>border-box</h1>
+			<div class="bg-clip border-box-clip">bg-clip from border-box</div>
+			<h1>padding-box</h1>
+			<div class="bg-clip padding-box-clip">bg-clip from padding-box</div>
+			<h1>content-box</h1>
+			<div class="bg-clip content-box-clip">bg-clip from content-box</div>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>background-origin</h1>
+			<aside>
+				Supported By IE9+ & Firefox 4+ & Opera & Chrome & Safari 5+
+			</aside>
+			<aside>
+				background-origin:border-box | padding-box | content-box
+			</aside>
+		</header>
+		<article>
+			<h1></h1>
+			<div class="bg-origin border-box-origin">bg-origin from border-box</div>
+			<h1></h1>
+			<div class="bg-origin padding-box-origin">bg-origin from padding-box</div>
+			<h1></h1>
+			<div class="bg-origin content-box-origin">bg-origin from content-box</div>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>background-size</h1>
+			<aside>
+				Supported By IE 9+ & Firefox 4+ & Opera & Chrome & Safari 5+
+			</aside>
+			<aside>
+				background-size: length | percentage | cover | contain
+			</aside>
+		</header>
+		<article>
+			<h1>background-size:length 100px 100px</h1>
+			<div class="bg-size length-size">background-size from length</div>
+			<h1>background-size:percentage 50% 50%</h1>
+			<div class="bg-size percentage-size">background-size from percentage</div>
+			<h1>background-size:cover</h1>
+			<div class="bg-size cover-size">background-size from cover</div>
+			<h1>background-size:contain</h1>
+			<div class="bg-size contain-size">background-size from contain</div>
+			<h1>background-size:25% repeat-x 4 times</h1>
+			<div class="bg-size-repeat">background-size repeat-x 4 times</div>
+		</article>
+	</section>
+</body>
+</html>
