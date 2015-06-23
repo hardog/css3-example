@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>css3 : user interface</title>
+	<style type="text/css">
+		.base{
+			width:100px;
+			height:80px;
+			overflow:hidden;
+			background-color:#888;
+			margin:10px;
+			padding:10px;
+			border:#f00 solid 1px;
+		}
+		.resizex{
+			resize:horizontal;
+		}
+		.resizey{
+			resize:vertical;
+		}
+		.resizexy{
+			resize:both;
+		}
+		.outline{
+			border:2px solid black;
+			outline:2px solid red;
+			outline-offset:10px;
+		}
+		.border-box{
+			box-sizing:border-box;
+			background-clip:content-box;
+		}
+		.content-box{
+			box-sizing:content-box;
+			background-clip:content-box;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<h1>resize</h1>
+		<aside>
+			Not Supported By Firefox 4+ & Chrome & Safari
+		</aside>
+		<div class="base resizex">resize-x</div>
+		<div class="base resizey">resize-y</div>
+		<div class="base resizexy">resize-xy</div>
+	</section>
+	<section>
+		<h1>outline-offset</h1>
+		<aside>
+			Supported By all popular Browser Excepts IE
+		</aside>
+		<div class="base outline">outline</div>
+	</section>
+	<section>
+		<h1>box-sizing</h1>
+		<aside>
+			Supported By all popular Browser Excepts Firefox needs '-moz-' prefix
+		</aside>
+		<h3>box-sizing:border-box</h3>
+		<div class="base border-box">
+			border-box<br/>
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:10px;
+		</div>
+		<h3>box-sizing:content-box</h3>
+		<div class="base content-box">
+			border-box<br/>
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:10px;
+		</div>
+	</section>
+</body>
+</html>
