@@ -3,9 +3,154 @@
 <head>
 	<meta charset="UTF-8">
 	<title>css3 : transition</title>
+	<link href="css/common.css" rel="stylesheet"/>
+	<style type="text/css">
+		.transition{
+			background-color:#92B901;
+			width:205px;
+			height:180px;
+			color:#fff;
+			font-weight:bold;
+			font-size:12px;
+			text-align:center;
+			padding:20px 10px 0px 10px;
+			border-radius:5px;
+			-webkit-border-radius:5px;
+			-moz-border-radius:5px;
+			-o-border-radius:5px;
+			transition:transform 1s linear 0s, width 1s linear 0s, height 1s linear 0s, font-size 1s linear 0s, background-color 1s linear 0s;
+			-webkit-transition:transform 1s linear 0s, width 1s linear 0s, height 1s linear 0s, font-size 1s linear 0s, background-color 1s linear 0s;
+			-moz-transition:transform 1s linear 0s, width 1s linear 0s, height 1s linear 0s, font-size 1s linear 0s, background-color 1s linear 0s;
+			-o-transition:transform 1s linear 0s, width 1s linear 0s, height 1s linear 0s, font-size 1s linear 0s, background-color 1s linear 0s; 
+		}
+		.transition:hover{
+			width:245px;
+			height:220px;
+			background-color:#1ec7e6;
+			font-size:14px;
+			transform:rotate(360deg);
+			-webkit-transform:rotate(360deg);
+			-moz-transform:rotate(360deg);
+			-o-transform:rotate(360deg);
+		}
+		.transition-width{
+			width: 100px;
+			height: 100px;
+			background-color:#ff0;
+			transition:width 2s;
+			-moz-transition:width 2s;
+			-webkit-transition:width 2s;
+			-o-transition:width 2s;
+		}
+		.transition-width:hover{
+			width:200px;
+		}
+		.transition-wh-transform{
+			width:100px;
+			height:100px;
+			background:#ff0;
+			transition:width 2s, height 2s, transform 2s;
+			-moz-transition:width 2s, height 2s, transform 2s;
+			-webkit-transition:width 2s, height 2s, transform 2s;
+			-o-transition:width 2s, height 2s, transform 2s;
+		}
+		.transition-wh-transform:hover{
+			width:200px;
+			height:200px;
+			transform:rotate(180deg);
+			-moz-transform:rotate(180deg);
+			-webkit-transform:rotate(180deg);
+			-o-transform:rotate(180deg);
+		}
+		.transition-sp-base{
+			width:100px;
+			height:100px;
+			background-image:url(img/puke.jpg);
+			background-size:100% 100%;
+		}		
+		.transition-sp-base:hover{
+			width:200px;
+		}
+		.transition-sp-linear{
+			transition:width 2s linear 1s;
+			-webkit-transition:width 2s linear 1s;
+			-moz-transition:width 2s linear 1s;
+			-o-transition:width 2s linear 1s;
+		}
+		.transition-sp-ease{
+			transition:width 2s ease 1s;
+			-webkit-transition:width 2s ease 1s;
+			-moz-transition:width 2s ease 1s;
+			-o-transition:width 2s ease 1s;
+		}
+		.transition-sp-ease-in{
+			transition:width 2s ease-in 1s;
+			-webkit-transition:width 2s ease-in 1s;
+			-moz-transition:width 2s ease-in 1s;
+			-o-transition:width 2s ease-in 1s;
+		}
+		.transition-sp-ease-out{
+			transition:width 2s ease-out 1s;
+			-webkit-transition:width 2s ease-out 1s;
+			-moz-transition:width 2s ease-out 1s;
+			-o-transition:width 2s ease-out 1s;
+		}
+		.transition-sp-ease-in-out{
+			transition:width 2s ease-in-out 1s;
+			-webkit-transition:width 2s ease-in-out 1s;
+			-moz-transition:width 2s ease-in-out 1s;
+			-o-transition:width 2s ease-in-out 1s;
+		}
+		.transition-sp-bezier{
+			transition:width 2s cubic-bezier(0.1, 0.2, 0.8, 1) 1s;
+			-webkit-transition:width 2s cubic-bezier(0.1, 0.2, 0.8, 1) 1s;
+			-moz-transition:width 2s cubic-bezier(0.1, 0.2, 0.8, 1) 1s;
+			-o-transition:width 2s cubic-bezier(0.1, 0.2, 0.8, 1) 1s;
+		}
+	</style>
 </head>
 
 <body>
-	
+	<aside>
+		<p>IE 10+ & Firefox & Chrome</p>
+		<p>Safari needs '-webkit-' prefix</p>
+		<p>Chrome 25 & eailer needs '-webkit' prefix</p>
+	</aside>
+	<section>
+		<h1>Example 0</h1>
+		<div class="transition">transition颜色大小变化</div>	
+	</section>
+	<section>
+		<h1>Example 1 : width transition</h1>
+		<div class="transition-width">transition-width</div>
+	</section>
+	<section>
+		<h1>Example 2 : width & height & transform transition</h1>
+		<div class="transition-wh-transform">transition-wh-transform</div>
+	</section>
+	<section>
+		<h1>Example 3 : transition simpily property - linear</h1>
+		<div class="transition-sp-base transition-sp-linear">transition-simpily-property - linear</div>
+	</section>
+	<section>
+		<h1>Example 4 : transition simpily property - ease</h1>
+		<div class="transition-sp-base transition-sp-ease">transition-simpily-property - ease</div>
+	</section>
+	<section>
+		<h1>Example 5 : transition simpily property - ease-in</h1>
+		<div class="transition-sp-base transition-sp-ease-in">transition-simpily-property - ease in</div>
+	</section>
+	<section>
+		<h1>Example 6 : transition simpily property - ease-out</h1>
+		<div class="transition-sp-base transition-sp-ease-out">transition-simpily-property - ease out</div>
+	</section>
+	<section>
+		<h1>Example 7 : transition simpily property - ease-in-out</h1>
+		<div class="transition-sp-base transition-sp-ease-in-out">transition-simpily-property - ease in out</div>
+	</section>
+	<section>
+		<h1>Example 8 : transition simpily property - cubic-bezier</h1>
+		<div class="transition-sp-base transition-sp-bezier">transition-simpily-property - cubic-bezier</div>
+	</section>
 </body>
 </html>
