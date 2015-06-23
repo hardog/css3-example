@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://www.w3cplus.com/css3/css3-2d-transform.html -->
+<html lang="zh-hans" dir="ltr" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="js"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style id="znBdcsStyle" type="text/css">.bdcs-container .bdcs-main,.bdcs-container .bdcs-main *{box-sizing:content-box;margin:0;padding:0;float:none;clear:none;overflow:hidden;white-space:nowrap;word-wrap:normal;border:0;background:0 0;width:auto;height:auto;max-width:none;min-width:none;max-height:none;min-height:none;border-radius:0;box-shadow:none;transition:none;text-align:left}.bdcs-container .bdcs-clearfix:after{content:'';display:block;clear:both;height:0}.bdcs-container .bdcs-clearfix{zoom:1}.bdcs-container .bdcs-main{overflow:visible}.bdcs-container .bdcs-search{display:block;overflow:visible;position:relative;border-style:solid}.bdcs-container .bdcs-search-form-input-wrap{display:inline-block}.bdcs-container .bdcs-search-form-input{border-width:1px;border-style:solid;display:inline-block;vertical-align:top;text-indent:5px;background-color:#fff;float:left}.bdcs-container .bdcs-search-form-input:focus{border-width:1px;border-style:solid;outline:0}.bdcs-container .bdcs-search-form-submit-wrap{display:inline-block}.bdcs-container .bdcs-search-form-submit{display:inline-block;cursor:pointer;border-width:1px;border-style:solid;vertical-align:top;text-align:center;width:50px;//_overflow:hidden}.bdcs-container .bdcs-search-form-submit-magnifier{width:45px;padding:0;text-indent:-999em;overflow:hidden;background:url(http://znsv.baidu.com/static/customer-search/component/search/magnifier-icon.png) no-repeat center center;_background:url(http://znsv.baidu.com/static/customer-search/component/search/magnifier-icon_ie6.png) no-repeat center center}div#default-searchbox .default-channel-meun{position:relative;width:75px;display:inline-block;vertical-align:middle;cursor:pointer;background:#fff;float:left;overflow:visible}div#default-searchbox .default-channel-current{border:1px solid;position:relative;width:100%;border-right:0}div#default-searchbox .default-channel-current span{margin-left:8px}div#default-searchbox .default-channel-current i{overflow:hidden;width:0;height:0;border-width:6px 6px 0;border-color:#9E9E9E #fff;border-style:solid;display:block;position:absolute;right:10px;top:11px}div.cse-default-channel-container{display:block;position:absolute;z-index:30061000000}div.cse-default-channel-container .default-channel-list{display:none;width:99%;list-style:none;background:#fff;border:1px solid #DDD;border-top:0;margin:0;padding:0}div.cse-default-channel-container .default-channel-list li{background:0 0;line-height:24px;list-style:none;display:block;padding-left:7px;cursor:pointer}div.cse-default-channel-container .default-channel-list li:hover{background:#DDD}.bdcs-container .bdcs-search-form-input-wrap{}.bdcs-container .bdcs-search-form-input-notspan{margin-left:0px;font-family:null;color:null;font-size:14px;}.bdcs-container .bdcs-search-form-input .icon-nofocus{left:;right:;top:;height:;width:;}.bdcs-container .bdcs-search{width:auto;height:px;overflow:visible;border-color:#ffffff;border-radius:0px;border-width:0px;box-shadow:none;background-color:none;}.bdcs-container .bdcs-search-form-input{border-color:#a6a6a6;margin-right:px;width:146px;height:26px;line-height:26px;font-family:null;color:null;font-size:14px;border-radius:0px;background-color:#FFFFFF;}.bdcs-container .bdcs-search-form-input:focus{border-color:null;}.bdcs-container .bdcs-search-form-submit-wrap{}.bdcs-container .bdcs-search-form-submit{border-color:#a6a6a6;height:26px;width:50px;background-color:#f5f5f5;color:null;font-family:null;font-size:14px;border-radius:0px;}.bdcs-container .bdcs-search-sug-list{width:250px;}.bdcs-container .bdcs-search-sug-list-item{height:40px;line-height:40px;font-family:Arial,Microsoft YaHei,sans-serif;font-size:14px;}.bdcs-container .bdcs-search-sug-list-item-value{color:#595959;}.bdcs-container .bdcs-clearfix:after{content:'';display:block;clear:both;height:0}.bdcs-container .bdcs-clearfix{zoom:1}.bdcs-container .bdcs-search{overflow:visible;position:relative}.bdcs-container .bdcs-search-sug,.bdcs-container .bdcs-search-sug *{box-sizing:content-box;margin:0;padding:0;float:none;clear:none;overflow:hidden;white-space:nowrap;word-wrap:normal;border:0;background:0 0;width:auto;height:auto;max-width:none;min-width:none;max-height:none;min-height:none;border-radius:0;box-shadow:none;transition:none;text-align:left}.bdcs-container .bdcs-search-sug{display:none;position:absolute;z-index:2147483647}.bdcs-container .bdcs-search-sug-list{list-style:none;border:1px solid #DDD;background-color:#FFF}.bdcs-container .bdcs-search-sug-list{}.bdcs-container .bdcs-search-sug-list-item{display:block;list-style:none;cursor:pointer;padding:0 5px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.bdcs-container .bdcs-search-sug-list-item-current{background-color:#EBEBEB}.bdcs-container .bdcs-search-sug-list-item-author-novel,.bdcs-container .bdcs-search-sug-list-item-author-music,.bdcs-container .bdcs-search-sug-list-item-type-movie{color:#BABABA}.bdcs-container .bdcs-search-sug-list-item-author-novel,.bdcs-container .bdcs-search-sug-list-item-author-music{margin-left:5px}.bdcs-container .bdcs-search-sug-list-item-music{overflow:hidden;*zoom:1}.bdcs-container .bdcs-search-sug-list-item-value-movie{float:left}.bdcs-container .bdcs-search-sug-list-item-type-movie{float:right}.bdcs-container .bdcs-search-sug-skin{display:none;width:85px;height:85px;position:absolute;right:1px;bottom:1px}.bdcs-container .bdcs-search-sug-skin-img{width:85px;height:85px}.bdcs-container .bdcs-search-sug-i{color:#e64fa3;font-weight:700;margin-left:10px;font-family:simsun;font-style:normal}.bdcs-container .bdcs-search-sug-adv{width:105px;position:absolute;right:1px;top:1px;display:none}.bdcs-container .bdcs-search-sug-adv-img{position:absolute;top:0;right:0}.bdcs-container{overflow:visible;}.bdcs-container .bdcs-search-form-submit{*height:28px;*margin-top:1px;}.bdcs-container .bdcs-search-form-submit{line-height:26px;}.bdcs-container .bdcs-search-sug-list-item{height:40px;line-height:40px;font-family:Arial,Microsoft YaHei,sans-serif;font-size:14px;}.bdcs-container .bdcs-search-sug-list-item-value{color:#595959;}#bdcs-rec{display:none;}</style>
+<link rel="shortlink" href="http://www.w3cplus.com/node/902">
+<meta content="CSS3 2D Transform" about="/css3/css3-2d-transform.html" property="dc:title">
+<link rel="shortcut icon" href="http://cdn1.w3cplus.com/cdn/farfuture/6I7SmeJ6bvYzRevkkH6pjf9WnDTRa7YEBbsCyi6dPro/mtime:1414079820/sites/all/themes/w3cplusV2/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="canonical" href="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus.html">
+<link rel="dns-prefetch" href="http://cdn1.w3cplus.com/">
+<meta name="Generator" content="Drupal 7 (http://drupal.org)">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="http://cdn.w3cplus.com/">
+<link rel="dns-prefetch" href="http://cdn2.w3cplus.com/">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="keywords" content="css3教程,css3实例,css3属性详解,w3c,transition">
+  <meta name="description" content="W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。">
+  <meta name="chinaz-site-verification" content="e05734b7-b750-4282-b98f-1dfe97a349bc">
+  <meta name="ujianVerification" content="4f5e0543e4b020324dcf03e2">
+  <meta name="baidu-site-verification" content="ftyq813qEZgpw9nb">
+  <meta name="google-site-verification" content="uVNoZLN3dibr1wA6EQAxou562q9YhGKXPYG5_ZzhW6Y">
+  <title>CSS3 2D Transform | css3教程-css3实例-css3动画 | W3CPlus</title>
+  <link type="text/css" rel="stylesheet" href="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/css_UmjYWbn8Yf1MjxlPR0E074Surjy3buZG43uTKL-Fjxw.css" media="all">
+<link type="text/css" rel="stylesheet" href="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/css_hYCLW089C9S9sP3ZYkuG6R-Q5ZHbEhblZBFjwZ_bE_I.css" media="all">
+<link type="text/css" rel="stylesheet" href="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/css_QmXPVGhcTv8mB_NIV1AEdR5Bj-0k_d2pHiGsSSa2yRs.css" media="all">
+<link type="text/css" rel="stylesheet" href="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/css_Z2GLhFLlYY5jx6an4gqVV6DKjkaQlren0kXYYP6qt2M.css" media="all">
+  <script src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/hm.js" type="text/javascript"></script><script type="text/javascript" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/respond.min.js"></script>
+<script type="text/javascript" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/js_oCVMDTeSNt-_QxknevWyf6yO5OzmME3AhRz3ggZgNtg.js"></script>
+<script type="text/javascript" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/js_NslBImOWcqfCIsbRFanlGvCfKcP9W6i3adHPXVdHgFo.js"></script>
+<script type="text/javascript" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/js_Qb0Mxsjko9jopxSpkpYiU7iOLxhLb8IyNq5ZcC-N-fE.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"w3cplusV2","theme_token":"qIYyaJ-7Upr67VeqqlVEVTgNFHOjTVAIwFb2rq9w0po","js":{"0":1,"modules\/statistics\/statistics.js":1,"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/zh-hans_hUjNQ1dZxNcdY8WChO2pX8idFCXnDfgIL3VJfBd-G2Q.js":1,"sites\/all\/modules\/contrib\/baidu_analytics\/baidu_analytics.js":1,"sites\/all\/themes\/w3cplusV2\/js\/highlight.pack.js":1,"sites\/all\/themes\/w3cplusV2\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/w3cplusV2\/css\/style.css":1}},"baidu_analytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"statistics":{"data":{"nid":"902"},"url":"\/modules\/statistics\/statistics.php"}});
+//--><!]]>
+</script>
+<script src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/share.js"></script><script type="text/javascript" async="" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/embed.js" charset="UTF-8"></script><script src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/js" charset="utf-8"></script><script data-css-animate="1" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/AD__w3cplus_words" charset="undefined"></script><link href="http://api.lagou.com/css/animate.css" rel="stylesheet" class="lazyload" charset="utf-8"><link type="text/css" rel="stylesheet" href="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/embed.default.css"><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style2_16.css"></head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-902 node-type-blog featured"><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+  <div id="skip-link">
+    <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+  </div>
+    <div id="header" role="header">
+  <div class="container">
+    <h1 id="logo">
+      <a href="http://www.w3cplus.com/" title="记述前端那些事,引领web前沿,打造精品css3教程" id="site_name">w3cplus</a>
+    </h1>
+    <div class="toggle-topbar menu-icon" id="pull">
+      <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#"><span>Menu</span></a>
+    </div>
+    <div class="toogle-topbar-content" id="pull-menu">
+              <ul class="menu clearfix"><li class="first leaf"><a href="http://www.w3cplus.com/blogs/list.html" title="">博客</a></li>
+<li class="leaf active-trail"><a href="http://www.w3cplus.com/blog/css3" title="" class="active active-trail">CSS3</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/mobile" title="">Mobile</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/blog/tags/302.html" title="Sass教程">Sass</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/responsive" title="响应式设计">Responsive</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/blog/tags/411.html" title="SVG">SVG</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/blog/translations" title="译文">译文</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/lessons.html" title="在线教程">在线教程</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/resources/list.html" title="">资源</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/demos/list.html" title="">案例</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/source/front-end-developer-excellent-tool.html" title="在线工具">工具</a></li>
+<li class="leaf"><a href="http://www.w3cplus.com/collective" title="">周刊</a></li>
+<li class="last leaf"><a href="http://www.w3cplus.com/tags" title="标签云">标签云</a></li>
+</ul>        <!-- /#main-menu -->
+          </div>
+  </div>
+</div>
+
+  <div id="branding" role="branding">
+    <div class="container">
+        <div class="region region-branding">
+    <div id="block-block-44" class="block block-block">
+
+    
+  <div class="content">
+    <div class="ct-ad-article-wrapper banner" style="margin-bottom:0;padding:0">
+	<div class="ct-ad-article">
+		<div class="bsap" style="color: #fff;font-size:2em;height: 90px;line-height:90px;background-color:#00a3cf;">
+			<a href="mailto:w3cplus@hotmail.com" target="_blank" style="color: #fff;display:block;line-height:90px;font-size:.8em;">诚征广告商入驻 w3cplus@hotmail.com</a>
+</div>
+	</div>
+</div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="page" role="page">
+  <div class="container">
+    
+    <div class="col-main">
+      <div class="main-wrap">
+        
+                    <div class="region region-featured">
+    <div id="block-block-22" class="block block-block">
+
+    
+  <div class="content">
+    <div class="ct-ad-article-wrapper" id="content-ad">
+	<div class="ct-ad-article">
+		<div class="bsap">
+			<a href="http://www.lagou.com/zhaopin/qianduankaifa?utm_source=AD__w3cplus&utm_medium=banner&utm_campaign=qianduan" target="_blank"><img alt="拉勾网" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/lagou960X90.png"></a></div>
+	</div>
+</div>
+  </div>
+</div>
+  </div>
+                
+        <div class="page-inner">
+                      <div id="breadcrumb" role="breadcrumb">
+              <h2 class="element-invisible">你在这里</h2><div class="breadcrumb"><a href="http://www.w3cplus.com/">首页</a> » <a href="http://www.w3cplus.com/blog">博客</a> » <a href="http://www.w3cplus.com/blogs/airen">Airen的博客</a></div>            </div>
+          
+          
+          <a id="main-content"></a>
+                                <h1 class="title" id="page-title">
+              CSS3 2D Transform            </h1>
+          
+                    
+                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-902" class="node node-blog node-promoted node-full clearfix" about="/css3/css3-2d-transform.html" typeof="sioc:Post sioct:BlogPost">
+  
+  <div class="node-header">
+              <div class="submitted">
+          作者：<span>大漠</span>          日期：<span>2013-11-13</span>          点击：<span>4241</span>        </div>
+            <div class="tags">
+        <div class="field field-name-field-blog-tag field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="http://www.w3cplus.com/blog/tags/95.html" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">transform</a></div></div></div>      </div>
+  </div>
+
+      <div id="node-top" class="node-top">
+      <div id="block-block-38" class="block block-block">
+
+    
+  <div class="content">
+    <div class="ct-ad-article-wrapper" id="content-ad">
+  <div class="ct-ad-article">
+    <div class="bsap">
+     <a href="https://www.baocai.com/activity/landing/?source=w3cplus_1" target="_blank">
+      <img src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/baocai.jpg">
+     </a>
+    </div>
+  </div>
+</div>  </div>
+</div>
+    </div>
+  
+  <div class="body-content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>在一个二维或三维空间，元素可以被扭曲、移位或旋转。只不过2D变形工作在X轴和Y轴，也就是大家常说的水平轴和垂直轴；而3D变形工作在X轴和Y轴之外，还有一个Z轴。这些3D变换不仅可以定义元素的长度和宽度，还有深度。我们将首先讨论元素在2D平面如何变换，然后我们在进入3D变换的讨论。</p>
+<p>CSS3 2D变换让Web设计师有了更多的自由来装饰和变形HTML组件。同时让设计师有更多的功能装饰文本和更多动画选项来装饰Div元素。在CSS3 2D变形中主要包含的一些基本功能如下。</p>
+<div class="gg-ad clearfix" style="text-align:center;">
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+/*468*60，创建于2014-3-16*/
+var cpro_id = "u1490106";
+
+//--><!]]>
+</script><script src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/c.js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1490106_0"><iframe id="cproIframe_u1490106_1" width="468" height="60" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/acom(3).html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/acom"></script></div>
+<h2>
+	位移translate()函数</h2>
+<p>大家不要误会了，translate并不是指翻译外国语言，在这里translate是一种方法，将元素向指定的方向移动，类似于<code>position</code>中的<code>relative</code>。可以简单的理解为，使用<code>translate()</code>函数，你可以把元素从原来的位置移动，而不影响在X、Y轴上任何组件。</p>
+<p>translate()函数的使用语法如下：</p>
+<pre class="undefined"><code class="undefined">translate(tx)
+</code></pre>
+<p>或者</p>
+<pre class="undefined"><code class="undefined">translate(tx,ty)
+</code></pre>
+<p><code>translate()</code>函数可以取一个值tx，也可以同时取两个值tx和ty，其取值具体说明如下：</p>
+<ul><li>
+		tx是一个代表X轴（横坐标）移动的向量长度，当其值为正值时，元素向X轴右方向移动，反之其值为负值时，元素向X轴左方向移动。</li>
+	<li>
+		ty是一个代表Y轴（纵向标）移动的向量长度，当其值为正值时，元素向Y轴下方向移动，反之其值为负值时，元素向Y轴上方向移动。如果ty没有显式设置时，相当于ty=0。</li>
+</ul><p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-29.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></p>
+<p>结合起来，<code>translate()</code>函数移动元素主要有以下三种移动：</p>
+<ul><li>
+		水平移动：向右移动<code>translate(tx,0)</code>和向左移动<code>translate(-tx,0)</code>；</li>
+	<li>
+		垂直移动：向上移动<code>translate(0,-ty)</code>和向下移动<code>translate(0,ty)</code>;</li>
+	<li>
+		对角移动：右下角移动<code>translate(tx,ty)</code>、右上角移动<code>translate(tx,-ty)</code>、左上角移动<code>translate(-tx,-ty)</code>和左下角移动<code>translate(-tx,ty)</code>。</li>
+</ul><p>现在我们来看一些有关于<code>translate()</code>函数的简单例子。我们使用<code>transform:translate(tx,ty)</code>将一个对象从其原始位置移动，其中tx值为正值和ty值等于0时，对像向右移动：</p>
+<h4>
+	HTML</h4>
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"images/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"images/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+<h4>
+	CSS</h4>
+<pre class="perl"><code class="perl">div {
+    width: <span class="number"><span class="number">500</span></span>px;
+    height: <span class="number"><span class="number">300</span></span>px;
+    margin: <span class="number"><span class="number">30</span></span>px auto;
+    position: relative;
+    background: url(images/bg-grid.jpg) <span class="keyword"><span class="keyword">no</span></span>-repeat center center;
+    background-size: <span class="number"><span class="number">100</span></span>% <span class="number"><span class="number">100</span></span><span class="variable"><span class="variable">%;</span></span>
+}
+
+/<span class="regexp"><span class="regexp">/默认图片都在容器中水平垂直居中
+div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -35px;
+    margin-top: -50px; 
+}
+div img:nth-child(1){
+    opacity: .5;
+    z-index: 1;
+}
+div img:nth-child(2){
+    opacity: 1;
+    z-index: 2;
+    transform: translate(100px,0);
+}
+</span></span></code></pre>
+<p>效果如下图所示：</p>
+<p><a href="http://codepen.io/airen/pen/pJnAB"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-30.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>在这个示例中，我们让扑克牌梅花King相对于原点中心位置向右移动100像素。如果仅需让元素向右移动，我们可以省略ty值。换句话说ty值为０时可以省略不写。如此一来，上面的效果等同与：</p>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">opacity</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(<span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>要将一个对象移动到左边，我们只需要输入一个负数的X轴坐标，而Y坐标应保持０，基于前面的实例，我们将扑克牌向左边移动100像素：</p>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(-<span class="number"><span class="number">100</span></span>px,<span class="number"><span class="number">0</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>效果如下图所示：</p>
+<p><a href="http://codepen.io/airen/pen/Avrck"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-31.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>垂直移动一个对象很简单，几乎和水平移动对象相同。唯一的区别是，我们将使用Y轴的值控制对象向上和向下移动位移量。正如我们前面提到的，Y轴的坐标值为正值时，对像向下移动；反之其坐标值为负值时，对象向上移动。而X轴的坐标值应该保持为０。我们来看一个简单的实例，将一扑克牌向上，向下移动100像素：</p>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">opacity</span></span></span><span class="rule">:<span class="value"><span class="value"> .<span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(<span class="number"><span class="number">0</span></span>,-<span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>其效果如下图所示：</p>
+<p><a href="http://codepen.io/airen/pen/Kqfyx"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-32.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>要让一个元素对角移动，我样将结合X轴和Y轴两坐标的值。根据不同的方向，X轴和Y轴的值可能是正值或是负值。如果我们要将一张扑克牌向右上角移动，需要将X轴坐标设置为正值，将Y轴从标设置为负值；如果要将一张扑克牌向右下角移动，需要将X、Y轴坐标设置为正值；如果要将一张扑克牌向左上角移动，需要将X、Y轴坐标设置为负值；如果要将扑克拍向左下角移动，需要将X坐标设置为负值，Y轴坐标设置为正值。</p>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">opacity</span></span></span><span class="rule">:<span class="value"><span class="value"> .<span class="number"><span class="number">5</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(<span class="number"><span class="number">100</span></span>px,-<span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(3)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(<span class="number"><span class="number">100</span></span>px,<span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(4)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(-<span class="number"><span class="number">100</span></span>px,-<span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(5)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">3</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(-<span class="number"><span class="number">100</span></span>px,<span class="number"><span class="number">100</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>其效果如下所示：</p>
+<p><a href="http://codepen.io/airen/pen/FkAwu"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-33.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>如果我们要将对象沿着一个方向移动，比如说沿着水平轴或者纵轴移动，可以实使用<code>translate(tx,0)</code>和<code>translate(0,ty)</code>来实现。其实在变形中还为单独一个方向移动对象提供了更简单的方法：</p>
+<ul><li>
+		translateX()：水平方向移动一个对象。通过给定一个X轴方向的数值指定对象沿水平轴方向的位移。简单点说，对像只向X轴进行移动，如果值为正值，对像向右移动；如果值为负值，对像向左移动。</li>
+	<li>
+		translateY()：纵轴方向移动一个对象。通过给定一个Y轴方向的数值指定对象沿纵轴方向的位移。简单点说，对象只向Y轴进行移动，如果值为正值，对象向下移动；如果值为负值，对像向上移动。</li>
+</ul><p>这两个函数和前面介绍的<code>translate()</code>函数不同的是每个方法只接受一个值。所以，<code>transform:translate(-100px,0)</code>实际上等于<code>transform:translateX(-100px)</code>;<code>transform:translate(0,-100px)</code>实际上等于<code>transform:translateY(-100px)</code>。</p>
+<h2>
+	缩放scale()函数</h2>
+<p>缩放scale()函数让元素根据中心原点对对象进行缩放。默认的值1。因此0.01到0.99之间的任何值，使一个元素缩小；而任何大于或等于1.01的值，让元素显得更大。</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-34.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></p>
+<p>缩放<code>scale()</code>函数和<code>translate()</code>函数的语法非常相似，他可以接受一个值，也可以同时接受两个值，如果只有一个值时，其第二个值默认与第一个值相等。例如，<code>scale(1,1)</code>元素不会有任何变化，而<code>scale(2,2)</code>让元素沿X轴和Y轴放大两倍。其使用语法如下：</p>
+<pre class="undefined"><code class="undefined">scale(sx)
+</code></pre>
+<p>或者：</p>
+<pre class="undefined"><code class="undefined">scale(sx,sy)
+</code></pre>
+<p>其取值简单说明如下：</p>
+<ul><li>
+		sx：用来指定横向坐标（X轴）方向的缩放向量，如果值为0.01~0.99之间，会让对象在X轴方向缩小，如果值大于或等于1.01，对象在X轴方向放大。</li>
+	<li>
+		sy：用来指定纵向坐标（Y轴）方向的缩放量，如果值为0.01~0.99之间，会让对象在Y轴方向缩小，如果值大于或等于1.01，对象在Y轴方向放大。</li>
+</ul><p>这有一个简单的实例：</p>
+<h4>
+	HTML</h4>
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"images/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"images/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+<h4>
+	CSS</h4>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">30</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">position</span></span></span><span class="rule">:<span class="value"><span class="value"> relative;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">url(images/bg-grid.jpg)</span></span> no-repeat center center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background-size</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">100</span></span>% <span class="number"><span class="number">100</span></span>%;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">position</span></span></span><span class="rule">:<span class="value"><span class="value"> absolute;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">top</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">50</span></span>%;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">left</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">50</span></span>%;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-left</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">35</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-top</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">50</span></span>px;</span></span></span><span class="value"></span></span> 
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">opacity</span></span></span><span class="rule">:<span class="value"><span class="value"> .<span class="number"><span class="number">8</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>px solid red;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">scale(<span class="number"><span class="number">1.5</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>效果如下所示：</p>
+<p><a href="http://codepen.io/airen/pen/afDjL"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-35.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>上面的例子将扑克牌放大了1.5倍或是实际尺寸的150%。因为我们同时对X和Y轴方向方大，所以我们只需要给scale()声明一个值。你也可以使用transform:scale(1.5,1.5)实现想相同的效果。</p>
+<p>此外如果我们要缩小一个元素，我们会专门使用一个0~0.9999的值，像下面的例子，我们将扑克牌缩放一半，也就是实际尺寸的50%。</p>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> ２;</span></span></span><span class="value"></span></span>       
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">scale(.<span class="number"><span class="number">5</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>效果如下所示：</p>
+<p><a href="http://codepen.io/airen/pen/hCBul"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-36.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>但是，要小心，如果你将值设置为“0”时，元素将会消失。我想，如果没必要，你是不会这样做的。当我们仅给scale() 函数只显式设置一个值时，会使对象成正比例放大或缩小。如果需要将对象在X轴和Y轴两个方向设置不同的值。</p>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">scale(.<span class="number"><span class="number">5</span></span>,<span class="number"><span class="number">1.2</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>效果如下所示：</p>
+<p><a href="http://codepen.io/airen/pen/dGFcf"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-37.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>scale()函数和translate()函数极其相似，除了能通过scale()函数使用元素水平方向和垂直方向同时缩放（也就是元素沿X轴和Y轴同时缩放）之外，也可以使元素仅沿着X轴或Y轴方向缩放：</p>
+<ul><li>
+		scaleX()：相当于scale(sx,1)。表示元素只在X轴（水平方向）缩放元素，其默认值是1。</li>
+	<li>
+		scaleY()：相当于scale(1,sy)。表示元素只在Y轴（纵横方向）缩放元素，其默认值是１。</li>
+</ul><p>通过上面的介绍，让我们不由想起图形编辑软件中的缩放工具，对对象进行缩放效果。在CSS3中的scale()函数和图形编辑软件中的缩放工具几乎相同：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-38.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></p>
+<p>在scale()函数中，取值除了可以取正值之外，同时还可以取负值。只不过取负值时，会先让元素进行翻转，然后在进行缩放。</p>
+<h4>
+	HTML</h4>
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"wrapper"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span>&gt;</span></span>Scale(-1.5)<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+<h4>
+	CSS</h4>
+<pre class="css"><code class="css"><span class="class"><span class="class">.wrapper</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">400</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">30</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">position</span></span></span><span class="rule">:<span class="value"><span class="value"> relative;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">url(http://www.w3cplus.com/sites/default/files/blogs/<span class="number"><span class="number">2013</span></span>/<span class="number"><span class="number">1311</span></span>/bg.jpg)</span></span> repeat center center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="class"><span class="class">.wrapper</span></span> &gt; <span class="tag"><span class="tag">div</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">position</span></span></span><span class="rule">:<span class="value"><span class="value"> absolute;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background-color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">hsla(<span class="number"><span class="number">220</span></span>,<span class="number"><span class="number">20</span></span>%,<span class="number"><span class="number">20</span></span>%,.<span class="number"><span class="number">3</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">top</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">50</span></span>%;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">left</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">50</span></span>%;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-left</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">100</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-top</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">100</span></span>px;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">198</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">198</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">border</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">1</span></span>px dotted orange;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">text-align</span></span></span><span class="rule">:<span class="value"><span class="value"> center;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">line-height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">198</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">color</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="hexcolor"><span class="hexcolor">#fff</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">font-size</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">20</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">scale(-<span class="number"><span class="number">1.5</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>效果如下：</p>
+<p><a href="http://codepen.io/airen/pen/DIckC"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-39.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p><code>scale()</code>函数对元素进行缩放时，都是以元素的中心为基点，但可以通过<code>transform-origin</code>来改变元素的基点。</p>
+<h2>
+	旋转rotate()函数</h2>
+<p>旋转rotate()函数通过指定的角度参数对元素根据对象原点指定一个2D旋转。它主要在二维空间内进行操作，接受一个角度值，用来指定旋转的幅度。如果这个值为正值，元素相对原点中心顺时针旋转；如果这个值为负值，元素相对原点中心逆时针旋转。</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-40.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></p>
+<p>rotate()函数的使用很简单，其基本语法如下：</p>
+<pre class="undefined"><code class="undefined">rotate(a);
+</code></pre>
+<p>rotate()函数只接受一个值，其属性值简单说明如下：</p>
+<ul><li>
+		a：代表的是一个旋转的角度值。其取值可以是正的，也可以是负的。如果取值为正值时，元素默认之下相对元素中心点顺时针旋转；如果取值为负值时，元素默认之下相对元素中心点逆时针旋转。</li>
+</ul><p>接下来，我们来看一个简单的例子，扑克牌相对于元素中心点顺时针旋转45度：</p>
+<h4>
+	HTML</h4>
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+<h4>
+	CSS</h4>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">width</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">500</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">height</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">300</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">30</span></span>px auto;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">position</span></span></span><span class="rule">:<span class="value"><span class="value"> relative;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">background</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">url(http://www.w3cplus.com/sites/default/files/blogs/<span class="number"><span class="number">2013</span></span>/<span class="number"><span class="number">1311</span></span>/bg.jpg)</span></span> repeat center center;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">position</span></span></span><span class="rule">:<span class="value"><span class="value"> absolute;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">top</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">50</span></span>%;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">left</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">50</span></span>%;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-left</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">70</span></span>px;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">margin-top</span></span></span><span class="rule">:<span class="value"><span class="value"> -<span class="number"><span class="number">100</span></span>px;</span></span></span><span class="value"></span></span> 
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> １;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">opacity</span></span></span><span class="rule">:<span class="value"><span class="value"> .<span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">rotate(<span class="number"><span class="number">45</span></span>deg)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>效果如下所示：</p>
+<p><a href="http://codepen.io/airen/pen/mdKgs"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-41.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>在默认之下，rotate()函数旋转元素是相对于元素中心点进行旋转，同样，我们可以通过<code>transform-origin</code>属性重置元素的旋转原点：</p>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform-origin</span></span></span><span class="rule">:<span class="value"><span class="value"> top left;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">rotate(<span class="number"><span class="number">45</span></span>deg)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>基于上例，修改旋转原点后的效果就完全不同了：</p>
+<p><a href="http://codepen.io/airen/pen/gzhpJ"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-42.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>rotate()函数也同样可以和图形编辑软件中的旋转工具的功能对比起来理解。如下图所示的是CSS3中rotate()函数在2D中的旋转与Photoshop制作软件中旋转工具的对比：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-43.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></p>
+<h2>
+	倾斜skew()函数</h2>
+<p>倾斜skew()函数能够让元素倾斜显示。它可以将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜。这与rotate()函数的旋转不同，rotate()函数只是旋转，而不会改变元素的形状。skew()函数不会旋转，而只会改变元素的形状。语法格式如下：</p>
+<pre class="undefined"><code class="undefined">skew(ax)
+</code></pre>
+<p>或者</p>
+<pre class="undefined"><code class="undefined">skew(ax,ay)
+</code></pre>
+<p>其属性值说明如下：</p>
+<ul><li>
+		ax：用来指定元素水平方向（X轴方向）倾斜的角度。</li>
+	<li>
+		ay：用来指定元素垂直方向（Y轴方向）倾斜的角度。如果未显式的设置这个值，其默认为０。</li>
+</ul><p>这里有一个简单的例子：</p>
+<pre class="css"><code class="css"><span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(1)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> １;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">opacity</span></span></span><span class="rule">:<span class="value"><span class="value"> .<span class="number"><span class="number">6</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="tag"><span class="tag">div</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">skew(<span class="number"><span class="number">30</span></span>deg,<span class="number"><span class="number">10</span></span>deg)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>效果如下图所示：</p>
+<p><a href="http://codepen.io/airen/pen/uJorp"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-44.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>倾斜skew()函数和CSS3中变形中的translate()、scale()函数一样，除了可以使用skew(tx,ty)函数让元素相于元素中心为原点在X轴和Y轴倾斜之外，还可以使用skewX()和skewY()函数让元素只在水平或垂直方向倾斜。</p>
+<ul><li>
+		skewX()：相当于skew(ax,0)和skew(ax)。按给定的角度沿X轴指定一个倾斜变形。skewX()使元素以其中心为基点，并在水平方向（X轴）进行倾斜变形。</li>
+	<li>
+		skewY()：相当于skew(0,ay)。按给定的角度沿Y轴指定一个倾斜变形。skewY()用来设置元素以其中心为基点并给定的角度在垂直方向（Y轴）倾斜变形。</li>
+</ul><p>在默认情况之下，skew()函数都是以元素的原中心点对元素进行倾斜变形，但是我们同样可以根据transform-origin属性，重新设置元素基点对元素进行倾斜变形。另外，skew()函数和制图软件中的变形工具所起作用类似。</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-45.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></p>
+<h2>
+	矩阵matrix()函数</h2>
+<p>CSS3中Transform让我们操作变形变得很简单，诸如，位移translate()函数、缩放scale()函数、旋转rotate()函数和倾斜skew()函数。这几个函数很简单，也很方便，但是变形中的矩阵函数matrix()对于我们来说就不常使用了。</p>
+<p>当然，Web设计师可以使用rotate()、skew()、scale()和translate()函数来满足他们的变形需要，那我们为什么要劳烦矩阵matrix()呢？在CSS3中的变形函数都可以使用matrix()函数来代替，例如：</p>
+<p>使用矩阵可以实现一个复杂的2D变形，如下：</p>
+<pre class="css"><code class="css"><span class="id"><span class="id">#object</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform-origin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">rotate(<span class="number"><span class="number">15</span></span>deg)</span></span>  <span class="function"><span class="function">translateX(<span class="number"><span class="number">230</span></span>px)</span></span>  <span class="function"><span class="function">scale(<span class="number"><span class="number">1.5</span></span>, <span class="number"><span class="number">2.6</span></span>)</span></span>  <span class="function"><span class="function">skew(<span class="number"><span class="number">220</span></span>deg, -<span class="number"><span class="number">150</span></span>deg)</span></span> <span class="function"><span class="function">translateX(<span class="number"><span class="number">230</span></span>px)</span></span>
+}</span></span></span><span class="value"></span></span></span><span class="rule"><span class="value"></span></span></span>
+</code></pre>
+<p>使用一个矩阵matrix()规则变成如下：</p>
+<pre class="css"><code class="css"><span class="id"><span class="id">#object</span></span> <span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform-origin</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">0</span></span> <span class="number"><span class="number">0</span></span>;</span></span></span><span class="value"></span></span>
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">matrix(<span class="number"><span class="number">1.06</span></span>, <span class="number"><span class="number">1.84</span></span>, <span class="number"><span class="number">0.54</span></span>, <span class="number"><span class="number">2.8</span></span>, <span class="number"><span class="number">466</span></span>px, <span class="number"><span class="number">482</span></span>px)</span></span>
+}</span></span></span><span class="value"></span></span></span><span class="rule"><span class="value"></span></span></span>
+</code></pre>
+<p>你也许很讨厌matrix()函数中的一大堆数字，但是要整明白CSS3变形中的matrix()函数，我们先要了解矩阵matrix是怎么一回事。接下来我们一起探讨一下transform中的matrix。</p>
+<p>在CSS3中变形的matrix分为两种，一种是2D矩阵，另外一种是3D矩阵。我们就先从简单的入手——2D矩阵matrix。</p>
+<p>CSS3中的2D矩阵matrix总共提供了六个参数:a,b,c,d,e和f，其基本写法如下：</p>
+<pre class="undefined"><code class="undefined">matrix(a,b,c,d,e,f)
+</code></pre>
+<p>实际上，这六个参数，对应的矩阵就是：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-46.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>在开始之前，首先来复习下一个简单的线性代数知识：矩阵与向量乘法。太复杂的我们用不到，我们只需要了解三维向量与3 x 3矩阵的乘积：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-47.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>弄明白3x3的矩阵之后，即可知道matrix计算方法。x和y是元素初始原点的坐标，x’和y’则是通过矩阵变换后得到的新原点坐标。通过中间的那个3x3的变换矩阵，对原先的坐标施加变换，就能得到新的坐标了。依据矩阵变换规则即可得到：x’=ax+cy+e和y’=bx+dy+f：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-48.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>上面的一大堆的字母让你看了犯迷糊，为了让人更好的理解，我们一起来看一个简单的例子。假设矩阵参数如下：</p>
+<pre class="http"><code class="http"><span class="attribute"><span class="attribute">transform</span></span>: <span class="string"><span class="string">matrix(1,0,0,1,50,50);/*a=1,b=0,c=0,d=1,e=50,f=50*/</span></span>
+</code></pre>
+<p>现在，我们根据这个矩阵偏移元素的中心点，假设是(0,0)，即x=0，y=0。</p>
+<p>我们可以按照上面介绍的矩阵方式，将这个列成矩阵：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-49.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>于是，变换后的原点位置x’和y’可以根据矩阵向量的计算规则计算出来：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-50.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>也就是计算得出x’=50，y’=50。即元素的原点由(0,0)移动到(50,50)的位置。实际上transform:matrix(1,0,0,1,50,50);就等同时transform: translate(50px,50px)。</p>
+<h4>
+	HTML</h4>
+<pre class="xml"><code class="xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"matrix"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"images/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"images/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+
+<span class="tag"><span class="tag">&lt;<span class="title"><span class="title">div</span></span> <span class="attribute"><span class="attribute">class</span></span>=<span class="value"><span class="value">"translate"</span></span>&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"images/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+    <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">img</span></span> <span class="attribute"><span class="attribute">src</span></span>=<span class="value"><span class="value">"images/cardKingClub.png"</span></span> <span class="attribute"><span class="attribute">alt</span></span>=<span class="value"><span class="value">""</span></span> <span class="attribute"><span class="attribute">width</span></span>=<span class="value"><span class="value">"70"</span></span> <span class="attribute"><span class="attribute">height</span></span>=<span class="value"><span class="value">"100"</span></span> /&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">div</span></span>&gt;</span></span>
+</code></pre>
+<h4>
+	CSS</h4>
+<pre class="css"><code class="css"><span class="class"><span class="class">.matrix</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">matrix(<span class="number"><span class="number">1</span></span>,<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">1</span></span>,<span class="number"><span class="number">50</span></span>,<span class="number"><span class="number">50</span></span>)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+<span class="class"><span class="class">.translate</span></span> <span class="tag"><span class="tag">img</span></span><span class="pseudo"><span class="pseudo">:nth-child(2)</span></span><span class="rules"><span class="rules">{
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">z-index</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="number"><span class="number">2</span></span>;</span></span></span><span class="value"></span></span> 
+    <span class="rule"><span class="attribute"><span class="rule"><span class="attribute">transform</span></span></span><span class="rule">:<span class="value"><span class="value"> <span class="function"><span class="function">translate(<span class="number"><span class="number">50</span></span>px,<span class="number"><span class="number">50</span></span>px)</span></span>;</span></span></span><span class="value"></span></span>
+<span class="rule"><span class="rule">}</span></span></span><span class="rule"></span></span>
+</code></pre>
+<p>效果如下所示：</p>
+<p><a href="http://codepen.io/airen/pen/DIaBj"><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-51.jpg" style="padding:2px;border:1px solid #ccc;width:400px;"></a></p>
+<p>通过一些篇幅介绍了矩阵的一些基础知识，并通过一个简单的实例用matrix()函数实现translate()的位移效果。接下来我们分别看看CSS3变形中matrix()和各变形函数之间的关系。</p>
+<h3>
+	translate()转换成matrix()</h3>
+<p>首先来看最简单的位移translate()函数。我们都知道transform:translate(tx,ty)的基本含义是将一个元素的显示位置平移tx,ty。在矩阵变形中，translate的matrix的参数为：</p>
+<pre class="perl"><code class="perl">matrix(<span class="number"><span class="number">1</span></span>,<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">1</span></span>,tx,ty)/<span class="variable"><span class="variable">*tx</span></span>,ty分别对应X和Y轴的增量<span class="variable"><span class="variable">*/</span></span>
+</code></pre>
+<p>其对应的矩阵图：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-52.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>由此公式可知：transform:translate(100px,100px)；即对应着transform:matrix(1,0,0,1,100,100)；推算出的结果：x’=x+tx=x+100；y’=y+ty=y+100。</p>
+<h3>
+	scale()转换成matrix()</h3>
+<p>transform:scale(sx,sy)将一个元素按指定的倍数进行缩放，它对应的矩阵是：</p>
+<pre class="perl"><code class="perl">matrix(sx<span class="variable"><span class="variable">*x</span></span>,<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">0</span></span>,sy<span class="variable"><span class="variable">*y</span></span>,<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">0</span></span>);<span class="regexp"><span class="regexp">/*sx和sy分别对应X轴和Y轴的缩放比率*/</span></span>
+</code></pre>
+<p>其对应的矩阵图：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-53.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>由此公式可知：transform:scale(1.5,1.5);及对应着transform:matrix(1.5,0,01.5,0,0);推算出的结果：<code>x’=x*sx=1.5*x</code>；<code>y’=y*sy=1.5*y</code>。</p>
+<h3>
+	rotate()转换成matrix()</h3>
+<p>transform:rotate(a)将一个元素按指定的角度旋转，它对应的矩阵是：</p>
+<pre class="perl"><code class="perl">　matrix(<span class="keyword"><span class="keyword">cos</span></span>(a),<span class="keyword"><span class="keyword">sin</span></span>(a),-<span class="keyword"><span class="keyword">sin</span></span>(a),<span class="keyword"><span class="keyword">cos</span></span>(a),<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">0</span></span>)；/<span class="variable"><span class="variable">*cos</span></span>(a)和<span class="keyword"><span class="keyword">sin</span></span>(a)是指旋转度转<span class="variable"><span class="variable">*/</span></span>
+</code></pre>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-54.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>由此公式可知：transform:rotate(45deg);及对应着transform:matrix(0.53,0.85,-0.85,0.53,0,0);[sin(45’)=0.85,cos(45’)=0.53]。推算出来的结果：<code>x’=cos(a) x – sin(a)*y=cos(45)*x – sin(45)*y</code>；<code>y’=sin(a)*x + cos(a)*y = sin(45)*x + cos(45)*y</code>。</p>
+<h3>
+	skew()转换成matrix()</h3>
+<p>transform:skew(ax,ay)将一个元素按指定的角度在X轴和Y轴倾斜，它对应的矩阵是：</p>
+<pre class="perl"><code class="perl">matrix(<span class="number"><span class="number">1</span></span>,tan(ay),tan(ax),<span class="number"><span class="number">1</span></span>,<span class="number"><span class="number">0</span></span>,<span class="number"><span class="number">0</span></span>)/<span class="variable"><span class="variable">*tan</span></span>(ax)和tan(ay)是对应的倾斜角度<span class="variable"><span class="variable">*/</span></span>
+</code></pre>
+<p>其对应的矩阵图：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-55.jpg" style="padding:2px;border:1px solid #ccc;"></p>
+<p>由此公式可知：transform:skew(45deg)，对应着transform:matrix(1,0,1,1,0,0)，其中tan(45’)=1。推算出来的结果：<code>x’=x + tan(a)*y</code>；<code>y’=tan(a)*x + y</code>。</p>
+<p>上面演示的是CSS3中常见的变形与矩阵的关系，除了上面演示的之外，还有其他的一些。下图就是所有CSS3变换与矩阵等价的关系图：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-56.jpg" style="padding:2px;border:1px solid #ccc; width:600px;"></p>
+<h3>
+	matrix()实现镜像</h3>
+<p>在制图软件中变形工具除了旋转、倾斜、位移、缩放等还有镜向（水平镜向、垂直镜向）：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-57.jpg" style="padding:2px;border:1px solid #ccc; width:500px;"></p>
+<p>但镜像对称在CSS3变形中没有相应的简化操作。只能通过矩阵matrix()来实现。通过前面的内容介绍，我们清楚的知道，元素变形的原点是其中心点（在没有显式的重置之外），那么这个镜向的原点也不例外。因为该轴永远经过原点，因此，任意对称轴都可以用y=k*x直线表示。则matrix表示就是：</p>
+<pre class="undefined"><code class="undefined">matrix((1-k^2)/(1+k^2),2k / (1 + k^2),2k/(1+k^2),(k^2-1)/(1+k^2),0,0)
+</code></pre>
+<p>这个如何得到的呢？我们来看看实现的过程。如下图所示，已经y=k*x，并且知道点(x,y)，求其对称点（x’,y’）的坐标位置：</p>
+<p><img alt="CSS3 2D Transform" data-pinit="registered" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/transform-58.jpg" style="padding:2px;border:1px solid #ccc; width:500px;"></p>
+<p>很简单，一是垂直，二是中心点在轴线上，因此有：</p>
+<pre class="undefined"><code class="undefined">(y-y') / (x - x') = -1/ k     →       ky-ky' = -x+x'
+(x + x') / 2 * k = y + y'     →       kx+kx' = y+y'
+</code></pre>
+<p>很简单的，把x’和y’提出来，就有：</p>
+<pre class="perl"><code class="perl"><span class="keyword"><span class="keyword">x</span></span><span class="string"><span class="string">' = (1-k^2)/(k^2+1) *x + 2k/(k^2+1) *y;
+y'</span></span> = <span class="number"><span class="number">2</span></span>k/(k^<span class="number"><span class="number">2</span></span>+<span class="number"><span class="number">1</span></span>) <span class="variable"><span class="variable">*x</span></span> + (k^<span class="number"><span class="number">2</span></span>-<span class="number"><span class="number">1</span></span>)/(k^<span class="number"><span class="number">2</span></span>+<span class="number"><span class="number">1</span></span>) <span class="variable"><span class="variable">*y</span></span>;
+</code></pre>
+<p>再结合矩阵公式：</p>
+<pre class="undefined"><code class="undefined">x' = ax+cy+e;
+y' = bx+dy+f;
+</code></pre>
+<p>我们就可以得到：</p>
+<pre class="ini"><code class="ini"><span class="setting"><span class="setting">a = <span class="value"><span class="value">(<span class="number"><span class="number">1</span></span>-k^<span class="number"><span class="number">2</span></span>)/(k^<span class="number"><span class="number">2</span></span>+<span class="number"><span class="number">1</span></span>);</span></span></span><span class="value"></span></span>
+<span class="setting"><span class="setting">b = <span class="value"><span class="number"><span class="value"><span class="number">2</span></span></span><span class="value">k/(k^<span class="number"><span class="number">2</span></span>+<span class="number"><span class="number">1</span></span>);</span></span></span><span class="value"></span></span>
+<span class="setting"><span class="setting">c = <span class="value"><span class="number"><span class="value"><span class="number">2</span></span></span><span class="value">k/(k^<span class="number"><span class="number">2</span></span>+<span class="number"><span class="number">1</span></span>);</span></span></span><span class="value"></span></span>
+<span class="setting"><span class="setting">d = <span class="value"><span class="value">(k^<span class="number"><span class="number">2</span></span>-<span class="number"><span class="number">1</span></span>)/(k^<span class="number"><span class="number">2</span></span>+<span class="number"><span class="number">1</span></span>);</span></span></span><span class="value"></span></span>
+</code></pre>
+<p>也就是上面matrix矩阵中的参数值。</p>
+<h2>
+	CSS3 2D Ttransform兼容性</h2>
+<p>CSS3的2D变形到目前为止在主流浏览器中得到较好的支持.CSS3的2D变换虽然得到众多主流浏览器的支持，但在实际使用的时候需要添加浏览器各自的私有属性：</p>
+<ul><li>
+		IE9中使用2D变形时，需要添加-ms-私有属性，在IE10+版本开始支持标准版本。</li>
+	<li>
+		Firefox3.5至Firefox15.0版本需要添加-moz-的私有属性，在Firefox16+版本开始支持标准版本。</li>
+	<li>
+		Chrome4.0+开始支持2D变形，在实际使用的时候需要添加-webkit-私有属性。</li>
+	<li>
+		Safari3.1+开始支持2D变形，在实际使用的时候需要添加-webkit-私有属性。</li>
+	<li>
+		Opera10.5+开始支持2D变形，在实际使用的时候需要添加-o-私有属性，但在Opera12.1版本不需要添加私有属性，不过在Opera15.0+版本需要添加私有属性-webkit-私有属性。</li>
+	<li>
+		移动设备iOS Safari3.2+、Android Browser2.1+、Blackberry Browser7.0+、Opera Mobile14.0+、Chrome for Android25.0+需要添加私有属性-webkit-，而Opera Mobile11.0至Opera Mobile12.1和Firefox for Android19.0+不需要使用浏览器私有属性。</li>
+</ul><h2>
+	下一节</h2>
+<p>在这一节中详细介绍了CSS3中2D tansform各函数的使用。通过早期的<a href="http://www.w3cplus.com/content/css3-transform">CSS3 Transform</a>一文和近期新发布的<a href="http://www.w3cplus.com/css3/transform-origin.html">CSS3 Transform——transform-origin</a>、<a href="http://www.w3cplus.com/css3/transform-basic-property.html">Transform-style和Perspective属性</a>和本文的介绍，有关于CSS3 transform的相关知识就只剩下了3d transform。接下来的一节中，将主要介绍3d transform。希望这一系列的教程能帮助您更好的理解CSS3 transform。敬请期待下一节的到来，如果你对transform有更好的理解，希望能在下面的评论中与我们一起分享。</p>
+<p>如需转载，烦请注明出处：<a href="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus.html">http://www.w3cplus.com/css3/css3-2d-transform.html</a></p>
+</div></div></div>  </div>
+
+  
+   
+    <div id="node_footer" class="clearfix">
+              <div class="previous-next"><span class="prev">上一篇: </span><a href="http://www.w3cplus.com/css/introducing-ink-our-new-responsive-email.html">Ink框架快速创建响应式EDM模板</a> | <span class="next">下一篇: </span><a href="http://www.w3cplus.com/tools/getting-started-with-grunt.html">开始使用Grunt</a></div>            <div class="bdsharebuttonbox bdshare-button-style2-16" data-bd-bind="1435022598805">
+        <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+        <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="http://www.w3cplus.com/css3/css3-2d-transform.html#" class="bds_more" data-cmd="more"></a>
+      </div>
+      <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"来自于W3cplus","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+
+          <div id="node_bottom">
+        <div id="block-block-23" class="block block-block">
+
+    
+  <div class="content">
+    <div class="alipay" title="欢迎使用支付宝扫一扫，绝对安全">
+	<h4 class="title">(^_^)如果您觉得此文对您有帮助，打个赏喝个咖啡(^_^)</h4>
+	<div class="des"><a title="小小赞助大大帮助" href="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/apr2rfygtefwlap154.png" target="_blank"><img align="absmiddle" width="156" height="156" alt="(^_^)如果您觉得此文对您有帮助，打个赏喝个咖啡(^_^)" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/apr2rfygtefwlap154.png"></a></div>
+</div>
+
+
+        </div>
+</div>
+<div id="block-block-24" class="block block-block">
+
+    
+  <div class="content">
+    <div class="ct-ad-article-wrapper" id="content-bottom-ad">
+	<div class="ct-ad-article">
+		<div class="bsap">
+			<script type="text/javascript">
+    /*960*90 创建于 2014-10-12*/
+    var cpro_id = "u1755601";
+</script>
+<script src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/c.js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1755601_0"><iframe id="cproIframe_u1755601_2" width="960" height="90" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/acom(4).html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/acom(1)"></script>
+		</div>
+	</div>
+</div>
+  </div>
+</div>
+      </div>
+        
+
+</div>  </div>
+</div>
+<div id="block-block-45" class="block block-block">
+
+    
+  <div class="content">
+    <!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="902" data-title="CSS3 2D Transform" data-author-key="1" id="ds-thread"><div id="ds-reset"><div class="ds-meta" style="display: none;"><a href="javascript:void(0)" class="ds-like-thread-button ds-rounded"><span class="ds-icon ds-icon-heart"></span> <span class="ds-thread-like-text">喜欢</span><span class="ds-thread-cancel-like">取消喜欢</span></a><span class="ds-like-panel"><span class="ds-highlight">2</span> 人喜欢</span></div><div class="ds-comments-info"><div class="ds-sort"><a class="ds-order-desc">最新</a><a class="ds-order-asc ds-current">最早</a><a class="ds-order-hot">最热</a></div><ul class="ds-comments-tabs"><li class="ds-tab"><a class="ds-comments-tab-duoshuo ds-current" href="javascript:void(0);"><span class="ds-highlight">2</span>条评论</a></li> <li class="ds-tab"><a class="ds-comments-tab-weibo" href="javascript:void(0);"><span class="ds-highlight">7</span>条新浪微博</a></li> <li class="ds-tab"><a class="ds-comments-tab-qqt" href="javascript:void(0);"><span class="ds-highlight">1</span>条腾讯微博</a></li></ul></div><ul class="ds-comments"><li class="ds-post" data-post-id="1326669630562896192"><div class="ds-post-self" data-post-id="1326669630562896192" data-thread-id="1326669630562893890" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="1809642"><a rel="nofollow author" target="_blank" href="http://weibo.com/2441656987" onclick="this.href=&#39;http://w3cplus.duoshuo.com/user-url/?user_id=1809642&#39;;" title="草珊瑚dragon"><img src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/1" alt="草珊瑚dragon"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/2441656987" onclick="this.href=&#39;http://w3cplus.duoshuo.com/user-url/?user_id=1809642&#39;;" rel="nofollow" target="_blank" data-user-id="1809642">草珊瑚dragon</a></div><p>rotate转换为matrix数字是错误的吧</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-10-23T00:59:38+08:00" title="2014年10月23日 上午12:59:38">2014年10月23日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li><li class="ds-post" data-post-id="1326669630562904097"><div class="ds-post-self" data-post-id="1326669630562904097" data-thread-id="1326669630562893890" data-root-id="0" data-source="duoshuo"><div class="ds-avatar" data-user-id="10192487"><a rel="nofollow author" target="_blank" href="http://weibo.com/2243275710" onclick="this.href=&#39;http://w3cplus.duoshuo.com/user-url/?user_id=10192487&#39;;" title="湘琪Qi"><img src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/1(1)" alt="湘琪Qi"></a></div><div class="ds-comment-body"><div class="ds-comment-header"><a class="ds-user-name ds-highlight" data-qqt-account="" href="http://weibo.com/2243275710" onclick="this.href=&#39;http://w3cplus.duoshuo.com/user-url/?user_id=10192487&#39;;" rel="nofollow" target="_blank" data-user-id="10192487">湘琪Qi</a></div><p>(x + x') / 2 * k = y + y'     →       kx+kx' = y+y'  前边应该是 (x + x') / 2 * k = (y + y' )/2吧</p><div class="ds-comment-footer ds-comment-actions"><span class="ds-time" datetime="2014-12-21T17:57:32+08:00" title="2014年12月21日 下午5:57:32">2014年12月21日</span><a class="ds-post-reply" href="javascript:void(0);"><span class="ds-icon ds-icon-reply"></span>回复</a><a class="ds-post-likes" href="javascript:void(0);"><span class="ds-icon ds-icon-like"></span>顶</a><a class="ds-post-repost" href="javascript:void(0);"><span class="ds-icon ds-icon-share"></span>转发</a><a class="ds-post-report" href="javascript:void(0);"><span class="ds-icon ds-icon-report"></span>举报</a></div></div></div></li></ul><div class="ds-paginator" style="display: none;"><div class="ds-border"></div><a data-page="1" href="javascript:void(0);" class="ds-current">1</a></div><a name="respond"></a><div class="ds-login-buttons"><p>社交帐号登录:</p><div class="ds-social-links"><ul class="ds-service-list"><li><a href="http://w3cplus.duoshuo.com/login/weibo/" rel="nofollow" class="ds-service-link ds-weibo">微博</a></li><li><a href="http://w3cplus.duoshuo.com/login/qq/" rel="nofollow" class="ds-service-link ds-qq">QQ</a></li><li><a href="http://w3cplus.duoshuo.com/login/renren/" rel="nofollow" class="ds-service-link ds-renren">人人</a></li><li><a href="http://w3cplus.duoshuo.com/login/douban/" rel="nofollow" class="ds-service-link ds-douban">豆瓣</a></li><li><a class="ds-more-services" href="javascript:void(0)">更多»</a></li></ul><ul class="ds-service-list ds-additional-services"><li><a href="http://w3cplus.duoshuo.com/login/kaixin/" rel="nofollow" class="ds-service-link ds-kaixin">开心</a></li><li><a href="http://w3cplus.duoshuo.com/login/netease/" rel="nofollow" class="ds-service-link ds-netease">网易</a></li><li><a href="http://w3cplus.duoshuo.com/login/sohu/" rel="nofollow" class="ds-service-link ds-sohu">搜狐</a></li><li><a href="http://w3cplus.duoshuo.com/login/baidu/" rel="nofollow" class="ds-service-link ds-baidu">百度</a></li><li><a href="http://w3cplus.duoshuo.com/login/google/" rel="nofollow" class="ds-service-link ds-google">谷歌</a></li></ul></div></div><div class="ds-replybox"><a class="ds-avatar" href="javascript:void(0);" onclick="return false"><img src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/noavatar_default.png" alt=""></a><form method="post"><input type="hidden" name="thread_id" value="1326669630562893890">
+<input type="hidden" name="parent_id" value="">
+<input type="hidden" name="nonce" value="550c43c912637"><div class="ds-textarea-wrapper ds-rounded-top"><textarea name="message" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea><pre class="ds-hidden-text undefined"></pre></div><div class="ds-post-toolbar"><div class="ds-post-options ds-gradient-bg"><span class="ds-sync"></span></div><button class="ds-post-button" type="submit">发布</button><div class="ds-toolbar-buttons"><a class="ds-toolbar-button ds-add-emote" title="插入表情"></a><a class="ds-toolbar-button ds-add-image" title="插入图片"></a></div></div></form></div><p class="ds-powered-by"><a href="http://duoshuo.com/" target="_blank" rel="nofollow">W3CPLUS正在使用多说</a></p></div></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"w3cplus"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+  </div>
+</div>
+  </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+          <div id="sidebar-second" class="col-extra">
+        <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="http://rp.baidu.com/rp3w/3w.js?sid=10994702955876242907') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script><div id="bdcs"><div class="bdcs-container"><meta http-equiv="x-ua-compatible" content="IE=9">   <!-- 嵌入式 -->  <div class="bdcs-main bdcs-clearfix" id="default-searchbox">      <div class="bdcs-search bdcs-clearfix" id="bdcs-search-inline">          <form action="http://zhannei.baidu.com/cse/search" method="get" target="_blank" class="bdcs-search-form" autocomplete="off" id="bdcs-search-form">              <input type="hidden" name="s" value="10994702955876242907">              <input type="hidden" name="entry" value="1">                                                                        <input type="text" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input" placeholder="请输入关键字" autocomplete="off" style="height: 40px; line-height: 40px;">              <input type="submit" class="bdcs-search-form-submit " id="bdcs-search-form-submit" value="搜索">                       </form>      </div>                <div class="bdcs-search-sug" id="bdcs-search-sug" style="top: 50px; width: 259px;">              <ul class="bdcs-search-sug-list" id="bdcs-search-sug-list"></ul>          </div>                  </div>                           </div></div><script charset="utf-8" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/3w.js"></script>
+          <div class="region region-sidebar-second">
+    <div id="block-block-32" class="block block-block">
+
+    
+  <div class="content">
+    <p><a href="http://www.zhufengpeixun.cn/" target="_blank" title="JavaScript培训|珠峰培训"><img alt="JavaScript培训|珠峰培训" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/zhufeng-sidebar.png" style="width: 300px; height: 160px;"></a></p>
+  </div>
+</div>
+<div id="block-block-30" class="block block-block">
+
+    
+  <div class="content">
+            <div id="lagouData" style="height: 325px; padding-top: 10px; border-radius: 3px; font-family: 微软雅黑; background-color: rgb(50, 157, 201);"><div class="lagou-header" style="height: 86px; width: 95%; margin: 0px auto; position: relative;"><img src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/api_logo.png" width="161" height="86" style="position: absolute; left: 0px; top: 0px; width: auto !important;"><a href="http://www.lagou.com/?utm_source=AD__w3cplus_banner1&utm_medium=front&utm_campaign=toufang" title="免费订阅" target="_blank" id="lagou-a" class="lagou-small" style="display: inline-block; width: 95px; height: 31px; line-height: 31px; text-decoration: none; position: absolute; left: 125px; top: 25px; border-radius: 3px; border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(187, 233, 215); z-index: 10; -webkit-animation: breathe 1.5s linear 0s infinite forwards; animation-duration: 1.5s; animation-timing-function: linear; animation-delay: 0s; animation-iteration-count: infinite; animation-direction: initial; animation-fill-mode: forwards; -webkit-animation-play-state: initial; animation-play-state: initial; animation-name: breathe; background-color: rgb(255, 255, 255);"><span style="font-size: 14px; font-weight: bold; color: rgb(50, 157, 201); padding-left: 15px;">免费订阅</span><i style="display: inline-block; width: 8px; height: 13px; position: absolute; right: 8px; top: 10px; background: url(http://api.lagou.com/images/api_smallArrow.png) 0% 0% no-repeat;"></i></a></div><div class="lagou-main" style="height: 225px; width: 95%; margin: 0px auto; border-radius: 3px; background-color: rgb(255, 255, 255);"><ul style="margin: 0px; padding: 0px;"><li style="border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(186, 186, 186); height: 55px; position: relative; list-style-type: none;"><a href="http://www.lagou.com/jobs/260094.html?utm_source=AD__w3cplus_words&utm_medium=front&utm_campaign=toufang" target="_blank" title="【广东优迈】-19.5万招前端工程师广州" style="display: block; width: 100%; height: 100%; text-decoration: none;"><div class="pos-ms" style="width: 140px; position: absolute; left: 10px; top: 3px; overflow: hidden;"><span style="font-size: 16px; color: rgb(51, 51, 51);">前端工程师</span><p style="font-size: 14px; color: rgb(121, 121, 121); margin: 0px; text-indent: 0px; padding: 0px;">广东优迈</p></div><div class="pos-pay" style="position: absolute; right: 10px; top: 18px;"><b style="font-weight: normal; color: rgb(50, 157, 201); font-size: 24px;">19.5万</b><span style="font-size: 14px; color: rgb(85, 85, 85);"></span></div></a></li><li style="border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(186, 186, 186); height: 55px; position: relative; list-style-type: none;"><a href="http://www.lagou.com/jobs/607913.html?utm_source=AD__w3cplus_words&utm_medium=front&utm_campaign=toufang" target="_blank" title="【铂略咨询】-26万招html5前端开发工程师上海" style="display: block; width: 100%; height: 100%; text-decoration: none;"><div class="pos-ms" style="width: 140px; position: absolute; left: 10px; top: 3px; overflow: hidden;"><span style="font-size: 16px; color: rgb(51, 51, 51);">html5前端开...</span><p style="font-size: 14px; color: rgb(121, 121, 121); margin: 0px; text-indent: 0px; padding: 0px;">铂略咨询</p></div><div class="pos-pay" style="position: absolute; right: 10px; top: 18px;"><b style="font-weight: normal; color: rgb(50, 157, 201); font-size: 24px;">26万</b><span style="font-size: 14px; color: rgb(85, 85, 85);"></span></div></a></li><li style="border-bottom-width: 1px; border-bottom-style: dashed; border-bottom-color: rgb(186, 186, 186); height: 55px; position: relative; list-style-type: none;"><a href="http://www.lagou.com/jobs/698135.html?utm_source=AD__w3cplus_words&utm_medium=front&utm_campaign=toufang" target="_blank" title="【Colleg】-19.5万招iOS北京" style="display: block; width: 100%; height: 100%; text-decoration: none;"><div class="pos-ms" style="width: 140px; position: absolute; left: 10px; top: 3px; overflow: hidden;"><span style="font-size: 16px; color: rgb(51, 51, 51);">iOS</span><p style="font-size: 14px; color: rgb(121, 121, 121); margin: 0px; text-indent: 0px; padding: 0px;">CollegeDai...</p></div><div class="pos-pay" style="position: absolute; right: 10px; top: 18px;"><b style="font-weight: normal; color: rgb(50, 157, 201); font-size: 24px;">19.5万</b><span style="font-size: 14px; color: rgb(85, 85, 85);"></span></div></a></li><li style="border: none; height: 55px; position: relative; list-style-type: none;"><a href="http://www.lagou.com/jobs/255817.html?utm_source=AD__w3cplus_words&utm_medium=front&utm_campaign=toufang" target="_blank" title="【美联英语】-26万招iOS北京" style="display: block; width: 100%; height: 100%; text-decoration: none;"><div class="pos-ms" style="width: 140px; position: absolute; left: 10px; top: 3px; overflow: hidden;"><span style="font-size: 16px; color: rgb(51, 51, 51);">iOS</span><p style="font-size: 14px; color: rgb(121, 121, 121); margin: 0px; text-indent: 0px; padding: 0px;">美联英语</p></div><div class="pos-pay" style="position: absolute; right: 10px; top: 18px;"><b style="font-weight: normal; color: rgb(50, 157, 201); font-size: 24px;">26万</b><span style="font-size: 14px; color: rgb(85, 85, 85);"></span></div></a></li></ul></div></div>
+  </div>
+</div>
+<div id="block-block-33" class="block block-block">
+
+    
+  <div class="content">
+    <p><a href="http://www.miaov.com/2013/download/video_download.html" target="_blank"><img height="160" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/miaomei-vip-w3cplus.jpg" width="300"></a></p>
+  </div>
+</div>
+<div id="block-block-6" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+	<a href="http://aibusy.com/course_list.html"><img alt="" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/busy.jpg" style="width: 300px; height: 160px;"></a></div>
+<div>
+	<img alt="" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/w3cplus-ad.png" style="width: 300px; height: 160px;"></div>
+  </div>
+</div>
+<div id="block-block-31" class="block block-block">
+
+    
+  <div class="content">
+    <div>
+	<a href="http://www.w3cplus.com/" target="_blank"><img alt="" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/w3cplus-ad.png" style="width: 300px; height: 160px;"></a></div>
+<div>
+	<a href="http://www.w3cplus.com/" target="_blank"><img alt="" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/w3cplus-ad.png" style="width: 300px; height: 160px;"></a></div>
+  </div>
+</div>
+<div id="block-block-18" class="block block-block">
+
+    <h2>合作网站</h2>
+  
+  <div class="content">
+    <ul class="clearfix" id="join_hands"><li>
+		<a href="http://www.uisdc.com/" target="_blank">优设网</a></li>
+	<li>
+		<a href="http://www.w3ctech.com/" title="中国最大的前端技术社区">w3ctech</a></li>
+	<li>
+		<a href="http://www.drupal001.com/">Drupal高性能网站</a></li>
+	<li>
+		<a href="http://segmentfault.com/">SegmentFault</a></li>
+	<li>
+		<a href="http://lugir.com/" target="_blank">Drupal教程</a></li>
+	<li>
+		<a href="http://drupalchina.cn/" target="_blank">Drupal中国</a></li>
+	<li>
+		<a href="http://www.drupalba.com/" target="_blank">Drupal吧</a></li>
+	
+	<li>
+		<a href="http://www.gbin1.com/" target="_blank">Gbin1</a></li>
+	<li>
+		<a href="http://www.zhufengpeixun.cn/" target="_blank">珠峰JavaScript培训</a></li>
+	<li>
+		<a href="http://ued.ctrip.com/blog/wp-content/webkitcss/index.html" target="_blank">Webkit CSS手册</a></li>
+	<li>
+		<a href="http://www.imooc.com/course/list" target="_blank">在线编程</a></li>
+</ul>  </div>
+</div>
+<div id="block-views-friend-block-1" class="block block-views">
+
+    <h2>友情链接</h2>
+  
+  <div class="content">
+    <div class="view view-friend view-id-friend view-display-id-block_1 view-dom-id-b77ee8045b14eaffc8a632788a30080d">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.uisdc.com/">优设网</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.w3cmark.com/">前端笔记</a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.cn-sass.com/">Sass中国</a></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.imooc.com/">慕课网</a></span>  </div></li>
+          <li class="views-row views-row-5 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://drupal001.net/">Drupal大学</a></span>  </div></li>
+          <li class="views-row views-row-6 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.drupalproject.org/">Drupal项目社区</a></span>  </div></li>
+          <li class="views-row views-row-7 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.58img.com/">web前端资源网</a></span>  </div></li>
+          <li class="views-row views-row-8 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://ued.yhd.com/blog">1号店UED</a></span>  </div></li>
+          <li class="views-row views-row-9 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://edu.cnzz.cn/">站长学院</a></span>  </div></li>
+          <li class="views-row views-row-10 views-row-even views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.kuaipao8.com/">Web开发</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="http://www.w3cplus.com/friend">
+    更多  </a>
+</div>
+  
+  
+  
+</div>  </div>
+</div>
+<div id="block-block-36" class="block block-block">
+
+    <h2>关注我们</h2>
+  
+  <div class="content">
+    <p style="text-align:center;"><img alt="" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/w3cplus-weixin.jpg" style="width: 258px; height: 258px;"></p>
+  </div>
+</div>
+<div id="block-block-42" class="block block-block">
+
+    <h2>百度广告</h2>
+  
+  <div class="content">
+    <script type="text/javascript">
+    /*300*260 创建于 2014-10-14*/
+    var cpro_id = "u1758328";
+</script>
+<script src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/c.js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1758328_0"><iframe id="cproIframe_u1758328_3" width="300" height="260" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/acom.html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/acom(2)"></script>
+
+  </div>
+</div>
+  </div>
+      </div>
+    
+
+  </div>
+</div>
+
+  <div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+    <div id="block-block-39" class="block block-block">
+
+    <h2>关于我们</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/">W3cplus</a>
+<div class="media-body">
+	<p>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS3、HTML5、Sass、Mobile和各类DEMO为主。</p>
+	<p>W3cplus具有一支强大的团队，提供长期的前端项目外包，Drupal建站，Drupal主题制作服务，以及提供企业广告展示与招聘发布，有需要的请联系：QQ:<a href="http://wpa.qq.com/msgrd?v=3&uin=81059347&site=qq&menu=yes" target="_blank">81059347</a>，E-mail:<a href="mailto:w3cplus@hotmail.com" target="_blank">w3cplus@hotmail.com</a></p>
+</div>
+  </div>
+</div>
+<div id="block-block-40" class="block block-block">
+
+    <h2>关于站长</h2>
+  
+  <div class="content">
+    <p><a class="media-object" href="http://www.w3cplus.com/" target="_blank">大漠</a></p>
+<div class="media-body">
+	<p>常用昵称“大漠”，<a href="http://www.w3cplus.com/" target="_blank">W3CPlus</a>，<a href="http://www.cn-sass.com/" target="_blank">Sass中国</a>创始人，目前就职于淘宝。中国Drupal社区核心成员之一。对HTML5、CSS3和Sass等前端脚本语言有非常深入的认识和丰富的实践经验，尤其专注对CSS3、Sass和Mobile的研究，是国内最早研究和使用CSS3和Sass技术的一批人。CSS3、Sass和Drupal中国布道者。2014年出版《<a href="http://www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+	<div class="social">
+		<a class="github" href="https://github.com/airen" target="_blank" title="github">github</a> <a class="weibo" href="http://weibo.com/w3cplus" target="_blank" title="weibo">weibo</a> <a class="facebook" href="https://www.facebook.com/w3cplus" target="_blank" title="facebook">facebook</a> <a class="google" href="https://plus.google.com/+AirenLiao" target="_blank" title="google">google</a> <a class="twitter" href="https://twitter.com/w3cplus" target="_blank" title="twitter">twitter</a> <a class="linkedin" href="http://cn.linkedin.com/in/w3cplus" target="_blank" title="linkedin">linkedin</a></div>
+</div>
+  </div>
+</div>
+<div id="block-block-41" class="block block-block">
+
+    <h2>我的作品</h2>
+  
+  <div class="content">
+    <a class="media-object" href="http://www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+<div class="media-body">
+	<p>本书是国内著名的Web前端专家历时2载的心血之作，根据最新的CSS3撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS3领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。</p>
+<p>本书理论知识系统全面，详细讲解了选择器、伸缩布局盒模型、渐变、过渡、动画等主题下涵盖的所有CSS3新特性。</p>
+	<p><a href="http://www.w3cplus.com/project" target="_blank">其他作品</a></p>
+</div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+  <div id="footer" class="footer">
+    <div class="container">
+        <div class="region region-footer">
+    <div id="block-block-12" class="block block-block">
+
+    
+  <div class="content">
+    <p>湘ICP备13003850号-12，版权所有 © 2011-2014 <a href="http://www.w3cplus.com/page/26.html" target="_blank">W3CPLUS</a>，感谢<a href="http://www.drupal.org/" target="_blank">Drupal</a>开源技术。感谢<a href="http://www.qiniu.com/" target="_blank">七牛云存储</a>提供静态资源空间。</p>  </div>
+</div>
+  </div>
+    </div>
+  </div> 
+
+<div id="totop" style="position: fixed; bottom: 50px; right: 15px; cursor: pointer; z-index: 999999; display: block; opacity: 1;">
+    <a title="返回顶部">返回顶部</a>
+</div>
+
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _hmt = _hmt || [];_hmt.push(["_setAccount", "177319b798978621f83845b12c86fa29"]);_hmt.push(["_trackPageview"]);(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?177319b798978621f83845b12c86fa29';hm.type = 'text/javascript';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})()
+//--><!]]>
+</script>
+<script type="text/javascript" src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/js_VU7P4CTgUZdF2SyFko5LLAg9ZK0OSVjXVaAFnTLgVt0.js"></script>
+  
+  <!-- w3cplus.com Baidu tongji analytics -->
+  <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F177319b798978621f83845b12c86fa29' type='text/javascript'%3E%3C/script%3E"));
+  </script><script src="./CSS3 2D Transform _ css3教程-css3实例-css3动画 _ W3CPlus_files/h.js" type="text/javascript"></script>
+
+
+<!-- Page cached by Boost @ 2015-06-22 09:54:52, expires @ 2015-06-25 09:54:52, lifetime 3 天 --><div id="window-resizer-tooltip" style="display: none;"><a href="http://www.w3cplus.com/css3/css3-2d-transform.html#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1366</span> x <span class="tooltipHeight" id="winHeight">728</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1366</span> x <span class="tooltipHeight" id="vpHeight">622</span></div></body></html>

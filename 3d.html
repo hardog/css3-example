@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="css/common.css" rel="stylesheet"/>
+	<title>css3 : 3d</title>
+	<style type="text/css">
+		.transform-basic{
+			width:100px;
+			height:100px;
+			background-color:yellow;
+			border:black solid 1px;
+		}
+		.transform-basic-puke{
+			width:143px;
+			height:220px;
+			background-image:url(img/puke.jpg);
+			border:black solid 1px;
+			color:#f00;
+		}
+		.rotate-x-120{
+			transform:rotateX(120deg);
+			-moz-transform:rotateX(120deg);
+			-webkit-transform:rotateX(120deg);
+		}
+		.rotate-y-120{
+			transform:rotateY(120deg);
+			-moz-transform:rotateY(120deg);
+			-webkit-transform:rotateY(120deg);
+		}
+		.rotate-z-120{
+			transform:rotateZ(120deg);
+			-moz-transform:rotateZ(120deg);
+			-webkit-transform:rotateZ(120deg);
+		}
+		.rotate-3d-60{
+			transform:rotate3d(0, 0, 0, 60deg);
+			-moz-transform:rotate3d(0, 0, 0, 60deg);
+			-webkit-transform:rotate3d(0, 0, 0, 60deg);
+		}
+		.translate-x-40{
+			transform:translateX(40px);
+			-webkit-transform:translateX(40px);
+			-ms-transform:translateX(40px);
+			-moz-transform:translateX(40px);
+			-o-transform:translateX(40px);
+		}
+		.translate-y-40{
+			transform:translateY(40px);
+			-webkit-transform:translateY(40px);
+			-ms-transform:translateY(40px);
+			-moz-transform:translateY(40px);
+			-o-transform:translateY(40px);
+		}
+		.translate-z-40{
+			transform:translateZ(40px);
+			-webkit-transform:translateZ(40px);
+			-ms-transform:translateZ(40px);
+			-moz-transform:translateZ(40px);
+			-o-transform:translateZ(40px);
+		}
+		.translate-3d-40{
+			transform:translate3d(40px, 40px, 40px);
+			-webkit-transform:translate3d(40px, 40px, 40px);
+			-ms-transform:translate3d(40px, 40px, 40px);
+			-moz-transform:translate3d(40px, 40px, 40px);
+			-o-transform:translate3d(40px, 40px, 40px);
+		}
+		.scale-x-15{
+			transform:scaleX(1.5) rotateX(45deg);
+			-webkit-transform:scaleX(1.5) rotateX(45deg);
+			-ms-transform:scaleX(1.5) rotateX(45deg);
+			-moz-transform:scaleX(1.5) rotateX(45deg);
+			-o-transform:scaleX(1.5) rotateX(45deg);
+			z-index:2;
+		}
+		.scale-y-15{
+			transform:scaleY(1.5) rotateX(45deg);
+			-webkit-transform:scaleY(1.5) rotateX(45deg);
+			-ms-transform:scaleY(1.5) rotateX(45deg);
+			-moz-transform:scaleY(1.5) rotateX(45deg);
+			-o-transform:scaleY(1.5) rotateX(45deg);
+			z-index:2;
+		}
+		.container{
+			width:200px;
+			height:250px;
+			position:relative;
+		}
+		.container .scale-z-5{
+			z-index:1;
+			opacity:0.6;
+			position:absolute;
+		}
+		.container img:nth-child(1){
+			transform:scaleZ(.1) rotateX(60deg);
+			-webkit-transform:scaleZ(.1) rotateX(60deg);
+			-ms-transform:scaleZ(.1) rotateX(60deg);
+			-moz-transform:scaleZ(.1) rotateX(60deg);
+			-o-transform:scaleZ(.1) rotateX(60deg);
+			z-index:3;
+			position:absolute;
+		}
+		.container img:nth-child(2){
+			transform:scaleZ(5) rotateY(45deg);
+			-webkit-transform:scaleZ(5) rotateY(45deg);
+			-ms-transform:scaleZ(5) rotateY(45deg);
+			-moz-transform:scaleZ(5) rotateY(45deg);
+			-o-transform:scaleZ(5) rotateY(45deg);
+			z-index:2;
+			position:absolute;
+		}
+		.scale-3d-15{
+			transform:scale3d(1.5, 1.5, 1.5) rotateX(45deg);
+			-webkit-transform:scale3d(1.5, 1.5, 1.5) rotateX(45deg);
+			-ms-transform:scale3d(1.5, 1.5, 1.5) rotateX(45deg);
+			-moz-transform:scale3d(1.5, 1.5, 1.5) rotateX(45deg);
+			-o-transform:scale3d(1.5, 1.5, 1.5) rotateX(45deg);
+			z-index:2;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<p>transform Supported By IE 10+ & Firefox<p>
+		<p>Chrome & Safari needs '-webkit-' prefix</p>
+		<p>Opera 只支持2D转换</p>
+	</header>
+	<section>
+		<header>
+			<h1>3D : rotateX、rotateY、rotate3d</h1>
+			<aside>
+				围绕其x轴以给定的度数进行旋转, 围绕y轴以给定的角度进行旋转
+			</aside>
+		</header>
+		<article>
+			<h3>rotateX(120deg)</h3>
+			<div class="transform-basic rotate-x-120">rotate-x-120</div>
+			<h3>rotateY(120deg)</h3>
+			<div class="transform-basic rotate-y-120">rotate-y-120</div>
+			<h3>rotateZ(120deg)</h3>
+			<div class="transform-basic rotate-z-120">rotate-z-120</div>
+			<h3>rotate3d(1, -1, 0, 0deg-360deg)</h3>
+			<div class="transform-basic rotate-3d-60" id = "rotate-3d-60">rotate-3d-0-360</div>
+			<input type="button" value="rotate" id="rotate" onclick="rotate();"/>
+			<script type="text/javascript">
+				function rotate(){
+					var obj = document.getElementById("rotate-3d-60"),
+						deg = 0;
+					
+					var timeInterval = setInterval(function(){
+						obj.style.transform = "rotate3d(1, -1, 0, "+ deg +"deg)";
+						
+						if(deg === 360){
+							deg = 0;
+						}
+						
+						deg += 1;
+					}, 10);
+				}
+			</script>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>3D : translate3d, translateX, translateY, translateZ</h1>
+			<aside>
+				translate3d(x, y, z), translateX(x), translateY(y), translateZ(z)
+			</aside>
+		</header>
+		<article>
+			<h3>translateX(40px)</h3>
+			<div class="transform-basic translate-x-40">translate-x-40</div>
+			<h3>translateY(40px)</h3>
+			<div class="transform-basic translate-y-40">translate-y-40</div>
+			<h3>translateZ(40px)</h3>
+			<div class="transform-basic translate-z-40">translate-z-40</div>
+			<h3>translate3d(40px, 40px, 40px)</h3>
+			<div class="transform-basic translate-3d-40">translate-3d-40</div>
+		</article>
+	</section>
+	<section>
+		<header>
+			<h1>3D : scale3d, scaleX, scaleY, scaleZ</h1>
+			<aside>
+				<p>需要配合其他变形函数一起使用才有效果，此处使用rotateX(45deg)</p>
+				<p>scale3d(x, y, z), scaleX(x), scaleY(y), scaleZ(z)</p>
+			</aside>
+		</header>
+		<article>
+			<h3>scaleX(1.5)</h3>
+			<div class="transform-basic-puke scale-x-15">scale-x-1.5</div>
+			<h3>scaleY(1.5)</h3>
+			<div class="transform-basic-puke scale-y-15">scale-y-1.5</div>
+			<h3>scaleZ(1.5)</h3>
+			<div class="container">
+				<div class="transform-basic-puke scale-z-5">scale-z-5</div>
+				<img src="img/puke.jpg" />
+				<img src="img/puke.jpg"/>	
+			</div>				
+			<h3>scale3d(1.5, 1.5, 1.5)</h3>
+			<div class="transform-basic-puke scale-3d-15">scale-3d-1.5</div>
+		</article>
+	</section>
+</body>
+</html>
