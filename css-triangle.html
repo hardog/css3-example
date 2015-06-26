@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>三角形图标的特殊做法</title>
+<style type="text/css">
+.control{
+	background-color:#888;
+	display:block;
+	position:fixed;
+	width:320px;
+	height:320px;
+}
+.base{
+	width:0;
+	height:0;
+	font-size:0;
+	border-style:solid;
+	padding:0;
+	position:absolute;
+}
+.top:hover{
+	border-bottom-color:red;
+	cursor:pointer;
+}
+.right:hover{
+	border-left-color:red;
+	cursor:pointer;
+}
+.bottom:hover{
+	border-top-color:red;
+	cursor:pointer;
+}
+.left:hover{
+	border-right-color:red;
+	cursor:pointer;
+}
+.top{
+	border-color:transparent transparent #42affa transparent;
+	border-width:0 60px 100px 60px;
+	left:100px;
+}
+.right{
+	border-color:transparent transparent transparent #42affa;
+	border-width:60px 0 60px 100px;
+	top:100px;
+	right:0;
+}
+.bottom{
+	border-color:#42affa transparent transparent transparent;
+	border-width:100px 60px 0 60px;
+	left:100px;
+	bottom:0;
+}
+.left{
+	border-color:transparent #42affa transparent transparent;
+	border-width:60px 100px 60px 0;
+	top:100px;
+	left:0;
+}
+</style>
+</head>
+<body>
+	<aside class="control">
+		<div class="base top"></div>
+		<div class="base right"></div>
+		<div class="base bottom"></div>
+		<div class="base left"></div>
+	</aside>
+</body>
+</html>
